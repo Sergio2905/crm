@@ -145,7 +145,7 @@
                 <div class="content__sidebar sidebar">
                     <ul class="sidebar__list">
                         <li class="sidebar__item active">
-                            <a href="#" class="sidebar__link">
+                            <a href="settings.html" class="sidebar__link">
                                 <svg>
                                     <use href='img/sprite/sprite.svg#shopping-cart'></use>
                                 </svg>
@@ -161,7 +161,7 @@
                             </a>
                         </li>
                         <li class="sidebar__item">
-                            <a href="#" class="sidebar__link">
+                            <a href="warehouses.html" class="sidebar__link">
                                 <svg>
                                     <use href='img/sprite/sprite.svg#box'></use>
                                 </svg>
@@ -224,32 +224,34 @@
                                         <span class="filter__checkbox-name">Автообновление каталога</span>
                                     </label>
                                 </div>
-                                <div class="filter__info-block">
-                                    <div class="filter__input-block">
-                                        <span class="filter__input-name">Автообновление каждые</span>
-                                        <input type="text" class="filter__input">
-                                    </div>
-                                </div>
-                                <div class="filter__info-block">
-                                    <div class="filter__select filter__select--time select">
-                                        <div class="filter__select-header">
-                                            <span class="filter__select-current select__current">
-                                                Минут
-                                            </span>
-                                            <svg width='12' height='12'>
-                                                <use href='img/sprite/sprite.svg#arrow'></use>
-                                            </svg>
+                                <div class="filter__info-wrapper">
+                                    <div class="filter__info-block">
+                                        <div class="filter__input-block">
+                                            <span class="filter__input-name">Автообновление каждые</span>
+                                            <input type="text" class="filter__input">
                                         </div>
-                                        <ul class="filter__select-body select__body">
-                                            <li class="filter__select-item select__item" data-choice='choosen'>Секунд
-                                            </li>
-                                            <li class="filter__select-item select__item" data-choice='choosen'>Часов
-                                            </li>
-                                        </ul>
+                                    </div>
+                                    <div class="filter__info-block">
+                                        <div class="filter__select filter__select--time select">
+                                            <div class="filter__select-header">
+                                                <span class="filter__select-current select__current">
+                                                    Минут
+                                                </span>
+                                                <svg width='12' height='12'>
+                                                    <use href='img/sprite/sprite.svg#arrow'></use>
+                                                </svg>
+                                            </div>
+                                            <ul class="filter__select-body select__body">
+                                                <li class="filter__select-item select__item" data-choice='choosen'>
+                                                    Секунд
+                                                </li>
+                                                <li class="filter__select-item select__item" data-choice='choosen'>Часов
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-
                             <div class="form__btns">
                                 <button type="button" class="form__btn btn-blue"
                                     data-path="catalog-save">Сохранить</button>
@@ -826,7 +828,7 @@
 
   <div class="modal__container" data-target="catalog-delete">
     <div class="modal__wrapper download">
-      <div class="modal__title">Удвлить каталог</div>
+      <div class="modal__title">Удалить каталог</div>
 
       <div class="modal__message">
         Подтвердите удаление всех данных для текущего каталога товаров. При подтверждении, вся информация о данном
