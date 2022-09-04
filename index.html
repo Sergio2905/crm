@@ -3181,6 +3181,108 @@
     </div>
   </div>
 
+  <div class="modal__container" data-target="catalog-edit">
+    <div class="modal__wrapper edit">
+      <div class="modal__close modal-close">
+        <svg width='24' height='24'>
+          <use href='img/sprite/sprite.svg#close'></use>
+        </svg>
+      </div>
+
+      <div class="modal__title">Добавить новый каталог</div>
+
+      <form class="modal__form form-modal">
+
+        <div class="form-modal__catalog">
+          <div class="form-modal__info-block">
+            <div class="form-modal__input-block">
+              <span class="form-modal__input-name">Название каталога</span>
+              <div class="form-modal__input-wrapper">
+                <input type="text" class="form-modal__input">
+              </div>
+            </div>
+          </div>
+          <div class="form-modal__info-block">
+            <div class="form__title">
+              Источник данных
+            </div>
+            <div class="form-modal__select form-modal__select--catalog select">
+              <div class="form-modal__select-header">
+                <span class="form-modal__select-current select__current">
+                  YML-файл
+                </span>
+                <svg width='12' height='12'>
+                  <use href='img/sprite/sprite.svg#arrow'></use>
+                </svg>
+              </div>
+              <ul class="form-modal__select-body select__body">
+                <li class="form-modal__select-item select__item" data-choice='choosen'>YML-файл
+                </li>
+                <li class="form-modal__select-item select__item" data-choice='choosen'>XML-файл
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-modal__link">
+          <h3 class="form-modal__subtitle">Ссылка на файл</h3>
+          <div class="form-modal__info-block">
+            <div class="form-modal__input-block">
+              <div class="form-modal__input-wrapper">
+                <input type="text" class="form-modal__input">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-modal__tags">
+          <h3 class="form-modal__subtitle">Соответствие тегов (YML)</h3>
+          <div class="form-modal__info-block">
+            <div class="form-modal__input-block">
+              <span class="form-modal__input-name">Название</span>
+              <input type="text" class="form-modal__input">
+            </div>
+            <div class="form-modal__input-block">
+              <span class="form-modal__input-name">Артикул</span>
+              <input type="text" class="form-modal__input">
+            </div>
+            <div class="form-modal__input-block">
+              <span class="form-modal__input-name">Ссылка на товар</span>
+              <input type="text" class="form-modal__input">
+            </div>
+            <div class="form-modal__input-block">
+              <span class="form-modal__input-name">Ссылка на фото</span>
+              <input type="text" class="form-modal__input">
+            </div>
+            <div class="form-modal__input-block">
+              <span class="form-modal__input-name">Цена</span>
+              <input type="text" class="form-modal__input">
+            </div>
+            <div class="form-modal__input-block">
+              <span class="form-modal__input-name">Количество</span>
+              <input type="text" class="form-modal__input">
+            </div>
+            <div class="form-modal__input-block">
+              <span class="form-modal__input-name">Категория</span>
+              <input type="text" class="form-modal__input">
+            </div>
+            <div class="form-modal__input-block">
+              <span class="form-modal__input-name">Продукт</span>
+              <input type="text" class="form-modal__input">
+            </div>
+          </div>
+        </div>
+
+      </form>
+
+      <div class="modal__bottom">
+        <button class="modal__btn modal__btn--download">Сохранить</button>
+        <button class="modal__btn modal-close">Отменить</button>
+      </div>
+    </div>
+  </div>
+
 </div>
   </div>
 
