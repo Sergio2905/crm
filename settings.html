@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="Ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="Description" content="default">
+  <title>BatteryCRM</title>
+  <link href="img/logo.png" rel="icon"/>
+  <link rel="preload" href="fonts/FuturaNewRegular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/FuturaNewMedium.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/FuturaNewDemi.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/FuturaNewBold.woff2" as="font" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+  <div class="header">
+    <div class="header__title">Система управления</div>
+    <a class="header__logo" href="$">
+      <svg width='8' height='16'>
+        <use href='img/sprite/sprite.svg#logo-battery'></use>
+      </svg>
+      <svg width='122' height='13'>
+        <use href='img/sprite/sprite.svg#logo-title'></use>
+      </svg>
+    </a>
+    <div class="header__btns">
+      <a href="./settings.html" class="header__btn">
+        <svg width='13.7' height='13.7'>
+          <use href='img/sprite/sprite.svg#setting'></use>
+        </svg>
+      </a>
+      <div class="header__user-btn">
+        <button class="header__btn">
+          <svg width='13.7' height='13.7'>
+            <use href='img/sprite/sprite.svg#user'></use>
+          </svg>
+        </button>
+        <div class="header__user-settings">
+          <div class="user">
+            <div class="user__personal">
+              <div class="user__avatar">
+                <picture>
+                  <source type='image/webp' srcset='img/agnes.webp'>
+                  <img width='40' height='40' src='img/agnes.png' alt='Агнес Толстопятко'>
+                </picture>
+              </div>
+              <div class="user__name">Агнес Толстопятко</div>
+            </div>
+            <ul class="user__btns">
+              <li class="user__btns-item">
+                <button class="user__btn">
+                  <svg width='14' height='14'>
+                    <use href='img/sprite/sprite.svg#account'></use>
+                  </svg>
+                  <span>Личный кабинет</span>
+                </button>
+              </li>
+              <li class="user__btns-item">
+                <button class="user__btn">
+                  <svg width='14' height='14'>
+                    <use href='img/sprite/sprite.svg#theme'></use>
+                  </svg>
+                  <span>Темная тема</span>
+                </button>
+              </li>
+              <li class="user__btns-item">
+                <button class="user__btn">
+                  <svg width='14' height='14'>
+                    <use href='img/sprite/sprite.svg#exit'></use>
+                  </svg>
+                  <span>Выйти</span>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+        <main class="main">
+
+            <section class="navigation">
+                <div class="navigation__wrapper">
+                    <ul class="navigation__controls">
+                        <li class="navigation__controls-item">
+                            <div class="navigation__controls-btn">
+                                <svg width='19' height='19'>
+                                    <use href='img/sprite/sprite.svg#bag'></use>
+                                </svg>
+                                <span>Заказы</span>
+                            </div>
+                        </li>
+                        <li class="navigation__controls-item">
+                            <div class="navigation__controls-btn">
+                                <svg width='19' height='19'>
+                                    <use href='img/sprite/sprite.svg#clients'></use>
+                                </svg>
+                                <span>Клиенты</span>
+                            </div>
+                        </li>
+                        <li class="navigation__controls-item">
+                            <div class="navigation__controls-btn active">
+                                <svg width='19' height='19'>
+                                    <use href='img/sprite/sprite.svg#shop'></use>
+                                </svg>
+                                <span>Товары</span>
+                            </div>
+                        </li>
+                        <li class="navigation__controls-item">
+                            <div class="navigation__controls-btn">
+                                <svg width='19' height='19'>
+                                    <use href='img/sprite/sprite.svg#wallet'></use>
+                                </svg>
+                                <span>Финансы</span>
+                            </div>
+                        </li>
+                        <li class="navigation__controls-item">
+                            <div class="navigation__controls-btn">
+                                <svg width='19' height='19'>
+                                    <use href='img/sprite/sprite.svg#tag'></use>
+                                </svg>
+                                <span>Соответствия товаров</span>
+                            </div>
+                        </li>
+                        <li class="navigation__controls-item">
+                            <div class="navigation__controls-btn">
+                                <svg width='19' height='19'>
+                                    <use href='img/sprite/sprite.svg#activity'></use>
+                                </svg>
+                                <span>Аналитика</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="content">
+                <h1 class="content__title-mobile">Товары</h1>
+
+                <div class="content__sidebar sidebar">
+                    <ul class="sidebar__list">
+                        <li class="sidebar__item active">
+                            <a href="#" class="sidebar__link">
+                                <svg>
+                                    <use href='img/sprite/sprite.svg#shopping-cart'></use>
+                                </svg>
+                                <span>Товары</span>
+                            </a>
+                        </li>
+                        <li class="sidebar__item">
+                            <a href="#" class="sidebar__link">
+                                <svg>
+                                    <use href='img/sprite/sprite.svg#store'></use>
+                                </svg>
+                                <span>Ресурсы продаж</span>
+                            </a>
+                        </li>
+                        <li class="sidebar__item">
+                            <a href="#" class="sidebar__link">
+                                <svg>
+                                    <use href='img/sprite/sprite.svg#box'></use>
+                                </svg>
+                                <span>Склады</span>
+                            </a>
+                        </li>
+                        <li class="sidebar__item">
+                            <a href="#" class="sidebar__link">
+                                <svg>
+                                    <use href='img/sprite/sprite.svg#data'></use>
+                                </svg>
+                                <span>Автоматизация</span>
+                            </a>
+                        </li>
+                        <li class="sidebar__item">
+                            <a href="#" class="sidebar__link">
+                                <svg>
+                                    <use href='img/sprite/sprite.svg#calculator'></use>
+                                </svg>
+                                <span>Матрица прибыли</span>
+                            </a>
+                        </li>
+                        <li class="sidebar__item">
+                            <a href="#" class="sidebar__link">
+                                <svg>
+                                    <use href='img/sprite/sprite.svg#folder-add'></use>
+                                </svg>
+                                <span>Другое</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="content__body">
+
+                    <div class="content__header header-content">
+                        <h2 class="header-content__title">Товары</h2>
+                        <div class="header-content__btns">
+                            <button class="header-content__btn btn-blue" data-path="catalog-refresh">Обновить
+                                каталог</button>
+                            <button class="header-content__btn btn-white" data-path="catalog-clear">Очистить каталог
+                                товаров</button>
+                        </div>
+                    </div>
+
+                    <h3 class="content__subtitle">Синхронизация товаров</h3>
+
+                    <div class="content__filter filter">
+                        <form class="filter__form form">
+                            <div class="filter__info">
+                                <div class="filter__info-block">
+                                    <div class="form__title">
+                                        Основной каталог данных
+                                    </div>
+                                    <div class="filter__select filter__select--catalog select">
+                                        <div class="filter__select-header">
+                                            <span class="filter__select-current select__current">
+                                                Каталог 1
+                                            </span>
+                                            <svg width='12' height='12'>
+                                                <use href='img/sprite/sprite.svg#arrow'></use>
+                                            </svg>
+                                        </div>
+                                        <ul class="filter__select-body select__body">
+                                            <li class="filter__select-item select__item" data-choice='choosen'>Каталог 1
+                                            </li>
+                                            <li class="filter__select-item select__item" data-choice='choosen'>Каталог 2
+                                            </li>
+                                            <li class="filter__select-item select__item" data-choice='choosen'>Каталог 3
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="filter__info-block">
+                                    <label class="filter__checkbox-label">
+                                        <input class="filter__checkbox-input" type="checkbox" name="auto-refresh">
+                                        <span class="filter__checkbox-name">Автообновление каталога</span>
+                                    </label>
+                                </div>
+                                <div class="filter__info-block">
+                                    <div class="filter__input-block">
+                                        <span class="filter__input-name">Автообновление каждые</span>
+                                        <input type="text" class="filter__input">
+                                    </div>
+                                </div>
+                                <div class="filter__info-block">
+                                    <div class="filter__select filter__select--time select">
+                                        <div class="filter__select-header">
+                                            <span class="filter__select-current select__current">
+                                                Минут
+                                            </span>
+                                            <svg width='12' height='12'>
+                                                <use href='img/sprite/sprite.svg#arrow'></use>
+                                            </svg>
+                                        </div>
+                                        <ul class="filter__select-body select__body">
+                                            <li class="filter__select-item select__item" data-choice='choosen'>Секунд
+                                            </li>
+                                            <li class="filter__select-item select__item" data-choice='choosen'>Часов
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form__btns">
+                                <button type="button" class="form__btn btn-blue"
+                                    data-path="catalog-save">Сохранить</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <h3 class="content__subtitle">Список каталогов</h3>
+
+                    <div class="content__table table">
+                        <div class="table__wrapp">
+                            <div class="table__product">
+                                <ul class="table__product-list">
+                                    <li class="table__product-item" data-sticky="sticky">
+                                        <button class="table__product-amount table__btn">
+                                            <span>#</span>
+                                            <svg width='14' height='14'>
+                                                <use href='img/sprite/sprite.svg#sorting'></use>
+                                            </svg>
+                                        </button>
+                                        <button class="table__product-title table__btn">
+                                            <span>Название</span>
+                                            <svg width='14' height='14'>
+                                                <use href='img/sprite/sprite.svg#sorting'></use>
+                                            </svg>
+                                        </button>
+                                        <button class="table__product-count table__btn">
+                                            <span>Количество товаров</span>
+                                            <svg width='14' height='14'>
+                                                <use href='img/sprite/sprite.svg#sorting'></use>
+                                            </svg>
+                                        </button>
+                                        <button class="table__product-source table__btn">
+                                            <span>Источник</span>
+                                            <svg width='14' height='14'>
+                                                <use href='img/sprite/sprite.svg#sorting'></use>
+                                            </svg>
+                                        </button>
+                                        <button class="table__product-main table__btn">
+                                            <span>Основной</span>
+                                        </button>
+                                        <button class="table__product-actions table__btn">
+                                            <span>Действие</span>
+                                        </button>
+                                    </li>
+                                    <li class="table__product-item">
+                                        <div class="table__product-amount">
+                                            <span>1</span>
+                                        </div>
+                                        <div class="table__product-title">
+                                            <span>USB Cable Yoho grey 1564 micro max</span>
+                                            <div class="table__product-titlefull">USB Cable Yoho grey 1564 micro max
+                                            </div>
+                                        </div>
+                                        <div class="table__product-count">
+                                            <span>174 458</span>
+                                            <div class="table__product-titlefull">174 458</div>
+                                        </div>
+                                        <div class="table__product-source">
+                                            <span>Кабели</span>
+                                            <div class="table__product-titlefull">Кабели</div>
+                                        </div>
+                                        <div class="table__product-main">
+                                            <svg>
+                                                <use xlink: href="img/sprite/sprite.svg#star"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="table__product-actions">
+                                            <div class="table__actions">
+                                                <button class="table__actions-btn">
+                                                    <svg>
+                                                        <use xlink: href="img/sprite/sprite.svg#edit"></use>
+                                                    </svg>
+                                                </button>
+                                                <button class="table__actions-btn" data-path="catalog-delete">
+                                                    <svg>
+                                                        <use xlink: href="img/sprite/sprite.svg#delete"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="table__product-item">
+                                        <div class="table__product-amount">
+                                            <span>2</span>
+                                        </div>
+                                        <div class="table__product-title">
+                                            <span>USB Cable Yoho grey 1564 micro max</span>
+                                            <div class="table__product-titlefull">USB Cable Yoho grey 1564 micro max
+                                            </div>
+                                        </div>
+                                        <div class="table__product-count">
+                                            <span>639 884 452</span>
+                                            <div class="table__product-titlefull">174 458</div>
+                                        </div>
+                                        <div class="table__product-source">
+                                            <span>Кабели</span>
+                                            <div class="table__product-titlefull">Кабели</div>
+                                        </div>
+                                        <div class="table__product-main">
+
+                                        </div>
+                                        <div class="table__product-actions">
+                                            <div class="table__actions">
+                                                <button class="table__actions-btn">
+                                                    <svg>
+                                                        <use xlink: href="img/sprite/sprite.svg#edit"></use>
+                                                    </svg>
+                                                </button>
+                                                <button class="table__actions-btn" data-path="catalog-delete">
+                                                    <svg>
+                                                        <use xlink: href="img/sprite/sprite.svg#delete"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="table__product-item">
+                                        <div class="table__product-amount">
+                                            <span>3</span>
+                                        </div>
+                                        <div class="table__product-title">
+                                            <span>USB Cable Yoho grey 1564 micro max</span>
+                                            <div class="table__product-titlefull">USB Cable Yoho grey 1564 micro max
+                                            </div>
+                                        </div>
+                                        <div class="table__product-count">
+                                            <span>0</span>
+                                            <div class="table__product-titlefull">174 458</div>
+                                        </div>
+                                        <div class="table__product-source">
+                                            <span>Кабели</span>
+                                            <div class="table__product-titlefull">Кабели</div>
+                                        </div>
+                                        <div class="table__product-main">
+
+                                        </div>
+                                        <div class="table__product-actions">
+                                            <div class="table__actions">
+                                                <button class="table__actions-btn">
+                                                    <svg>
+                                                        <use xlink: href="img/sprite/sprite.svg#edit"></use>
+                                                    </svg>
+                                                </button>
+                                                <button class="table__actions-btn" data-path="catalog-delete">
+                                                    <svg>
+                                                        <use xlink: href="img/sprite/sprite.svg#delete"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="content__btn content__btn-add btn-blue">
+                        <svg>
+                            <use xlink: href="img/sprite/sprite.svg#plus"></use>
+                        </svg>
+                        <span>Добавить каталог</span>
+                    </button>
+                </div>
+            </section>
+
+        </main>
+
+        <footer>
+  <div class="footer">
+    <p class="copyright">© 2022. iBattery CRM. Все права защищены.</p>
+  </div>
+</footer>
+
+        <div class="modal">
+  <div class="modal__container" data-target="export">
+    <div class="modal__wrapper download">
+      <div class="modal__title">Выберите формат экспорта</div>
+
+      <div class="download__modal-content">
+        <div class="download__select select">
+          <div class="download__select-header select__header">
+            <span class="download__select-current select__current">
+              Таблица XLSX
+            </span>
+            <svg width='12' height='12'>
+              <use href='img/sprite/sprite.svg#arrow'></use>
+            </svg>
+          </div>
+
+          <ul class="download__select-body select__body">
+            <li class="download__select-item select__item" data-choice='choosen'>Таблица XLSX</li>
+            <li class="download__select-item select__item" data-choice='choosen'>Таблица XLS</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="modal__bottom">
+        <button class="modal__btn modal__btn--download">Загрузить</button>
+        <button class="modal__btn modal-close">Отменить</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal__container" data-target="filter">
+    <div class="modal__wrapper choose">
+      <div class="modal__close modal-close">
+        <svg width='24' height='24'>
+          <use href='img/sprite/sprite.svg#close'></use>
+        </svg>
+      </div>
+
+      <div class="choose__modal-content">
+        <div class="modal__title">Выберите категорию</div>
+
+        <div class="choose__content">
+          <div class="choose__categories">
+            <div class="choose__category">
+              <div class="choose__categories-title">Категория</div>
+
+              <ul class="choose__categories-list">
+                <li class="choose__categories-item">
+                  <label class="choose__label sort__label">
+                    <input class="choose__input sort__input" type="checkbox" name="category">
+                    <span class="choose__name sort__name">Автотовары</span>
+                  </label>
+                </li>
+                <li class="choose__categories-item">
+                  <label class="choose__label sort__label">
+                    <input class="choose__input sort__input" type="checkbox" name="category">
+                    <span class="choose__name sort__name">Аксессуары</span>
+                  </label>
+                </li>
+                <li class="choose__categories-item">
+                  <label class="choose__label sort__label">
+                    <input class="choose__input sort__input" type="checkbox" name="category">
+                    <span class="choose__name sort__name">Техника</span>
+                  </label>
+                </li>
+                <li class="choose__categories-item">
+                  <label class="choose__label sort__label">
+                    <input class="choose__input sort__input" type="checkbox" name="category">
+                    <span class="choose__name sort__name">Аудио</span>
+                  </label>
+                </li>
+                <li class="choose__categories-item">
+                  <label class="choose__label sort__label">
+                    <input class="choose__input sort__input" type="checkbox" name="category">
+                    <span class="choose__name sort__name">Чехлы-аккумуляторы</span>
+                  </label>
+                </li>
+                <li class="choose__categories-item">
+                  <label class="choose__label sort__label">
+                    <input class="choose__input sort__input" type="checkbox" name="category">
+                    <span class="choose__name sort__name">Зарядные устройства</span>
+                  </label>
+                </li>
+                <li class="choose__categories-item">
+                  <label class="choose__label sort__label">
+                    <input class="choose__input sort__input" type="checkbox" name="category">
+                    <span class="choose__name sort__name">Здоровье</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+
+            <div class="choose__category">
+              <div class="choose__categories-title">Подкатегория 1</div>
+
+              <ul class="choose__categories-list">
+                <li class="choose__categories-item">
+                  <label class="choose__label sort__label">
+                    <input class="choose__input sort__input" type="checkbox" name="category1">
+                    <span class="choose__name sort__name">Для iPhone</span>
+                  </label>
+                </li>
+                <li class="choose__categories-item">
+                  <label class="choose__label sort__label">
+                    <input class="choose__input sort__input" type="checkbox" name="category1">
+                    <span class="choose__name sort__name">Для iPhone 6</span>
+                  </label>
+                </li>
+                <li class="choose__categories-item">
+                  <label class="choose__label sort__label">
+                    <input class="choose__input sort__input" type="checkbox" name="category1">
+                    <span class="choose__name sort__name">Для iPhone 7</span>
+                  </label>
+                </li>
+                <li class="choose__categories-item">
+                  <label class="choose__label sort__label">
+                    <input class="choose__input sort__input" type="checkbox" name="category1">
+                    <span class="choose__name sort__name">Для iPhone 8</span>
+                  </label>
+                </li>
+                <li class="choose__categories-item">
+                  <label class="choose__label sort__label">
+                    <input class="choose__input sort__input" type="checkbox" name="category1">
+                    <span class="choose__name sort__name">Для iPhone 9</span>
+                  </label>
+                </li>
+                <li class="choose__categories-item">
+                  <label class="choose__label sort__label">
+                    <input class="choose__input sort__input" type="checkbox" name="category1">
+                    <span class="choose__name sort__name">Для iPhone 10</span>
+                  </label>
+                </li>
+                <li class="choose__categories-item">
+                  <label class="choose__label sort__label">
+                    <input class="choose__input sort__input" type="checkbox" name="category1">
+                    <span class="choose__name sort__name">Для iPhone 11</span>
+                  </label>
+                </li>
+                <li class="choose__categories-item">
+                  <label class="choose__label sort__label">
+                    <input class="choose__input sort__input" type="checkbox" name="category1">
+                    <span class="choose__name sort__name">Для iPhone 12</span>
+                  </label>
+                </li>
+                <li class="choose__categories-item">
+                  <label class="choose__label sort__label">
+                    <input class="choose__input sort__input" type="checkbox" name="category1">
+                    <span class="choose__name sort__name">Для iPhone 13</span>
+                  </label>
+                </li>
+                <li class="choose__categories-item">
+                  <label class="choose__label sort__label">
+                    <input class="choose__input sort__input" type="checkbox" name="category1">
+                    <span class="choose__name sort__name">Защитные стекла и пленки</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+
+            <div class="choose__category">
+              <div class="choose__categories-title">Подкатегория 2</div>
+
+              <ul class="choose__categories-list">
+                <li class="choose__categories-item">
+                  <label class="choose__label sort__label">
+                    <input class="choose__input sort__input" type="checkbox" name="category2">
+                    <span class="choose__name sort__name">Портативный </span>
+                  </label>
+                </li>
+                <li class="choose__categories-item">
+                  <label class="choose__label sort__label">
+                    <input class="choose__input sort__input" type="checkbox" name="category2">
+                    <span class="choose__name sort__name">Солнечный</span>
+                  </label>
+                </li>
+                <li class="choose__categories-item">
+                  <label class="choose__label sort__label">
+                    <input class="choose__input sort__input" type="checkbox" name="category2">
+                    <span class="choose__name sort__name">Безпроводной</span>
+                  </label>
+                </li>
+                <li class="choose__categories-item">
+                  <label class="choose__label sort__label">
+                    <input class="choose__input sort__input" type="checkbox" name="category2">
+                    <span class="choose__name sort__name">Серии А</span>
+                  </label>
+                </li>
+                <li class="choose__categories-item">
+                  <label class="choose__label sort__label">
+                    <input class="choose__input sort__input" type="checkbox" name="category2">
+                    <span class="choose__name sort__name">Для Samsunge S</span>
+                  </label>
+                </li>
+                <li class="choose__categories-item">
+                  <label class="choose__label sort__label">
+                    <input class="choose__input sort__input" type="checkbox" name="category2">
+                    <span class="choose__name sort__name">Для Samsunge A10</span>
+                  </label>
+                </li>
+                <li class="choose__categories-item">
+                  <label class="choose__label sort__label">
+                    <input class="choose__input sort__input" type="checkbox" name="category2">
+                    <span class="choose__name sort__name">Для Samsunge A20</span>
+                  </label>
+                </li>
+                <li class="choose__categories-item">
+                  <label class="choose__label sort__label">
+                    <input class="choose__input sort__input" type="checkbox" name="category2">
+                    <span class="choose__name sort__name">Для Samsunge Note A10</span>
+                  </label>
+                </li>
+                <li class="choose__categories-item">
+                  <label class="choose__label sort__label">
+                    <input class="choose__input sort__input" type="checkbox" name="category2">
+                    <span class="choose__name sort__name">Для Samsunge Note S10</span>
+                  </label>
+                </li>
+                <li class="choose__categories-item">
+                  <label class="choose__label sort__label">
+                    <input class="choose__input sort__input" type="checkbox" name="category2">
+                    <span class="choose__name sort__name">Для Samsunge</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal__bottom">
+        <button class="modal__btn modal__btn--choose">Выбрать</button>
+        <button class="modal__btn">Очистить</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal__container" data-target="categories">
+    <div class="modal__wrapper choose">
+      <div class="modal__close modal-close">
+        <svg width='24' height='24'>
+          <use href='img/sprite/sprite.svg#close'></use>
+        </svg>
+      </div>
+
+      <div class="choose__modal-content">
+        <div class="modal__title">Конструктор таблицы</div>
+
+        <div class="choose__content">
+          <div class="choose__categories">
+            <div class="choose__category">
+              <div class="choose__categories-title">Товары</div>
+
+              <ul class="choose__categories-list">
+                <li class="choose__categories-item">
+                  <label class="choose__label sort__label">
+                    <input class="choose__input sort__input" type="checkbox" name="category">
+                    <span class="choose__name sort__name">Категория</span>
+                  </label>
+                </li>
+                <li class="choose__categories-item">
+                  <label class="choose__label sort__label">
+                    <input class="choose__input sort__input" type="checkbox" name="category">
+                    <span class="choose__name sort__name">Подкатегория 1</span>
+                  </label>
+                </li>
+                <li class="choose__categories-item">
+                  <label class="choose__label sort__label">
+                    <input class="choose__input sort__input" type="checkbox" name="category">
+                    <span class="choose__name sort__name">Подкатегория 2</span>
+                  </label>
+                </li>
+                <li class="choose__categories-item">
+                  <label class="choose__label sort__label">
+                    <input class="choose__input sort__input" type="checkbox" name="category" checked>
+                    <span class="choose__name sort__name">Артикул</span>
+                  </label>
+                </li>
+                <li class="choose__categories-item">
+                  <label class="choose__label sort__label">
+                    <input class="choose__input sort__input" type="checkbox" name="category">
+                    <span class="choose__name sort__name">Фото</span>
+                  </label>
+                </li>
+                <li class="choose__categories-item">
+                  <label class="choose__label sort__label">
+                    <input class="choose__input sort__input" type="checkbox" name="category">
+                    <span class="choose__name sort__name">Название</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+
+            <div class="choose__category">
+              <div class="choose__categories-title">Ресурсы продаж</div>
+
+              <ul class="choose__categories-list">
+                <li class="choose__categories-item">
+                  <label class="choose__label sort__label">
+                    <input class="choose__input sort__input" type="checkbox" name="category1">
+                    <span class="choose__name sort__name">Сайт</span>
+                  </label>
+                </li>
+                <li class="choose__categories-item">
+                  <label class="choose__label sort__label">
+                    <input class="choose__input sort__input" type="checkbox" name="category1" checked>
+                    <span class="choose__name sort__name">Rozetka</span>
+                  </label>
+                </li>
+                <li class="choose__categories-item">
+                  <label class="choose__label sort__label">
+                    <input class="choose__input sort__input" type="checkbox" name="category1">
+                    <span class="choose__name sort__name">Prom</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+
+            <div class="choose__category">
+              <div class="choose__categories-title">Склады</div>
+
+              <ul class="choose__categories-list">
+                <li class="choose__categories-item">
+                  <label class="choose__label sort__label">
+                    <input class="choose__input sort__input" type="checkbox" name="category2" checked>
+                    <span class="choose__name sort__name">Склад 1</span>
+                  </label>
+                </li>
+                <li class="choose__categories-item">
+                  <label class="choose__label sort__label">
+                    <input class="choose__input sort__input" type="checkbox" name="category2">
+                    <span class="choose__name sort__name">Склад 2</span>
+                  </label>
+                </li>
+                <li class="choose__categories-item">
+                  <label class="choose__label sort__label">
+                    <input class="choose__input sort__input" type="checkbox" name="category2" checked>
+                    <span class="choose__name sort__name">Склад 3</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal__bottom">
+        <button class="modal__btn modal__btn--choose">Выбрать</button>
+        <button class="modal__btn">Очистить</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal__container" data-target="catalog-refresh">
+    <div class="modal__wrapper download">
+      <div class="modal__title">Обновить каталог</div>
+
+      <div class="modal__message">
+        Подтвердите загрузку данных для текущего каталога товаров. При подтверждении, загрузка начнется в фоне и Вы
+        получите уведомление об окончании.
+      </div>
+
+      <div class="modal__bottom">
+        <button class="modal__btn modal__btn--download">Подтвердить</button>
+        <button class="modal__btn modal-close">Отменить</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal__container" data-target="catalog-clear">
+    <div class="modal__wrapper download">
+      <div class="modal__title">Очистить каталог</div>
+
+      <div class="modal__message">
+        Подтвердите очистку всех данных для текущего каталога товаров. При подтверждении, работа системи соответствия
+        товаров будет остановлена.
+      </div>
+
+      <div class="modal__bottom">
+        <button class="modal__btn modal__btn--download">Подтвердить</button>
+        <button class="modal__btn modal-close">Отменить</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal__container" data-target="catalog-save">
+    <div class="modal__wrapper download">
+      <div class="modal__title">Сохранить каталог</div>
+
+      <div class="modal__message">
+        Подтвердите очистку всех данных для текущего каталога товаров. При подтверждении, работа системи соответствия
+        товаров будет остановлена.
+      </div>
+
+      <div class="modal__bottom">
+        <button class="modal__btn modal__btn--download">Подтвердить</button>
+        <button class="modal__btn modal-close">Отменить</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal__container" data-target="catalog-delete">
+    <div class="modal__wrapper download">
+      <div class="modal__title">Удвлить каталог</div>
+
+      <div class="modal__message">
+        Подтвердите удаление всех данных для текущего каталога товаров. При подтверждении, вся информация о данном
+        складе будет безвозвратно удалена.
+      </div>
+
+      <div class="modal__bottom">
+        <button class="modal__btn modal__btn--download">Подтвердить</button>
+        <button class="modal__btn modal-close">Отменить</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+    </div>
+
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>
