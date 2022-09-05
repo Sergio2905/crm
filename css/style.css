@@ -2959,6 +2959,22 @@ footer {
   display: -ms-flexbox;
   display: flex;
   grid-gap: 10px;
+  position: relative;
+  z-index: 1;
+}
+.form-modal__autorefresh .form-modal__info-block:first-child .autorefresh__input-block {
+  display: none;
+}
+.form-modal__autorefresh .form-modal__info-block:first-child .autorefresh__info-block {
+  display: none;
+}
+.form-modal__autorefresh .form-modal__info-block:first-child.active .autorefresh__input-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.form-modal__autorefresh .form-modal__info-block:first-child.active .autorefresh__info-block {
+  display: block;
 }
 .form-modal__autorefresh .autorefresh__select--time {
   -webkit-transform: translate(0, 0);
@@ -3290,12 +3306,6 @@ footer {
 .table__product-title:hover .table__product-titlefull {
   opacity: 1;
   visibility: visible;
-}
-@media (min-width: 2040px) {
-  .table__product-title:hover .table__product-titlefull {
-    opacity: 0;
-    visibility: hidden;
-  }
 }
 .table__product-titlefull {
   margin-top: 9px;
@@ -3885,6 +3895,9 @@ footer {
 }
 .content__table-warehouses .table__product-item:last-child .autorefresh__select-body {
   bottom: 32px;
+}
+.content__table-warehouses .table__product-item:nth-last-child(2) .autorefresh__select-body {
+  top: 18px;
 }
 .content__table-warehouses .table__product-item:not(:first-child) .table__product-actions {
   -webkit-box-pack: end;
