@@ -4309,7 +4309,7 @@ footer {
   margin-bottom: 10px;
 }
 .table__product-sublist .table__product-item {
-  background: none;
+  background: #fff;
   height: 60px;
   width: 100%;
   position: relative;
@@ -4335,7 +4335,6 @@ footer {
 }
 .table__product-sublist .table__product-item:first-of-type {
   height: 60px;
-  width: 1070px;
   border-radius: 20px;
   margin-bottom: 10px;
 }
