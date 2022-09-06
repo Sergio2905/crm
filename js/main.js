@@ -25,8 +25,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_replaceEl_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_components_replaceEl_js__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var _components_switcher_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/switcher.js */ "./source/js/components/switcher.js");
 /* harmony import */ var _components_switcher_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_components_switcher_js__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _components_autorefresh_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/autorefresh.js */ "./source/js/components/autorefresh.js");
-/* harmony import */ var _components_autorefresh_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_components_autorefresh_js__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _components_check_all_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/check-all.js */ "./source/js/components/check-all.js");
+/* harmony import */ var _components_check_all_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_components_check_all_js__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _components_autorefresh_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/autorefresh.js */ "./source/js/components/autorefresh.js");
+/* harmony import */ var _components_autorefresh_js__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_components_autorefresh_js__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _components_uncover_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/uncover.js */ "./source/js/components/uncover.js");
+/* harmony import */ var _components_uncover_js__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_components_uncover_js__WEBPACK_IMPORTED_MODULE_10__);
 // import './components/sliders.js';
  // import './components/burger.js';
 
@@ -37,6 +41,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
  // import './components/poper.js';
+
+
 
 
 
@@ -245,6 +251,35 @@ if (refreshBlocks.length > 0) {
       const refreshForm = refreshBtn.closest('.form-modal__info-block');
       console.log(e.target);
       refreshForm.classList.toggle('active');
+    });
+  }
+}
+
+/***/ }),
+
+/***/ "./source/js/components/check-all.js":
+/*!*******************************************!*\
+  !*** ./source/js/components/check-all.js ***!
+  \*******************************************/
+/***/ (function() {
+
+const checkAllBtns = document.querySelectorAll('.check-all');
+const warehouseTables = document.querySelectorAll('.table__warehouse');
+
+if (checkAllBtns.length > 0) {
+  for (let index = 0; index < checkAllBtns.length; index++) {
+    const checkAllBtn = checkAllBtns[index];
+    checkAllBtn.addEventListener('click', function () {
+      const checkboxes = warehouseTables[index].querySelectorAll('.filter__checkbox-input');
+      checkboxes.forEach(checkbox => {
+        if (!checkbox.nextElementSibling.classList.contains('check-all')) {
+          if (!checkAllBtn.previousElementSibling.checked) {
+            checkbox.checked = true;
+          } else {
+            checkbox.checked = false;
+          }
+        }
+      });
     });
   }
 }
@@ -732,6 +767,81 @@ if (switchers.length > 0) {
       const parentEl = switcher.closest('.table__product-item');
       parentEl.classList.toggle('available');
       parentEl.classList.toggle('unavailable');
+    });
+  }
+}
+
+/***/ }),
+
+/***/ "./source/js/components/uncover.js":
+/*!*****************************************!*\
+  !*** ./source/js/components/uncover.js ***!
+  \*****************************************/
+/***/ (function() {
+
+const coverBtns = document.querySelectorAll('.cover');
+const uncoverBtns = document.querySelectorAll('.uncover');
+const warehouses = document.querySelectorAll('.table__warehouse');
+let value = 0;
+
+if (coverBtns.length > 0) {
+  for (let index = 0; index < coverBtns.length; index++) {
+    const coverBtn = coverBtns[index];
+    coverBtn.addEventListener('click', function () {
+      const parentItem = coverBtn.closest('.table__product-item');
+      value = index;
+
+      if (parentItem.classList.contains('uncovered')) {
+        parentItem.classList.remove('uncovered');
+        const sublist = parentItem.nextElementSibling;
+
+        if (sublist.classList.contains('visible')) {
+          sublist.classList.remove('visible');
+          sublist.classList.add('hidden');
+
+          if (warehouses.length > 0) {
+            for (let index = 0; index < warehouses.length; index++) {
+              const warehouse = warehouses[index];
+              const list = warehouse.querySelectorAll('.table__warehouse-sublist')[value];
+
+              if (!list.classList.contains('hidden')) {
+                list.classList.add('hidden');
+              }
+            }
+          }
+        }
+      }
+    });
+  }
+}
+
+if (uncoverBtns.length > 0) {
+  for (let index = 0; index < uncoverBtns.length; index++) {
+    const uncoverBtn = uncoverBtns[index];
+    uncoverBtn.addEventListener('click', function () {
+      const parentItem = uncoverBtn.closest('.table__product-item');
+      value = index;
+
+      if (!parentItem.classList.contains('uncovered')) {
+        parentItem.classList.add('uncovered');
+        const sublist = parentItem.nextElementSibling;
+
+        if (sublist.classList.contains('hidden')) {
+          sublist.classList.remove('hidden');
+          sublist.classList.add('visible');
+
+          if (warehouses.length > 0) {
+            for (let index = 0; index < warehouses.length; index++) {
+              const warehouse = warehouses[index];
+              const list = warehouse.querySelectorAll('.table__warehouse-sublist')[value];
+
+              if (list.classList.contains('hidden')) {
+                list.classList.remove('hidden');
+              }
+            }
+          }
+        }
+      }
     });
   }
 }
