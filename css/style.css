@@ -3862,19 +3862,18 @@ footer {
 }
 
 .content__table-warehouses .table__product {
-  min-width: 1140px;
+  min-width: 1400px;
 }
 .content__table-warehouses .table__product.table__resources:last-child .table__product-actions {
   width: 28px;
   margin-right: 0;
 }
-.content__table-warehouses .table__product:last-of-type {
-  min-width: 396px;
-  min-width: 396px;
+.content__table-warehouses .table__product.table__resources-spec {
+  min-width: 1140px;
 }
-.content__table-warehouses .table__product:last-of-type .table__product-actions {
-  width: 170px;
-  margin-right: 0;
+.content__table-warehouses .table__product.table__resources-extra {
+  max-width: 396px;
+  min-width: unset;
 }
 .content__table-warehouses .table__product.table__resources .table__product-actions {
   width: 105px;
@@ -4557,9 +4556,9 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 .special-table__header .content__subtitle {
   margin-top: 0;
@@ -4622,6 +4621,10 @@ footer {
 }
 .special-table__search-show.active {
   display: block;
+}
+
+.special-content {
+  margin-top: 40px;
 }
 
 .filter {
