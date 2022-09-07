@@ -55,6 +55,9 @@
 <path d="M5 22H7C9 22 10 21 10 19V17C10 15 9 14 7 14H5C3 14 2 15 2 17V19C2 21 3 22 5 22Z" stroke="#ACDED8" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M6 10C8.20914 10 10 8.20914 10 6C10 3.79086 8.20914 2 6 2C3.79086 2 2 3.79086 2 6C2 8.20914 3.79086 10 6 10Z" stroke="#ACDED8" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M18 22C20.2091 22 22 20.2091 22 18C22 15.7909 20.2091 14 18 14C15.7909 14 14 15.7909 14 18C14 20.2091 15.7909 22 18 22Z" stroke="#ACDED8" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol><symbol id="check-gray" viewBox="0 0 25 24">
+<rect x="0.5" width="24" height="24" rx="6" fill="#D9D9D9"/>
+<path d="M7.5 12L10.5 15L18.5 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </symbol><symbol id="check" viewBox="0 0 24 24">
 <rect width="24" height="24" rx="6" fill="#64B6AC"/>
 <path d="M7 12L10 15L18 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
