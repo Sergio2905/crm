@@ -758,15 +758,70 @@ stickyElFunction(stickyBlocks, activeClass, stickyOffset);
   \******************************************/
 /***/ (function() {
 
-const switchers = document.querySelectorAll(".table__product-switcher");
+const onSwitchers = document.querySelectorAll(".table__product-switcher.on");
+const offSwitchers = document.querySelectorAll(".table__product-switcher.off");
+const extraEl = document.querySelectorAll('.table__resources-extra .table__product-item');
 
-if (switchers.length > 0) {
-  for (let index = 0; index < switchers.length; index++) {
-    const switcher = switchers[index];
-    switcher.addEventListener('click', function () {
-      const parentEl = switcher.closest('.table__product-item');
+if (onSwitchers.length > 0) {
+  for (let index = 0; index < onSwitchers.length; index++) {
+    const onSwitcher = onSwitchers[index];
+    const offSwitcher = offSwitchers[index];
+    onSwitcher.addEventListener('click', function () {
+      const parentEl = onSwitcher.closest('.table__product-item');
       parentEl.classList.toggle('available');
       parentEl.classList.toggle('unavailable');
+
+      if (extraEl.length > 0) {
+        extraEl[index + 1].classList.toggle('available');
+        extraEl[index + 1].classList.toggle('unavailable');
+      }
+    });
+    offSwitcher.addEventListener('click', function () {
+      const parentEl = offSwitcher.closest('.table__product-item');
+      parentEl.classList.toggle('available');
+      parentEl.classList.toggle('unavailable');
+
+      if (extraEl.length > 0) {
+        extraEl[index + 1].classList.toggle('available');
+        extraEl[index + 1].classList.toggle('unavailable');
+      }
+    });
+  }
+}
+
+const singleSwitchers = document.querySelectorAll(".table__product-switcher-single");
+
+if (singleSwitchers.length > 0) {
+  for (let index = 0; index < singleSwitchers.length; index++) {
+    const singleSwitcher = singleSwitchers[index];
+    singleSwitcher.addEventListener('click', function () {
+      const parentEl = singleSwitcher.closest('.table__product-status');
+      parentEl.classList.toggle('available');
+      parentEl.classList.toggle('unavailable');
+    });
+  }
+}
+
+const showSearchBtns = document.querySelectorAll('.special-table__search-show');
+const closeSearchBtns = document.querySelectorAll('.special-table__search-close');
+
+if (showSearchBtns.length > 0) {
+  for (let index = 0; index < showSearchBtns.length; index++) {
+    const showSearchBtn = showSearchBtns[index];
+    showSearchBtn.addEventListener('click', () => {
+      showSearchBtn.nextElementSibling.classList.toggle('active');
+      showSearchBtn.classList.toggle('active');
+    });
+  }
+}
+
+if (closeSearchBtns.length > 0) {
+  for (let index = 0; index < closeSearchBtns.length; index++) {
+    const closeSearchBtn = closeSearchBtns[index];
+    closeSearchBtn.addEventListener('click', () => {
+      const parentEl = closeSearchBtn.closest('.special-table__search');
+      parentEl.classList.toggle('active');
+      parentEl.previousElementSibling.classList.toggle('active');
     });
   }
 }
@@ -781,6 +836,8 @@ if (switchers.length > 0) {
 
 const coverBtns = document.querySelectorAll('.cover');
 const uncoverBtns = document.querySelectorAll('.uncover');
+const coverSecondBtns = document.querySelectorAll('.cover-second');
+const uncoverSecondBtns = document.querySelectorAll('.uncover-second');
 const warehouses = document.querySelectorAll('.table__warehouse');
 let value = 0;
 
@@ -790,6 +847,7 @@ if (coverBtns.length > 0) {
     coverBtn.addEventListener('click', function () {
       const parentItem = coverBtn.closest('.table__product-item');
       value = index;
+      console.log(coverBtns.length);
 
       if (parentItem.classList.contains('uncovered')) {
         parentItem.classList.remove('uncovered');
@@ -803,6 +861,38 @@ if (coverBtns.length > 0) {
             for (let index = 0; index < warehouses.length; index++) {
               const warehouse = warehouses[index];
               const list = warehouse.querySelectorAll('.table__warehouse-sublist')[value];
+
+              if (!list.classList.contains('hidden')) {
+                list.classList.add('hidden');
+                console.log(warehouse.querySelectorAll('.table__warehouse-sublist'));
+              }
+            }
+          }
+        }
+      }
+    });
+  }
+}
+
+if (coverSecondBtns.length > 0) {
+  for (let index = 0; index < coverSecondBtns.length; index++) {
+    const coverSecondBtn = coverSecondBtns[index];
+    coverSecondBtn.addEventListener('click', function () {
+      const parentItem = coverSecondBtn.closest('.table__product-item');
+      value = index;
+
+      if (parentItem.classList.contains('uncovered')) {
+        parentItem.classList.remove('uncovered');
+        const sublist = parentItem.nextElementSibling;
+
+        if (sublist.classList.contains('visible')) {
+          sublist.classList.remove('visible');
+          sublist.classList.add('hidden');
+
+          if (warehouses.length > 0) {
+            for (let index = 0; index < warehouses.length; index++) {
+              const warehouse = warehouses[index];
+              const list = warehouse.querySelectorAll('.table__warehouse-sublist-second')[value];
 
               if (!list.classList.contains('hidden')) {
                 list.classList.add('hidden');
@@ -834,6 +924,37 @@ if (uncoverBtns.length > 0) {
             for (let index = 0; index < warehouses.length; index++) {
               const warehouse = warehouses[index];
               const list = warehouse.querySelectorAll('.table__warehouse-sublist')[value];
+
+              if (list.classList.contains('hidden')) {
+                list.classList.remove('hidden');
+              }
+            }
+          }
+        }
+      }
+    });
+  }
+}
+
+if (uncoverSecondBtns.length > 0) {
+  for (let index = 0; index < uncoverSecondBtns.length; index++) {
+    const uncoverSecondBtn = uncoverSecondBtns[index];
+    uncoverSecondBtn.addEventListener('click', function () {
+      const parentItem = uncoverSecondBtn.closest('.table__product-item');
+      value = index;
+
+      if (!parentItem.classList.contains('uncovered')) {
+        parentItem.classList.add('uncovered');
+        const sublist = parentItem.nextElementSibling;
+
+        if (sublist.classList.contains('hidden')) {
+          sublist.classList.remove('hidden');
+          sublist.classList.add('visible');
+
+          if (warehouses.length > 0) {
+            for (let index = 0; index < warehouses.length; index++) {
+              const warehouse = warehouses[index];
+              const list = warehouse.querySelectorAll('.table__warehouse-sublist-second')[value];
 
               if (list.classList.contains('hidden')) {
                 list.classList.remove('hidden');
