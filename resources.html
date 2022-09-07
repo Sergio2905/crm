@@ -142,7 +142,7 @@
             </section>
 
             <section class="content">
-                <h1 class="content__title-mobile">Матрица прибыли</h1>
+                <h1 class="content__title-mobile">Ресурсы продаж</h1>
 
                 <div class="content__sidebar sidebar">
                     <ul class="sidebar__list">
@@ -154,7 +154,7 @@
                                 <span>Товары</span>
                             </a>
                         </li>
-                        <li class="sidebar__item">
+                        <li class="sidebar__item active">
                             <a href="resources.html" class="sidebar__link">
                                 <svg>
                                     <use href='img/sprite/sprite.svg#store'></use>
@@ -170,7 +170,7 @@
                                 <span>Склады</span>
                             </a>
                         </li>
-                        <li class="sidebar__item active">
+                        <li class="sidebar__item">
                             <a href="matrix.html" class="sidebar__link">
                                 <svg>
                                     <use href='img/sprite/sprite.svg#calculator'></use>
@@ -183,913 +183,1053 @@
                 <div class="content__body">
 
                     <div class="content__header header-content">
-                        <h2 class="header-content__title">Матрица прибыли</h2>
+                        <h2 class="header-content__title">Ресурсы продаж</h2>
 
                         <div class="header-content__btns">
-                            <button class="header-content__btn btn-blue" data-path="matrix-refresh">
-                                <span>Обновить каталог</span>
+                            <button class="header-content__btn btn-blue" data-path="resources-add">
+                                <svg>
+                                    <use xlink: href="img/sprite/sprite.svg#plus"></use>
+                                </svg>
+                                <span>Добавить ресурс</span>
                             </button>
-                            <button class="header-content__btn btn-white" data-path="warehouse-show-all">
-                                Раскрыть все пункты
+                            <button class="header-content__btn btn-white" data-path="resources-refresh-all">
+                                Обновить товары ресурсов
                             </button>
                         </div>
                     </div>
 
-                    <h3 class="content__subtitle">Список родительский категорий</h3>
+                    <!--<h3 class="content__subtitle">Список ресурсов</h3>-->
 
-                    <div class="content__table content__table-matrix table">
+                    <div class="content__table content__table-warehouses content__table-resources table">
                         <div class="table__wrapp">
-
-                            <div class="table__product">
+                            <div class="table__product table__resources table__resources-spec">
+                                <h3 class="content__subtitle">Список ресурсов</h3>
                                 <ul class="table__product-list">
                                     <li class="table__product-item" data-sticky="sticky">
                                         <button class="table__product-amount table__btn">
                                             <span>#</span>
-                                            <svg width="14" height="14">
-                                                <use href="img/sprite/sprite.svg#sorting"></use>
+                                            <svg width='14' height='14'>
+                                                <use href='img/sprite/sprite.svg#sorting'></use>
                                             </svg>
                                         </button>
-                                        <button class="table__product-id table__btn">
-                                            <span>ID категории</span>
-                                            <svg width="14" height="14">
-                                                <use href="img/sprite/sprite.svg#sorting"></use>
+                                        <button class="table__product-title table__btn">
+                                            <span>Название</span>
+                                            <svg width='14' height='14'>
+                                                <use href='img/sprite/sprite.svg#sorting'></use>
+                                            </svg>
+                                        </button>
+                                        <button class="table__product-source table__btn">
+                                            <span>Источник</span>
+                                            <svg width='14' height='14'>
+                                                <use href='img/sprite/sprite.svg#sorting'></use>
                                             </svg>
                                         </button>
                                         <button class="table__product-count table__btn">
-                                            <span>Кол-во подкатегорий (½)</span>
-                                            <svg width="14" height="14">
-                                                <use href="img/sprite/sprite.svg#sorting"></use>
+                                            <span>Кол-во товаров</span>
+                                            <svg width='14' height='14'>
+                                                <use href='img/sprite/sprite.svg#sorting'></use>
                                             </svg>
                                         </button>
-                                        <button class="table__product-name table__btn">
-                                            <span>Название категории</span>
-                                            <svg width="14" height="14">
-                                                <use href="img/sprite/sprite.svg#sorting"></use>
+                                        <button class="table__product-priority table__btn">
+                                            <span>Приоритет</span>
+                                            <svg width='14' height='14'>
+                                                <use href='img/sprite/sprite.svg#sorting'></use>
                                             </svg>
+                                        </button>
+                                        <button class="table__product-status table__btn">
+                                            <span>Статус</span>
+                                        </button>
+                                        <button class="table__product-autorefresh table__btn">
+                                            <span>Автообновление</span>
                                         </button>
                                         <button class="table__product-actions table__btn">
-                                            <span>Действия</span>
+                                            <span>Действие</span>
                                         </button>
                                     </li>
 
-                                    <li class="table__product-item">
+                                    <li class="table__product-item available">
                                         <div class="table__product-amount">
                                             <span>1</span>
                                         </div>
-                                        <div class="table__product-id">
-                                            <span>221</span>
-                                        </div>
-                                        <div class="table__product-count">
-                                            <span>1 / 2</span>
-                                        </div>
-                                        <div class="table__product-name">
-                                            <span>Средства коммуникации</span>
-                                        </div>
-                                        <div class="table__product-actions">
-                                            <button class="table__product-action uncover">
-                                                <span>раскрыть</span>
-                                                <svg width="10" height="10">
-                                                    <use href="img/sprite/sprite.svg#arrow-down"></use>
-                                                </svg>
-                                            </button>
-                                            <button class="table__product-action cover">
-                                                <span>скрыть</span>
-                                                <svg width="10" height="10">
-                                                    <use href="img/sprite/sprite.svg#arrow-up"></use>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </li>
-                                    <ul class="table__product-sublist hidden">
-                                        <li class="table__product-item">
-                                            <div class="table__product-amount">
-                                                <span></span>
-                                            </div>
-                                            <div class="table__product-id">
-                                                <span>413</span>
-                                            </div>
-                                            <div class="table__product-count">
-                                                <span>-</span>
-                                            </div>
-                                            <div class="table__product-name">
-                                                <span>Планшетные компьютеры</span>
-                                            </div>
-                                            <div class="table__product-actions">
-                                                <button class="table__product-action uncover-second">
-                                                    <span>раскрыть</span>
-                                                    <svg width="10" height="10">
-                                                        <use href="img/sprite/sprite.svg#arrow-down"></use>
-                                                    </svg>
-                                                </button>
-                                                <button class="table__product-action cover-second">
-                                                    <span>скрыть</span>
-                                                    <svg width="10" height="10">
-                                                        <use href="img/sprite/sprite.svg#arrow-up"></use>
-                                                    </svg>
-                                                </button>
-                                            </div>
-                                        </li>
-                                        <ul class="table__product-sublist hidden">
-                                            <li class="table__product-item">
-                                                <div class="table__product-amount">
-                                                    <span></span>
-                                                </div>
-                                                <div class="table__product-id">
-                                                    <span>552</span>
-                                                </div>
-                                                <div class="table__product-count">
-                                                    <span>-</span>
-                                                </div>
-                                                <div class="table__product-name">
-                                                    <span>GPS-навигаторы и трансляторы</span>
-                                                </div>
-                                                <div class="table__product-actions">
-                                                </div>
-                                            </li>
-                                            <li class="table__product-item">
-                                                <div class="table__product-amount">
-                                                    <span></span>
-                                                </div>
-                                                <div class="table__product-id">
-                                                    <span>552</span>
-                                                </div>
-                                                <div class="table__product-count">
-                                                    <span>-</span>
-                                                </div>
-                                                <div class="table__product-name">
-                                                    <span>GPS-навигаторы и трансляторы</span>
-                                                </div>
-                                                <div class="table__product-actions">
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </ul>
-
-                                    <li class="table__product-item">
-                                        <div class="table__product-amount">
-                                            <span>1</span>
-                                        </div>
-                                        <div class="table__product-id">
-                                            <span>221</span>
-                                        </div>
-                                        <div class="table__product-count">
-                                            <span>1 / 2</span>
-                                        </div>
-                                        <div class="table__product-name">
-                                            <span>Средства коммуникации</span>
-                                        </div>
-                                        <div class="table__product-actions">
-                                        </div>
-                                    </li>
-
-                                    <li class="table__product-item">
-                                        <div class="table__product-amount">
-                                            <span>1</span>
-                                        </div>
-                                        <div class="table__product-id">
-                                            <span>221</span>
-                                        </div>
-                                        <div class="table__product-count">
-                                            <span>1 / 2</span>
-                                        </div>
-                                        <div class="table__product-name">
-                                            <span>Средства коммуникации</span>
-                                        </div>
-                                        <div class="table__product-actions">
-                                            <button class="table__product-action uncover">
-                                                <span>раскрыть</span>
-                                                <svg width="10" height="10">
-                                                    <use href="img/sprite/sprite.svg#arrow-down"></use>
-                                                </svg>
-                                            </button>
-                                            <button class="table__product-action cover">
-                                                <span>скрыть</span>
-                                                <svg width="10" height="10">
-                                                    <use href="img/sprite/sprite.svg#arrow-up"></use>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </li>
-                                    <ul class="table__product-sublist hidden">
-                                        <li class="table__product-item">
-                                            <div class="table__product-amount">
-                                                <span></span>
-                                            </div>
-                                            <div class="table__product-id">
-                                                <span>413</span>
-                                            </div>
-                                            <div class="table__product-count">
-                                                <span>-</span>
-                                            </div>
-                                            <div class="table__product-name">
-                                                <span>Планшетные компьютеры</span>
-                                            </div>
-                                            <div class="table__product-actions">
-                                                <button class="table__product-action uncover-second">
-                                                    <span>раскрыть</span>
-                                                    <svg width="10" height="10">
-                                                        <use href="img/sprite/sprite.svg#arrow-down"></use>
-                                                    </svg>
-                                                </button>
-                                                <button class="table__product-action cover-second">
-                                                    <span>скрыть</span>
-                                                    <svg width="10" height="10">
-                                                        <use href="img/sprite/sprite.svg#arrow-up"></use>
-                                                    </svg>
-                                                </button>
-                                            </div>
-                                        </li>
-                                        <ul class="table__product-sublist hidden">
-                                            <li class="table__product-item">
-                                                <div class="table__product-amount">
-                                                    <span></span>
-                                                </div>
-                                                <div class="table__product-id">
-                                                    <span>552</span>
-                                                </div>
-                                                <div class="table__product-count">
-                                                    <span>-</span>
-                                                </div>
-                                                <div class="table__product-name">
-                                                    <span>GPS-навигаторы и трансляторы</span>
-                                                </div>
-                                                <div class="table__product-actions">
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </ul>
-
-                                    <li class="table__product-item">
-                                        <div class="table__product-amount">
-                                            <span>1</span>
-                                        </div>
-                                        <div class="table__product-id">
-                                            <span>221</span>
-                                        </div>
-                                        <div class="table__product-count">
-                                            <span>1 / 2</span>
-                                        </div>
-                                        <div class="table__product-name">
-                                            <span>Средства коммуникации</span>
-                                        </div>
-                                        <div class="table__product-actions">
-                                        </div>
-                                    </li>
-
-                                    <li class="table__product-item">
-                                        <div class="table__product-amount">
-                                            <span>1</span>
-                                        </div>
-                                        <div class="table__product-id">
-                                            <span>221</span>
-                                        </div>
-                                        <div class="table__product-count">
-                                            <span>1 / 2</span>
-                                        </div>
-                                        <div class="table__product-name">
-                                            <span>Средства коммуникации</span>
-                                        </div>
-                                        <div class="table__product-actions">
-                                        </div>
-                                    </li>
-
-                                    <li class="table__product-item">
-                                        <div class="table__product-amount">
-                                            <span>1</span>
-                                        </div>
-                                        <div class="table__product-id">
-                                            <span>221</span>
-                                        </div>
-                                        <div class="table__product-count">
-                                            <span>1 / 2</span>
-                                        </div>
-                                        <div class="table__product-name">
-                                            <span>Средства коммуникации</span>
-                                        </div>
-                                        <div class="table__product-actions">
-                                            <button class="table__product-action uncover">
-                                                <span>раскрыть</span>
-                                                <svg width="10" height="10">
-                                                    <use href="img/sprite/sprite.svg#arrow-down"></use>
-                                                </svg>
-                                            </button>
-                                            <button class="table__product-action cover">
-                                                <span>скрыть</span>
-                                                <svg width="10" height="10">
-                                                    <use href="img/sprite/sprite.svg#arrow-up"></use>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </li>
-                                    <ul class="table__product-sublist hidden">
-                                        <li class="table__product-item">
-                                            <div class="table__product-amount">
-                                                <span></span>
-                                            </div>
-                                            <div class="table__product-id">
-                                                <span>413</span>
-                                            </div>
-                                            <div class="table__product-count">
-                                                <span>-</span>
-                                            </div>
-                                            <div class="table__product-name">
-                                                <span>Планшетные компьютеры</span>
-                                            </div>
-                                            <div class="table__product-actions">
-                                                <button class="table__product-action uncover-second">
-                                                    <span>раскрыть</span>
-                                                    <svg width="10" height="10">
-                                                        <use href="img/sprite/sprite.svg#arrow-down"></use>
-                                                    </svg>
-                                                </button>
-                                                <button class="table__product-action cover-second">
-                                                    <span>скрыть</span>
-                                                    <svg width="10" height="10">
-                                                        <use href="img/sprite/sprite.svg#arrow-up"></use>
-                                                    </svg>
-                                                </button>
-                                            </div>
-                                        </li>
-                                        <ul class="table__product-sublist hidden">
-                                            <li class="table__product-item">
-                                                <div class="table__product-amount">
-                                                    <span></span>
-                                                </div>
-                                                <div class="table__product-id">
-                                                    <span>552</span>
-                                                </div>
-                                                <div class="table__product-count">
-                                                    <span>-</span>
-                                                </div>
-                                                <div class="table__product-name">
-                                                    <span>GPS-навигаторы и трансляторы</span>
-                                                </div>
-                                                <div class="table__product-actions">
-                                                </div>
-                                            </li>
-                                            <li class="table__product-item">
-                                                <div class="table__product-amount">
-                                                    <span></span>
-                                                </div>
-                                                <div class="table__product-id">
-                                                    <span>552</span>
-                                                </div>
-                                                <div class="table__product-count">
-                                                    <span>-</span>
-                                                </div>
-                                                <div class="table__product-name">
-                                                    <span>GPS-навигаторы и трансляторы</span>
-                                                </div>
-                                                <div class="table__product-actions">
-                                                </div>
-                                            </li>
-                                            <li class="table__product-item">
-                                                <div class="table__product-amount">
-                                                    <span></span>
-                                                </div>
-                                                <div class="table__product-id">
-                                                    <span>552</span>
-                                                </div>
-                                                <div class="table__product-count">
-                                                    <span>-</span>
-                                                </div>
-                                                <div class="table__product-name">
-                                                    <span>GPS-навигаторы и трансляторы</span>
-                                                </div>
-                                                <div class="table__product-actions">
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </ul>
-
-                                </ul>
-                            </div>
-                            <div class="table__warehouse">
-                                <ul class="table__warehouse-list">
-                                    <li class="table__warehouse-item green" data-sticky="sticky">
-                                        <button class="table__warehouse-btn table__btn">
+                                        <div class="table__product-title">
                                             <span>iBattery</span>
-                                            <svg width='14' height='14'>
-                                                <use href='img/sprite/sprite.svg#sorting'></use>
-                                            </svg>
-                                        </button>
-                                    </li>
-
-                                    <li class="table__warehouse-item pink">
-                                        <div class="table__warehouse-unavailable">
-                                            <span>недоступно</span>
-                                        </div>
-                                    </li>
-                                    <ul class="table__warehouse-sublist hidden">
-                                        <li class="table__warehouse-item pink">
-                                            <div class="table__warehouse-unavailable">
-                                                <span>недоступно</span>
+                                            <div class="table__product-titlefull">iBattery
                                             </div>
-                                        </li>
-                                        <ul class="table__warehouse-sublist-second hidden">
-                                            <li class="table__warehouse-item pink">
-                                                <div class="table__warehouse-unavailable">
-                                                    <span>недоступно</span>
-                                                </div>
-                                            </li>
-                                            <li class="table__warehouse-item pink">
-                                                <div class="table__warehouse-unavailable">
-                                                    <span>недоступно</span>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </ul>
-
-                                    <li class="table__warehouse-item pink">
-                                        <div class="table__warehouse-unavailable">
-                                            <span>недоступно</span>
                                         </div>
-                                    </li>
-
-                                    <li class="table__warehouse-item pink">
-                                        <div class="table__warehouse-unavailable">
-                                            <span>недоступно</span>
+                                        <div class="table__product-source">
+                                            <span>JSON-файл</span>
+                                            <div class="table__product-titlefull">JSON-файл</div>
                                         </div>
-                                    </li>
-                                    <ul class="table__warehouse-sublist hidden">
-                                        <li class="table__warehouse-item pink">
-                                            <div class="table__warehouse-unavailable">
-                                                <span>недоступно</span>
+                                        <div class="table__product-count">
+                                            <span>10123</span>
+                                            <div class="table__product-titlefull">10123</div>
+                                        </div>
+                                        <div class="table__product-priority">
+                                            <span>2</span>
+                                            <div class="table__product-titlefull">2</div>
+                                        </div>
+                                        <div class="table__product-status">
+                                            <button class="table__product-switcher on">Вкл</button>
+                                            <button class="table__product-switcher off">Выкл</button>
+                                        </div>
+                                        <div class="table__product-autorefresh autorefresh">
+                                            <div class="autorefresh__info-block">
+                                                <div class="autorefresh__input-block">
+                                                    <input type="text" class="autorefresh__input" value="60">
+                                                </div>
                                             </div>
-                                        </li>
-                                        <ul class="table__warehouse-sublist-second hidden">
-                                            <li class="table__warehouse-item pink">
-                                                <div class="table__warehouse-unavailable">
-                                                    <span>недоступно</span>
+                                            <div class="autorefresh__info-block">
+                                                <div class="autorefresh__select autorefresh__select--time select">
+                                                    <div class="autorefresh__select-header">
+                                                        <span class="autorefresh__select-current select__current">
+                                                            мин
+                                                        </span>
+                                                        <svg width='8' height='8'>
+                                                            <use href='img/sprite/sprite.svg#arrow'></use>
+                                                        </svg>
+                                                    </div>
+                                                    <ul class="autorefresh__select-body select__body">
+                                                        <li class="autorefresh__select-item select__item"
+                                                            data-choice='choosen'>
+                                                            сек
+                                                        </li>
+                                                        <li class="autorefresh__select-item select__item"
+                                                            data-choice='choosen'>
+                                                            мин
+                                                        </li>
+                                                        <li class="autorefresh__select-item select__item"
+                                                            data-choice='choosen'>час
+                                                        </li>
+                                                    </ul>
                                                 </div>
-                                            </li>
-                                        </ul>
-                                    </ul>
-
-                                    <li class="table__warehouse-item pink">
-                                        <div class="table__warehouse-unavailable">
-                                            <span>недоступно</span>
-                                        </div>
-                                    </li>
-
-                                    <li class="table__warehouse-item pink">
-                                        <div class="table__warehouse-unavailable">
-                                            <span>недоступно</span>
-                                        </div>
-                                    </li>
-
-                                    <li class="table__warehouse-item pink">
-                                        <div class="table__warehouse-unavailable">
-                                            <span>недоступно</span>
-                                        </div>
-                                    </li>
-                                    <ul class="table__warehouse-sublist hidden">
-                                        <li class="table__warehouse-item pink">
-                                            <div class="table__warehouse-unavailable">
-                                                <span>недоступно</span>
                                             </div>
-                                        </li>
-                                        <ul class="table__warehouse-sublist-second hidden">
-                                            <li class="table__warehouse-item pink">
-                                                <div class="table__warehouse-unavailable">
-                                                    <span>недоступно</span>
-                                                </div>
-                                            </li>
-                                            <li class="table__warehouse-item pink">
-                                                <div class="table__warehouse-unavailable">
-                                                    <span>недоступно</span>
-                                                </div>
-                                            </li>
-                                            <li class="table__warehouse-item pink">
-                                                <div class="table__warehouse-unavailable">
-                                                    <span>недоступно</span>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </ul>
+                                            <div class="autorefresh__unavailable">
+                                                недоступно
+                                            </div>
+                                        </div>
+                                        <div class="table__product-actions">
+                                            <div class="table__actions">
+                                                <button class="table__actions-btn" data-path="resources-login">
+                                                    <svg>
+                                                        <use xlink: href="img/sprite/sprite.svg#edit"></use>
+                                                    </svg>
+                                                </button>
+                                                <button class="table__actions-btn" data-path="resources-refresh">
+                                                    <svg>
+                                                        <use xlink: href="img/sprite/sprite.svg#refresh"></use>
+                                                    </svg>
+                                                </button>
+                                                <button class="table__actions-btn" data-path="resources-delete">
+                                                    <svg>
+                                                        <use xlink: href="img/sprite/sprite.svg#delete"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </li>
 
-                                    <li class="table__warehouse-item table__warehouse-item-last">
-                                        <button class="table__warehouse-btn table__btn">
-                                            <label class="filter__checkbox-label">
-                                                <input class="filter__checkbox-input" type="checkbox">
-                                                <span class="filter__checkbox-name check-all"></span>
-                                            </label>
-                                        </button>
+                                    <li class="table__product-item unavailable">
+                                        <div class="table__product-amount">
+                                            <span>1</span>
+                                        </div>
+                                        <div class="table__product-title">
+                                            <span>iBattery</span>
+                                            <div class="table__product-titlefull">iBattery
+                                            </div>
+                                        </div>
+                                        <div class="table__product-source">
+                                            <span>JSON-файл</span>
+                                            <div class="table__product-titlefull">JSON-файл</div>
+                                        </div>
+                                        <div class="table__product-count">
+                                            <span>10123</span>
+                                            <div class="table__product-titlefull">10123</div>
+                                        </div>
+                                        <div class="table__product-priority">
+                                            <span>2</span>
+                                            <div class="table__product-titlefull">2</div>
+                                        </div>
+                                        <div class="table__product-status">
+                                            <button class="table__product-switcher on">Вкл</button>
+                                            <button class="table__product-switcher off">Выкл</button>
+                                        </div>
+                                        <div class="table__product-autorefresh autorefresh">
+                                            <div class="autorefresh__info-block">
+                                                <div class="autorefresh__input-block">
+                                                    <input type="text" class="autorefresh__input" value="60">
+                                                </div>
+                                            </div>
+                                            <div class="autorefresh__info-block">
+                                                <div class="autorefresh__select autorefresh__select--time select">
+                                                    <div class="autorefresh__select-header">
+                                                        <span class="autorefresh__select-current select__current">
+                                                            мин
+                                                        </span>
+                                                        <svg width='8' height='8'>
+                                                            <use href='img/sprite/sprite.svg#arrow'></use>
+                                                        </svg>
+                                                    </div>
+                                                    <ul class="autorefresh__select-body select__body">
+                                                        <li class="autorefresh__select-item select__item"
+                                                            data-choice='choosen'>
+                                                            сек
+                                                        </li>
+                                                        <li class="autorefresh__select-item select__item"
+                                                            data-choice='choosen'>
+                                                            мин
+                                                        </li>
+                                                        <li class="autorefresh__select-item select__item"
+                                                            data-choice='choosen'>час
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="autorefresh__unavailable">
+                                                недоступно
+                                            </div>
+                                        </div>
+                                        <div class="table__product-actions">
+                                            <div class="table__actions">
+                                                <button class="table__actions-btn" data-path="resources-login">
+                                                    <svg>
+                                                        <use xlink: href="img/sprite/sprite.svg#edit"></use>
+                                                    </svg>
+                                                </button>
+                                                <button class="table__actions-btn" data-path="resources-delete">
+                                                    <svg>
+                                                        <use xlink: href="img/sprite/sprite.svg#delete"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="table__product-item available">
+                                        <div class="table__product-amount">
+                                            <span>1</span>
+                                        </div>
+                                        <div class="table__product-title">
+                                            <span>iBattery</span>
+                                            <div class="table__product-titlefull">iBattery
+                                            </div>
+                                        </div>
+                                        <div class="table__product-source">
+                                            <span>JSON-файл</span>
+                                            <div class="table__product-titlefull">JSON-файл</div>
+                                        </div>
+                                        <div class="table__product-count">
+                                            <span>10123</span>
+                                            <div class="table__product-titlefull">10123</div>
+                                        </div>
+                                        <div class="table__product-priority">
+                                            <span>2</span>
+                                            <div class="table__product-titlefull">2</div>
+                                        </div>
+                                        <div class="table__product-status">
+                                            <button class="table__product-switcher on">Вкл</button>
+                                            <button class="table__product-switcher off">Выкл</button>
+                                        </div>
+                                        <div class="table__product-autorefresh autorefresh">
+                                            <div class="autorefresh__info-block">
+                                                <div class="autorefresh__input-block">
+                                                    <input type="text" class="autorefresh__input" value="60">
+                                                </div>
+                                            </div>
+                                            <div class="autorefresh__info-block">
+                                                <div class="autorefresh__select autorefresh__select--time select">
+                                                    <div class="autorefresh__select-header">
+                                                        <span class="autorefresh__select-current select__current">
+                                                            мин
+                                                        </span>
+                                                        <svg width='8' height='8'>
+                                                            <use href='img/sprite/sprite.svg#arrow'></use>
+                                                        </svg>
+                                                    </div>
+                                                    <ul class="autorefresh__select-body select__body">
+                                                        <li class="autorefresh__select-item select__item"
+                                                            data-choice='choosen'>
+                                                            сек
+                                                        </li>
+                                                        <li class="autorefresh__select-item select__item"
+                                                            data-choice='choosen'>
+                                                            мин
+                                                        </li>
+                                                        <li class="autorefresh__select-item select__item"
+                                                            data-choice='choosen'>час
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="autorefresh__unavailable">
+                                                недоступно
+                                            </div>
+                                        </div>
+                                        <div class="table__product-actions">
+                                            <div class="table__actions">
+                                                <button class="table__actions-btn" data-path="resources-login">
+                                                    <svg>
+                                                        <use xlink: href="img/sprite/sprite.svg#edit"></use>
+                                                    </svg>
+                                                </button>
+                                                <button class="table__actions-btn" data-path="resources-refresh">
+                                                    <svg>
+                                                        <use xlink: href="img/sprite/sprite.svg#refresh"></use>
+                                                    </svg>
+                                                </button>
+                                                <button class="table__actions-btn" data-path="resources-delete">
+                                                    <svg>
+                                                        <use xlink: href="img/sprite/sprite.svg#delete"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
                                     </li>
                                 </ul>
                             </div>
-                            <div class="table__warehouse">
-                                <ul class="table__warehouse-list">
-                                    <li class="table__warehouse-item green" data-sticky="sticky">
-                                        <button class="table__warehouse-btn table__btn">
-                                            <span>Rozetka — Cedrus</span>
-                                            <svg width='14' height='14'>
-                                                <use href='img/sprite/sprite.svg#sorting'></use>
-                                            </svg>
+
+                            <div class="table__product table__resources table__resources-extra">
+                                <h3 class="content__subtitle">Автоматизация</h3>
+                                <ul class="table__product-list">
+                                    <li class="table__product-item" data-sticky="sticky">
+                                        <button class="table__product-autorefresh table__btn">
+                                            <span>Изменения</span>
+                                        </button>
+                                        <button class="table__product-status table__btn">
+                                            <span>Цены</span>
+                                        </button>
+                                        <button class="table__product-status table__btn">
+                                            <span>Наличие</span>
+                                        </button>
+                                        <button class="table__product-actions table__btn">
+                                            <span></span>
                                         </button>
                                     </li>
 
-                                    <li class="table__warehouse-item white">
-                                        <div class="table__warehouse-value">
-                                            <span>500</span>
-                                        </div>
-                                        <div class="table__warehouse-value">
-                                            <label class="filter__checkbox-label">
-                                                <input class="filter__checkbox-input" type="checkbox">
-                                                <span class="filter__checkbox-name"></span>
-                                            </label>
-                                        </div>
-                                    </li>
-                                    <ul class="table__warehouse-sublist hidden">
-                                        <li class="table__warehouse-item white">
-                                            <div class="table__warehouse-value">
-                                                <span>500</span>
+                                    <li class="table__product-item available">
+                                        <div class="table__product-autorefresh autorefresh">
+                                            <div class="autorefresh__info-block">
+                                                <div class="autorefresh__input-block">
+                                                    <input type="text" class="autorefresh__input" value="60">
+                                                </div>
                                             </div>
-                                            <div class="table__warehouse-value">
-                                                <label class="filter__checkbox-label">
-                                                    <input class="filter__checkbox-input" type="checkbox">
-                                                    <span class="filter__checkbox-name"></span>
-                                                </label>
+                                            <div class="autorefresh__info-block">
+                                                <div class="autorefresh__select autorefresh__select--time select">
+                                                    <div class="autorefresh__select-header">
+                                                        <span class="autorefresh__select-current select__current">
+                                                            мин
+                                                        </span>
+                                                        <svg width='8' height='8'>
+                                                            <use href='img/sprite/sprite.svg#arrow'></use>
+                                                        </svg>
+                                                    </div>
+                                                    <ul class="autorefresh__select-body select__body">
+                                                        <li class="autorefresh__select-item select__item"
+                                                            data-choice='choosen'>
+                                                            сек
+                                                        </li>
+                                                        <li class="autorefresh__select-item select__item"
+                                                            data-choice='choosen'>
+                                                            мин
+                                                        </li>
+                                                        <li class="autorefresh__select-item select__item"
+                                                            data-choice='choosen'>час
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                             </div>
-                                        </li>
-                                        <ul class="table__warehouse-sublist-second hidden">
-                                            <li class="table__warehouse-item white">
-                                                <div class="table__warehouse-value">
-                                                    <span>500</span>
-                                                </div>
-                                                <div class="table__warehouse-value">
-                                                    <label class="filter__checkbox-label">
-                                                        <input class="filter__checkbox-input" type="checkbox">
-                                                        <span class="filter__checkbox-name"></span>
-                                                    </label>
-                                                </div>
-                                            </li>
-                                            <li class="table__warehouse-item white">
-                                                <div class="table__warehouse-value">
-                                                    <span>500</span>
-                                                </div>
-                                                <div class="table__warehouse-value">
-                                                    <label class="filter__checkbox-label">
-                                                        <input class="filter__checkbox-input" type="checkbox">
-                                                        <span class="filter__checkbox-name"></span>
-                                                    </label>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </ul>
-
-                                    <li class="table__warehouse-item white">
-                                        <div class="table__warehouse-value">
-                                            <span>500</span>
-                                        </div>
-                                        <div class="table__warehouse-value">
-                                            <label class="filter__checkbox-label">
-                                                <input class="filter__checkbox-input" type="checkbox">
-                                                <span class="filter__checkbox-name"></span>
-                                            </label>
-                                        </div>
-                                    </li>
-
-                                    <li class="table__warehouse-item white">
-                                        <div class="table__warehouse-value">
-                                            <span>500</span>
-                                        </div>
-                                        <div class="table__warehouse-value">
-                                            <label class="filter__checkbox-label">
-                                                <input class="filter__checkbox-input" type="checkbox">
-                                                <span class="filter__checkbox-name"></span>
-                                            </label>
-                                        </div>
-                                    </li>
-                                    <ul class="table__warehouse-sublist hidden">
-                                        <li class="table__warehouse-item white">
-                                            <div class="table__warehouse-value">
-                                                <span>500</span>
+                                            <div class="autorefresh__unavailable">
+                                                недоступно
                                             </div>
-                                            <div class="table__warehouse-value">
-                                                <label class="filter__checkbox-label">
-                                                    <input class="filter__checkbox-input" type="checkbox">
-                                                    <span class="filter__checkbox-name"></span>
-                                                </label>
+                                        </div>
+                                        <div class="table__product-status unavailable">
+                                            <button class="table__product-switcher-single on">Вкл</button>
+                                            <button class="table__product-switcher-single off">Выкл</button>
+                                        </div>
+                                        <div class="table__product-status unavailable">
+                                            <button class="table__product-switcher-single on">Вкл</button>
+                                            <button class="table__product-switcher-single off">Выкл</button>
+                                        </div>
+                                        <div class="table__product-actions">
+                                            <div class="table__actions">
+                                                <button class="table__actions-btn" data-path="resources-refresh">
+                                                    <svg>
+                                                        <use xlink: href="img/sprite/sprite.svg#refresh"></use>
+                                                    </svg>
+                                                </button>
                                             </div>
-                                        </li>
-                                        <ul class="table__warehouse-sublist-second hidden">
-                                            <li class="table__warehouse-item white">
-                                                <div class="table__warehouse-value">
-                                                    <span>500</span>
+                                        </div>
+                                    </li>
+
+                                    <li class="table__product-item unavailable">
+                                        <div class="table__product-autorefresh autorefresh">
+                                            <div class="autorefresh__info-block">
+                                                <div class="autorefresh__input-block">
+                                                    <input type="text" class="autorefresh__input" value="60">
                                                 </div>
-                                                <div class="table__warehouse-value">
-                                                    <label class="filter__checkbox-label">
-                                                        <input class="filter__checkbox-input" type="checkbox">
-                                                        <span class="filter__checkbox-name"></span>
-                                                    </label>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </ul>
-
-                                    <li class="table__warehouse-item white">
-                                        <div class="table__warehouse-value">
-                                            <span>500</span>
-                                        </div>
-                                        <div class="table__warehouse-value">
-                                            <label class="filter__checkbox-label">
-                                                <input class="filter__checkbox-input" type="checkbox">
-                                                <span class="filter__checkbox-name"></span>
-                                            </label>
-                                        </div>
-                                    </li>
-
-                                    <li class="table__warehouse-item white">
-                                        <div class="table__warehouse-value">
-                                            <span>500</span>
-                                        </div>
-                                        <div class="table__warehouse-value">
-                                            <label class="filter__checkbox-label">
-                                                <input class="filter__checkbox-input" type="checkbox">
-                                                <span class="filter__checkbox-name"></span>
-                                            </label>
-                                        </div>
-                                    </li>
-
-                                    <li class="table__warehouse-item white">
-                                        <div class="table__warehouse-value">
-                                            <span>500</span>
-                                        </div>
-                                        <div class="table__warehouse-value">
-                                            <label class="filter__checkbox-label">
-                                                <input class="filter__checkbox-input" type="checkbox">
-                                                <span class="filter__checkbox-name"></span>
-                                            </label>
-                                        </div>
-                                    </li>
-                                    <ul class="table__warehouse-sublist hidden">
-                                        <li class="table__warehouse-item white">
-                                            <div class="table__warehouse-value">
-                                                <span>500</span>
                                             </div>
-                                            <div class="table__warehouse-value">
-                                                <label class="filter__checkbox-label">
-                                                    <input class="filter__checkbox-input" type="checkbox">
-                                                    <span class="filter__checkbox-name"></span>
-                                                </label>
+                                            <div class="autorefresh__info-block">
+                                                <div class="autorefresh__select autorefresh__select--time select">
+                                                    <div class="autorefresh__select-header">
+                                                        <span class="autorefresh__select-current select__current">
+                                                            мин
+                                                        </span>
+                                                        <svg width='8' height='8'>
+                                                            <use href='img/sprite/sprite.svg#arrow'></use>
+                                                        </svg>
+                                                    </div>
+                                                    <ul class="autorefresh__select-body select__body">
+                                                        <li class="autorefresh__select-item select__item"
+                                                            data-choice='choosen'>
+                                                            сек
+                                                        </li>
+                                                        <li class="autorefresh__select-item select__item"
+                                                            data-choice='choosen'>
+                                                            мин
+                                                        </li>
+                                                        <li class="autorefresh__select-item select__item"
+                                                            data-choice='choosen'>час
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                             </div>
-                                        </li>
-                                        <ul class="table__warehouse-sublist-second hidden">
-                                            <li class="table__warehouse-item white">
-                                                <div class="table__warehouse-value">
-                                                    <span>500</span>
-                                                </div>
-                                                <div class="table__warehouse-value">
-                                                    <label class="filter__checkbox-label">
-                                                        <input class="filter__checkbox-input" type="checkbox">
-                                                        <span class="filter__checkbox-name"></span>
-                                                    </label>
-                                                </div>
-                                            </li>
-                                            <li class="table__warehouse-item white">
-                                                <div class="table__warehouse-value">
-                                                    <span>500</span>
-                                                </div>
-                                                <div class="table__warehouse-value">
-                                                    <label class="filter__checkbox-label">
-                                                        <input class="filter__checkbox-input" type="checkbox">
-                                                        <span class="filter__checkbox-name"></span>
-                                                    </label>
-                                                </div>
-                                            </li>
-                                            <li class="table__warehouse-item white">
-                                                <div class="table__warehouse-value">
-                                                    <span>500</span>
-                                                </div>
-                                                <div class="table__warehouse-value">
-                                                    <label class="filter__checkbox-label">
-                                                        <input class="filter__checkbox-input" type="checkbox">
-                                                        <span class="filter__checkbox-name"></span>
-                                                    </label>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </ul>
-
-                                    <li class="table__warehouse-item table__warehouse-item-last">
-                                        <label class="filter__checkbox-label">
-                                            <input class="filter__checkbox-input" type="checkbox">
-                                            <span class="filter__checkbox-name check-all"></span>
-                                        </label>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="table__warehouse">
-                                <ul class="table__warehouse-list">
-                                    <li class="table__warehouse-item green" data-sticky="sticky">
-                                        <button class="table__warehouse-btn table__btn">
-                                            <span>Prom</span>
-                                            <svg width='14' height='14'>
-                                                <use href='img/sprite/sprite.svg#sorting'></use>
-                                            </svg>
-                                        </button>
-                                    </li>
-
-                                    <li class="table__warehouse-item white">
-                                        <div class="table__warehouse-value">
-                                            <span>500</span>
-                                        </div>
-                                        <div class="table__warehouse-value">
-                                            <label class="filter__checkbox-label">
-                                                <input class="filter__checkbox-input" type="checkbox">
-                                                <span class="filter__checkbox-name"></span>
-                                            </label>
-                                        </div>
-                                    </li>
-                                    <ul class="table__warehouse-sublist hidden">
-                                        <li class="table__warehouse-item white">
-                                            <div class="table__warehouse-value">
-                                                <span>500</span>
+                                            <div class="autorefresh__unavailable">
+                                                недоступно
                                             </div>
-                                            <div class="table__warehouse-value">
-                                                <label class="filter__checkbox-label">
-                                                    <input class="filter__checkbox-input" type="checkbox">
-                                                    <span class="filter__checkbox-name"></span>
-                                                </label>
-                                            </div>
-                                        </li>
-                                        <ul class="table__warehouse-sublist-second hidden">
-                                            <li class="table__warehouse-item white">
-                                                <div class="table__warehouse-value">
-                                                    <span>500</span>
-                                                </div>
-                                                <div class="table__warehouse-value">
-                                                    <label class="filter__checkbox-label">
-                                                        <input class="filter__checkbox-input" type="checkbox">
-                                                        <span class="filter__checkbox-name"></span>
-                                                    </label>
-                                                </div>
-                                            </li>
-                                            <li class="table__warehouse-item white">
-                                                <div class="table__warehouse-value">
-                                                    <span>500</span>
-                                                </div>
-                                                <div class="table__warehouse-value">
-                                                    <label class="filter__checkbox-label">
-                                                        <input class="filter__checkbox-input" type="checkbox">
-                                                        <span class="filter__checkbox-name"></span>
-                                                    </label>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </ul>
-
-                                    <li class="table__warehouse-item white">
-                                        <div class="table__warehouse-value">
-                                            <span>500</span>
                                         </div>
-                                        <div class="table__warehouse-value">
-                                            <label class="filter__checkbox-label">
-                                                <input class="filter__checkbox-input" type="checkbox">
-                                                <span class="filter__checkbox-name"></span>
-                                            </label>
+                                        <div class="table__product-status unavailable">
+                                            <button class="table__product-switcher-single on">Вкл</button>
+                                            <button class="table__product-switcher-single off">Выкл</button>
+                                        </div>
+                                        <div class="table__product-status unavailable">
+                                            <button class="table__product-switcher-single on">Вкл</button>
+                                            <button class="table__product-switcher-single off">Выкл</button>
+                                        </div>
+                                        <div class="table__product-actions">
+                                            <div class="table__actions">
+                                                <!--<button class="table__actions-btn" data-path="resources-refresh">
+                                                    <svg>
+                                                        <use xlink: href="img/sprite/sprite.svg#refresh"></use>
+                                                    </svg>
+                                                </button>-->
+                                            </div>
                                         </div>
                                     </li>
 
-                                    <li class="table__warehouse-item white">
-                                        <div class="table__warehouse-value">
-                                            <span>500</span>
-                                        </div>
-                                        <div class="table__warehouse-value">
-                                            <label class="filter__checkbox-label">
-                                                <input class="filter__checkbox-input" type="checkbox">
-                                                <span class="filter__checkbox-name"></span>
-                                            </label>
-                                        </div>
-                                    </li>
-                                    <ul class="table__warehouse-sublist hidden">
-                                        <li class="table__warehouse-item white">
-                                            <div class="table__warehouse-value">
-                                                <span>500</span>
+                                    <li class="table__product-item available">
+                                        <div class="table__product-autorefresh autorefresh">
+                                            <div class="autorefresh__info-block">
+                                                <div class="autorefresh__input-block">
+                                                    <input type="text" class="autorefresh__input" value="60">
+                                                </div>
                                             </div>
-                                            <div class="table__warehouse-value">
-                                                <label class="filter__checkbox-label">
-                                                    <input class="filter__checkbox-input" type="checkbox">
-                                                    <span class="filter__checkbox-name"></span>
-                                                </label>
+                                            <div class="autorefresh__info-block">
+                                                <div class="autorefresh__select autorefresh__select--time select">
+                                                    <div class="autorefresh__select-header">
+                                                        <span class="autorefresh__select-current select__current">
+                                                            мин
+                                                        </span>
+                                                        <svg width='8' height='8'>
+                                                            <use href='img/sprite/sprite.svg#arrow'></use>
+                                                        </svg>
+                                                    </div>
+                                                    <ul class="autorefresh__select-body select__body">
+                                                        <li class="autorefresh__select-item select__item"
+                                                            data-choice='choosen'>
+                                                            сек
+                                                        </li>
+                                                        <li class="autorefresh__select-item select__item"
+                                                            data-choice='choosen'>
+                                                            мин
+                                                        </li>
+                                                        <li class="autorefresh__select-item select__item"
+                                                            data-choice='choosen'>час
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                             </div>
-                                        </li>
-                                        <ul class="table__warehouse-sublist-second hidden">
-                                            <li class="table__warehouse-item white">
-                                                <div class="table__warehouse-value">
-                                                    <span>500</span>
-                                                </div>
-                                                <div class="table__warehouse-value">
-                                                    <label class="filter__checkbox-label">
-                                                        <input class="filter__checkbox-input" type="checkbox">
-                                                        <span class="filter__checkbox-name"></span>
-                                                    </label>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </ul>
-
-                                    <li class="table__warehouse-item white">
-                                        <div class="table__warehouse-value">
-                                            <span>500</span>
-                                        </div>
-                                        <div class="table__warehouse-value">
-                                            <label class="filter__checkbox-label">
-                                                <input class="filter__checkbox-input" type="checkbox">
-                                                <span class="filter__checkbox-name"></span>
-                                            </label>
-                                        </div>
-                                    </li>
-
-                                    <li class="table__warehouse-item white">
-                                        <div class="table__warehouse-value">
-                                            <span>500</span>
-                                        </div>
-                                        <div class="table__warehouse-value">
-                                            <label class="filter__checkbox-label">
-                                                <input class="filter__checkbox-input" type="checkbox">
-                                                <span class="filter__checkbox-name"></span>
-                                            </label>
-                                        </div>
-                                    </li>
-
-                                    <li class="table__warehouse-item white">
-                                        <div class="table__warehouse-value">
-                                            <span>500</span>
-                                        </div>
-                                        <div class="table__warehouse-value">
-                                            <label class="filter__checkbox-label">
-                                                <input class="filter__checkbox-input" type="checkbox">
-                                                <span class="filter__checkbox-name"></span>
-                                            </label>
-                                        </div>
-                                    </li>
-                                    <ul class="table__warehouse-sublist hidden">
-                                        <li class="table__warehouse-item white">
-                                            <div class="table__warehouse-value">
-                                                <span>500</span>
+                                            <div class="autorefresh__unavailable">
+                                                недоступно
                                             </div>
-                                            <div class="table__warehouse-value">
-                                                <label class="filter__checkbox-label">
-                                                    <input class="filter__checkbox-input" type="checkbox">
-                                                    <span class="filter__checkbox-name"></span>
-                                                </label>
+                                        </div>
+                                        <div class="table__product-status unavailable">
+                                            <button class="table__product-switcher-single on">Вкл</button>
+                                            <button class="table__product-switcher-single off">Выкл</button>
+                                        </div>
+                                        <div class="table__product-status unavailable">
+                                            <button class="table__product-switcher-single on">Вкл</button>
+                                            <button class="table__product-switcher-single off">Выкл</button>
+                                        </div>
+                                        <div class="table__product-actions">
+                                            <div class="table__actions">
+                                                <button class="table__actions-btn" data-path="resources-refresh">
+                                                    <svg>
+                                                        <use xlink: href="img/sprite/sprite.svg#refresh"></use>
+                                                    </svg>
+                                                </button>
                                             </div>
-                                        </li>
-                                        <ul class="table__warehouse-sublist-second hidden">
-                                            <li class="table__warehouse-item white">
-                                                <div class="table__warehouse-value">
-                                                    <span>500</span>
-                                                </div>
-                                                <div class="table__warehouse-value">
-                                                    <label class="filter__checkbox-label">
-                                                        <input class="filter__checkbox-input" type="checkbox">
-                                                        <span class="filter__checkbox-name"></span>
-                                                    </label>
-                                                </div>
-                                            </li>
-                                            <li class="table__warehouse-item white">
-                                                <div class="table__warehouse-value">
-                                                    <span>500</span>
-                                                </div>
-                                                <div class="table__warehouse-value">
-                                                    <label class="filter__checkbox-label">
-                                                        <input class="filter__checkbox-input" type="checkbox">
-                                                        <span class="filter__checkbox-name"></span>
-                                                    </label>
-                                                </div>
-                                            </li>
-                                            <li class="table__warehouse-item white">
-                                                <div class="table__warehouse-value">
-                                                    <span>500</span>
-                                                </div>
-                                                <div class="table__warehouse-value">
-                                                    <label class="filter__checkbox-label">
-                                                        <input class="filter__checkbox-input" type="checkbox">
-                                                        <span class="filter__checkbox-name"></span>
-                                                    </label>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </ul>
-
-                                    <li class="table__warehouse-item table__warehouse-item-last">
-                                        <label class="filter__checkbox-label">
-                                            <input class="filter__checkbox-input" type="checkbox">
-                                            <span class="filter__checkbox-name check-all"></span>
-                                        </label>
+                                        </div>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
 
-                    <div class="content__btn-right" data-path="matrix-rearesh-percentage">
-                        <button class="content__btn content__btn-warehouses btn-blue">
-                            <span>Обновить процент</span>
+                    <div class="content__btn-right">
+                        <button class="content__btn content__btn-warehouses btn-blue" data-path="resources-save">
+                            <span>Сохранить</span>
                         </button>
                     </div>
+
+                    <div class="content__special special-content">
+                        <h2 class="header-content__title">Особые условия обновления</h2>
+                        <div class="special-content__table content__table table">
+                            <div class="table__wrapp">
+
+                                <div class="special-table__product table__product">
+                                    <div class="special-table__header">
+                                        <h3 class="content__subtitle">Товары</h3>
+
+                                        <div class="special-table__search-block">
+                                            <button type="button"
+                                                class="special-table__search-btn special-table__search-show active">
+                                                <svg>
+                                                    <use xlink: href="img/sprite/sprite.svg#search"></use>
+                                                </svg>
+                                            </button>
+                                            <form class="special-table__search">
+                                                <button class="special-table__search-btn">
+                                                    <svg>
+                                                        <use xlink: href="img/sprite/sprite.svg#search"></use>
+                                                    </svg>
+                                                </button>
+                                                <input type="text">
+                                                <button type="button" class="special-table__search-close">
+                                                    <svg>
+                                                        <use href='img/sprite/sprite.svg#close'></use>
+                                                    </svg>
+                                                </button>
+                                            </form>
+                                        </div>
+
+                                        <button class="content__btn content__btn-warehouses btn-blue"
+                                            data-path="resources-save">
+                                            <span>Добавить</span>
+                                        </button>
+                                    </div>
+                                    <ul class="table__product-list">
+
+                                        <li class="table__product-item" data-sticky="sticky">
+                                            <button class="table__product-amount table__btn">
+                                                <span>#</span>
+                                                <svg width='14' height='14'>
+                                                    <use href='img/sprite/sprite.svg#sorting'></use>
+                                                </svg>
+                                            </button>
+                                            <button class="table__product-art table__btn">
+                                                <span>Артикул</span>
+                                                <svg width='14' height='14'>
+                                                    <use href='img/sprite/sprite.svg#sorting'></use>
+                                                </svg>
+                                            </button>
+                                            <button class="table__product-title table__btn">
+                                                <span>Название</span>
+                                                <svg width='14' height='14'>
+                                                    <use href='img/sprite/sprite.svg#sorting'></use>
+                                                </svg>
+                                            </button>
+                                            <button class="table__product-price table__btn">
+                                                <span>Цена</span>
+                                                <svg width='14' height='14'>
+                                                    <use href='img/sprite/sprite.svg#sorting'></use>
+                                                </svg>
+                                            </button>
+                                            <button class="table__product-availability table__btn">
+                                                <span>Наличие</span>
+                                                <svg width='14' height='14'>
+                                                    <use href='img/sprite/sprite.svg#sorting'></use>
+                                                </svg>
+                                            </button>
+                                        </li>
+
+                                        <li class="table__product-item">
+                                            <div class="table__product-amount">
+                                                <span>1</span>
+                                            </div>
+                                            <div class="table__product-art">
+                                                <span>bci-0001</span>
+                                            </div>
+                                            <div class="table__product-title">
+                                                <span>Чехол-аккумулятор iBattery для iPhone 6/6s/8 на 3200mAh
+                                                    Black</span>
+                                                <div class="table__product-titlefull">Чехол-аккумулятор iBattery для
+                                                    iPhone 6/6s/8 на 3200mAh Black
+                                                </div>
+                                            </div>
+                                            <div class="table__product-price">
+                                                <label class="filter__checkbox-label">
+                                                    <input class="filter__checkbox-input" type="checkbox">
+                                                    <span class="filter__checkbox-name"></span>
+                                                </label>
+                                            </div>
+                                            <div class="table__product-availability">
+                                                <label class="filter__checkbox-label">
+                                                    <input class="filter__checkbox-input" type="checkbox">
+                                                    <span class="filter__checkbox-name"></span>
+                                                </label>
+                                            </div>
+                                        </li>
+
+                                        <li class="table__product-item">
+                                            <div class="table__product-amount">
+                                                <span>1</span>
+                                            </div>
+                                            <div class="table__product-art">
+                                                <span>bci-0001</span>
+                                            </div>
+                                            <div class="table__product-title">
+                                                <span>Чехол-аккумулятор iBattery для iPhone 6/6s/8 на 3200mAh
+                                                    Black</span>
+                                                <div class="table__product-titlefull">Чехол-аккумулятор iBattery для
+                                                    iPhone 6/6s/8 на 3200mAh Black
+                                                </div>
+                                            </div>
+                                            <div class="table__product-price">
+                                                <label class="filter__checkbox-label">
+                                                    <input class="filter__checkbox-input" type="checkbox">
+                                                    <span class="filter__checkbox-name"></span>
+                                                </label>
+                                            </div>
+                                            <div class="table__product-availability">
+                                                <label class="filter__checkbox-label">
+                                                    <input class="filter__checkbox-input" type="checkbox">
+                                                    <span class="filter__checkbox-name"></span>
+                                                </label>
+                                            </div>
+                                        </li>
+
+                                        <li class="table__product-item red">
+                                            <div class="table__product-amount">
+                                                <span>1</span>
+                                            </div>
+                                            <div class="table__product-art">
+                                                <span>bci-0001</span>
+                                            </div>
+                                            <div class="table__product-title">
+                                                <span>Чехол-аккумулятор iBattery для iPhone 6/6s/8 на 3200mAh
+                                                    Black</span>
+                                                <div class="table__product-titlefull">Чехол-аккумулятор iBattery для
+                                                    iPhone 6/6s/8 на 3200mAh Black
+                                                </div>
+                                            </div>
+                                            <div class="table__product-price">
+                                                <button class="table__actions-btn" data-path="resources-refresh">
+                                                    <svg>
+                                                        <use xlink: href="img/sprite/sprite.svg#refresh"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                            <div class="table__product-availability">
+                                                <button class="table__actions-btn" data-path="resources-delete">
+                                                    <svg>
+                                                        <use xlink: href="img/sprite/sprite.svg#delete"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </li>
+
+                                        <li class="table__product-item">
+                                            <div class="table__product-amount">
+                                                <span>1</span>
+                                            </div>
+                                            <div class="table__product-art">
+                                                <span>bci-0001</span>
+                                            </div>
+                                            <div class="table__product-title">
+                                                <span>Чехол-аккумулятор iBattery для iPhone 6/6s/8 на 3200mAh
+                                                    Black</span>
+                                                <div class="table__product-titlefull">Чехол-аккумулятор iBattery для
+                                                    iPhone 6/6s/8 на 3200mAh Black
+                                                </div>
+                                            </div>
+                                            <div class="table__product-price">
+                                                <label class="filter__checkbox-label">
+                                                    <input class="filter__checkbox-input" type="checkbox">
+                                                    <span class="filter__checkbox-name"></span>
+                                                </label>
+                                            </div>
+                                            <div class="table__product-availability">
+                                                <label class="filter__checkbox-label">
+                                                    <input class="filter__checkbox-input" type="checkbox">
+                                                    <span class="filter__checkbox-name"></span>
+                                                </label>
+                                            </div>
+                                        </li>
+
+                                        <li class="table__product-item">
+                                            <div class="table__product-amount">
+                                                <span>1</span>
+                                            </div>
+                                            <div class="table__product-art">
+                                                <span>bci-0001</span>
+                                            </div>
+                                            <div class="table__product-title">
+                                                <span>Чехол-аккумулятор iBattery для iPhone 6/6s/8 на 3200mAh
+                                                    Black</span>
+                                                <div class="table__product-titlefull">Чехол-аккумулятор iBattery для
+                                                    iPhone 6/6s/8 на 3200mAh Black
+                                                </div>
+                                            </div>
+                                            <div class="table__product-price">
+                                                <label class="filter__checkbox-label">
+                                                    <input class="filter__checkbox-input" type="checkbox">
+                                                    <span class="filter__checkbox-name"></span>
+                                                </label>
+                                            </div>
+                                            <div class="table__product-availability">
+                                                <label class="filter__checkbox-label">
+                                                    <input class="filter__checkbox-input" type="checkbox">
+                                                    <span class="filter__checkbox-name"></span>
+                                                </label>
+                                            </div>
+                                        </li>
+
+                                        <li class="table__product-item">
+                                            <div class="table__product-amount">
+                                                <span>1</span>
+                                            </div>
+                                            <div class="table__product-art">
+                                                <span>bci-0001</span>
+                                            </div>
+                                            <div class="table__product-title">
+                                                <span>Чехол-аккумулятор iBattery для iPhone 6/6s/8 на 3200mAh
+                                                    Black</span>
+                                                <div class="table__product-titlefull">Чехол-аккумулятор iBattery для
+                                                    iPhone 6/6s/8 на 3200mAh Black
+                                                </div>
+                                            </div>
+                                            <div class="table__product-price">
+                                                <label class="filter__checkbox-label">
+                                                    <input class="filter__checkbox-input" type="checkbox">
+                                                    <span class="filter__checkbox-name"></span>
+                                                </label>
+                                            </div>
+                                            <div class="table__product-availability">
+                                                <label class="filter__checkbox-label">
+                                                    <input class="filter__checkbox-input" type="checkbox">
+                                                    <span class="filter__checkbox-name"></span>
+                                                </label>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+
+                                    <div class="controls">
+                                        <div class="controls__wrapper">
+                                            <div class="pagination">
+                                                <a class="pagination__nav pagination__nav--prev" href="#">
+                                                    <svg width='11' height='15'>
+                                                        <use href='img/sprite/sprite.svg#arrow'></use>
+                                                    </svg>
+                                                </a>
+                                                <ul class="pagination__list">
+                                                    <li class="pagination__list-item">
+                                                        <a class="pagination__list-link pagination__list-link--active"
+                                                            href="#">1</a>
+                                                    </li>
+                                                    <li class="pagination__list-item">
+                                                        <a class="pagination__list-link" href="#">2</a>
+                                                    </li>
+                                                    <li class="pagination__list-item">
+                                                        <span>…</span>
+                                                    </li>
+                                                    <li class="pagination__list-item">
+                                                        <a class="pagination__list-link" href="#">19</a>
+                                                    </li>
+                                                </ul>
+                                                <a class="pagination__nav pagination__nav--next" href="#">
+                                                    <svg width='11' height='15'>
+                                                        <use href='img/sprite/sprite.svg#arrow'></use>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                            <div class="show">
+                                                <div class="show__title">Показывать по:</div>
+                                                <div class="show__select select">
+                                                    <div class="show__select-header select__header">
+                                                        <span class="show__select-current select__current">
+                                                            20
+                                                        </span>
+                                                        <svg width='6' height='12'>
+                                                            <use href='img/sprite/sprite.svg#arrow'></use>
+                                                        </svg>
+                                                    </div>
+
+                                                    <ul class="show__select-body select__body">
+                                                        <li class="show__select-item select__item"
+                                                            data-choice='choosen'>10</li>
+                                                        <li class="show__select-item select__item"
+                                                            data-choice='choosen'>20</li>
+                                                        <li class="show__select-item select__item"
+                                                            data-choice='choosen'>50</li>
+                                                        <li class="show__select-item select__item"
+                                                            data-choice='choosen'>100</li>
+                                                        <li class="show__select-item select__item"
+                                                            data-choice='choosen'>200</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="special-table__product table__product">
+                                    <div class="special-table__header">
+                                        <h3 class="content__subtitle">Категории</h3>
+
+                                        <div class="special-table__search-block">
+                                            <button type="button"
+                                                class="special-table__search-btn special-table__search-show active">
+                                                <svg>
+                                                    <use xlink: href="img/sprite/sprite.svg#search"></use>
+                                                </svg>
+                                            </button>
+                                            <form class="special-table__search">
+                                                <button class="special-table__search-btn">
+                                                    <svg>
+                                                        <use xlink: href="img/sprite/sprite.svg#search"></use>
+                                                    </svg>
+                                                </button>
+                                                <input type="text">
+                                                <button type="button" class="special-table__search-close">
+                                                    <svg>
+                                                        <use href='img/sprite/sprite.svg#close'></use>
+                                                    </svg>
+                                                </button>
+                                            </form>
+                                        </div>
+
+                                        <button class="content__btn content__btn-warehouses btn-blue"
+                                            data-path="resources-save">
+                                            <span>Добавить</span>
+                                        </button>
+                                    </div>
+                                    <ul class="table__product-list">
+
+                                        <li class="table__product-item" data-sticky="sticky">
+                                            <button class="table__product-amount table__btn">
+                                                <span>#</span>
+                                                <svg width='14' height='14'>
+                                                    <use href='img/sprite/sprite.svg#sorting'></use>
+                                                </svg>
+                                            </button>
+                                            <button class="table__product-art table__btn">
+                                                <span>ID</span>
+                                                <svg width='14' height='14'>
+                                                    <use href='img/sprite/sprite.svg#sorting'></use>
+                                                </svg>
+                                            </button>
+                                            <button class="table__product-title table__btn">
+                                                <span>Название</span>
+                                                <svg width='14' height='14'>
+                                                    <use href='img/sprite/sprite.svg#sorting'></use>
+                                                </svg>
+                                            </button>
+                                            <button class="table__product-price table__btn">
+                                                <span>Цена</span>
+                                                <svg width='14' height='14'>
+                                                    <use href='img/sprite/sprite.svg#sorting'></use>
+                                                </svg>
+                                            </button>
+                                            <button class="table__product-availability table__btn">
+                                                <span>Наличие</span>
+                                                <svg width='14' height='14'>
+                                                    <use href='img/sprite/sprite.svg#sorting'></use>
+                                                </svg>
+                                            </button>
+                                        </li>
+
+                                        <li class="table__product-item">
+                                            <div class="table__product-amount">
+                                                <span>1</span>
+                                            </div>
+                                            <div class="table__product-art">
+                                                <span>217</span>
+                                            </div>
+                                            <div class="table__product-title">
+                                                <span>Чехол-аккумулятор iBattery для iPhone 6/6s/8 на 3200mAh
+                                                    Black</span>
+                                                <div class="table__product-titlefull">Чехол-аккумулятор iBattery для
+                                                    iPhone 6/6s/8 на 3200mAh Black
+                                                </div>
+                                            </div>
+                                            <div class="table__product-price">
+                                                <label class="filter__checkbox-label">
+                                                    <input class="filter__checkbox-input" type="checkbox">
+                                                    <span class="filter__checkbox-name"></span>
+                                                </label>
+                                            </div>
+                                            <div class="table__product-availability">
+                                                <label class="filter__checkbox-label">
+                                                    <input class="filter__checkbox-input" type="checkbox">
+                                                    <span class="filter__checkbox-name"></span>
+                                                </label>
+                                            </div>
+                                        </li>
+
+                                        <li class="table__product-item">
+                                            <div class="table__product-amount">
+                                                <span>1</span>
+                                            </div>
+                                            <div class="table__product-art">
+                                                <span>217</span>
+                                            </div>
+                                            <div class="table__product-title">
+                                                <span>Чехол-аккумулятор iBattery для iPhone 6/6s/8 на 3200mAh
+                                                    Black</span>
+                                                <div class="table__product-titlefull">Чехол-аккумулятор iBattery для
+                                                    iPhone 6/6s/8 на 3200mAh Black
+                                                </div>
+                                            </div>
+                                            <div class="table__product-price">
+                                                <label class="filter__checkbox-label">
+                                                    <input class="filter__checkbox-input" type="checkbox">
+                                                    <span class="filter__checkbox-name"></span>
+                                                </label>
+                                            </div>
+                                            <div class="table__product-availability">
+                                                <label class="filter__checkbox-label">
+                                                    <input class="filter__checkbox-input" type="checkbox">
+                                                    <span class="filter__checkbox-name"></span>
+                                                </label>
+                                            </div>
+                                        </li>
+
+                                        <li class="table__product-item">
+                                            <div class="table__product-amount">
+                                                <span>1</span>
+                                            </div>
+                                            <div class="table__product-art">
+                                                <span>217</span>
+                                            </div>
+                                            <div class="table__product-title">
+                                                <span>Чехол-аккумулятор iBattery для iPhone 6/6s/8 на 3200mAh
+                                                    Black</span>
+                                                <div class="table__product-titlefull">Чехол-аккумулятор iBattery для
+                                                    iPhone 6/6s/8 на 3200mAh Black
+                                                </div>
+                                            </div>
+                                            <div class="table__product-price">
+                                                <label class="filter__checkbox-label">
+                                                    <input class="filter__checkbox-input" type="checkbox">
+                                                    <span class="filter__checkbox-name"></span>
+                                                </label>
+                                            </div>
+                                            <div class="table__product-availability">
+                                                <label class="filter__checkbox-label">
+                                                    <input class="filter__checkbox-input" type="checkbox">
+                                                    <span class="filter__checkbox-name"></span>
+                                                </label>
+                                            </div>
+                                        </li>
+
+                                        <li class="table__product-item">
+                                            <div class="table__product-amount">
+                                                <span>1</span>
+                                            </div>
+                                            <div class="table__product-art">
+                                                <span>217</span>
+                                            </div>
+                                            <div class="table__product-title">
+                                                <span>Чехол-аккумулятор iBattery для iPhone 6/6s/8 на 3200mAh
+                                                    Black</span>
+                                                <div class="table__product-titlefull">Чехол-аккумулятор iBattery для
+                                                    iPhone 6/6s/8 на 3200mAh Black
+                                                </div>
+                                            </div>
+                                            <div class="table__product-price">
+                                                <label class="filter__checkbox-label">
+                                                    <input class="filter__checkbox-input" type="checkbox">
+                                                    <span class="filter__checkbox-name"></span>
+                                                </label>
+                                            </div>
+                                            <div class="table__product-availability">
+                                                <label class="filter__checkbox-label">
+                                                    <input class="filter__checkbox-input" type="checkbox">
+                                                    <span class="filter__checkbox-name"></span>
+                                                </label>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+                                    <div class="controls">
+                                        <div class="controls__wrapper">
+                                            <div class="pagination">
+                                                <a class="pagination__nav pagination__nav--prev" href="#">
+                                                    <svg width='11' height='15'>
+                                                        <use href='img/sprite/sprite.svg#arrow'></use>
+                                                    </svg>
+                                                </a>
+                                                <ul class="pagination__list">
+                                                    <li class="pagination__list-item">
+                                                        <a class="pagination__list-link pagination__list-link--active"
+                                                            href="#">1</a>
+                                                    </li>
+                                                    <li class="pagination__list-item">
+                                                        <a class="pagination__list-link" href="#">2</a>
+                                                    </li>
+                                                    <li class="pagination__list-item">
+                                                        <span>…</span>
+                                                    </li>
+                                                    <li class="pagination__list-item">
+                                                        <a class="pagination__list-link" href="#">19</a>
+                                                    </li>
+                                                </ul>
+                                                <a class="pagination__nav pagination__nav--next" href="#">
+                                                    <svg width='11' height='15'>
+                                                        <use href='img/sprite/sprite.svg#arrow'></use>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                            <div class="show">
+                                                <div class="show__title">Показывать по:</div>
+                                                <div class="show__select select">
+                                                    <div class="show__select-header select__header">
+                                                        <span class="show__select-current select__current">
+                                                            20
+                                                        </span>
+                                                        <svg width='6' height='12'>
+                                                            <use href='img/sprite/sprite.svg#arrow'></use>
+                                                        </svg>
+                                                    </div>
+
+                                                    <ul class="show__select-body select__body">
+                                                        <li class="show__select-item select__item"
+                                                            data-choice='choosen'>10</li>
+                                                        <li class="show__select-item select__item"
+                                                            data-choice='choosen'>20</li>
+                                                        <li class="show__select-item select__item"
+                                                            data-choice='choosen'>50</li>
+                                                        <li class="show__select-item select__item"
+                                                            data-choice='choosen'>100</li>
+                                                        <li class="show__select-item select__item"
+                                                            data-choice='choosen'>200</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content__btn-right">
+                                        <button class="content__btn content__btn-warehouses btn-blue"
+                                            data-path="resources-save">
+                                            <span>Сохранить</span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </section>
 
