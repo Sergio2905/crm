@@ -712,7 +712,7 @@
                                         </div>
 
                                         <button class="content__btn content__btn-warehouses btn-blue"
-                                            data-path="resources-save">
+                                            data-path="resources-add-item">
                                             <span>Добавить</span>
                                         </button>
                                     </div>
@@ -822,14 +822,14 @@
                                                 </div>
                                             </div>
                                             <div class="table__product-price">
-                                                <button class="table__actions-btn" data-path="resources-refresh">
+                                                <button class="table__actions-btn" data-path="resources-check">
                                                     <svg>
                                                         <use xlink: href="img/sprite/sprite.svg#refresh"></use>
                                                     </svg>
                                                 </button>
                                             </div>
                                             <div class="table__product-availability">
-                                                <button class="table__actions-btn" data-path="resources-delete">
+                                                <button class="table__actions-btn" data-path="resources-del">
                                                     <svg>
                                                         <use xlink: href="img/sprite/sprite.svg#delete"></use>
                                                     </svg>
@@ -1009,7 +1009,7 @@
                                         </div>
 
                                         <button class="content__btn content__btn-warehouses btn-blue"
-                                            data-path="resources-save">
+                                            data-path="resources-add-item">
                                             <span>Добавить</span>
                                         </button>
                                     </div>
@@ -1831,7 +1831,7 @@
       </div>
 
       <div class="modal__bottom">
-        <button class="modal__btn modal__btn--download">Подтвердить</button>
+        <button class="modal__btn modal__btn--download btn-show-all">Подтвердить</button>
         <button class="modal__btn modal-close">Отменить</button>
       </div>
     </div>
@@ -2977,6 +2977,43 @@
         </div>
 
       </form>
+
+      <div class="modal__bottom">
+        <button class="modal__btn modal__btn--download">Сохранить</button>
+        <button class="modal__btn modal-close">Отменить</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal__container" data-target="resources-del">
+    <div class="modal__wrapper download">
+      <div class="modal__title">Удалить товар</div>
+
+      <div class="modal__bottom">
+        <button class="modal__btn modal__btn--download">Подтвердить</button>
+        <button class="modal__btn modal-close">Отменить</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal__container" data-target="resources-check">
+    <div class="modal__wrapper download">
+      <div class="modal__title">Проверить отображение товара</div>
+
+      <div class="modal__bottom">
+        <button class="modal__btn modal__btn--download">Подтвердить</button>
+        <button class="modal__btn modal-close">Отменить</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal__container" data-target="resources-add-item">
+    <div class="modal__wrapper download">
+      <div class="modal__title">Введите артикул</div>
+
+      <div class="modal__message">
+        <input type="text">
+      </div>
 
       <div class="modal__bottom">
         <button class="modal__btn modal__btn--download">Сохранить</button>

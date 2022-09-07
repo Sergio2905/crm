@@ -669,7 +669,7 @@
                                     </ul>
 
                                     <li class="table__warehouse-item table__warehouse-item-last">
-                                        <button class="table__warehouse-btn table__btn">
+                                        <button class="table__warehouse-btn table__btn" style="display: none;">
                                             <label class="filter__checkbox-label">
                                                 <input class="filter__checkbox-input" type="checkbox">
                                                 <span class="filter__checkbox-name check-all"></span>
@@ -1691,7 +1691,7 @@
       </div>
 
       <div class="modal__bottom">
-        <button class="modal__btn modal__btn--download">Подтвердить</button>
+        <button class="modal__btn modal__btn--download btn-show-all">Подтвердить</button>
         <button class="modal__btn modal-close">Отменить</button>
       </div>
     </div>
@@ -2837,6 +2837,43 @@
         </div>
 
       </form>
+
+      <div class="modal__bottom">
+        <button class="modal__btn modal__btn--download">Сохранить</button>
+        <button class="modal__btn modal-close">Отменить</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal__container" data-target="resources-del">
+    <div class="modal__wrapper download">
+      <div class="modal__title">Удалить товар</div>
+
+      <div class="modal__bottom">
+        <button class="modal__btn modal__btn--download">Подтвердить</button>
+        <button class="modal__btn modal-close">Отменить</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal__container" data-target="resources-check">
+    <div class="modal__wrapper download">
+      <div class="modal__title">Проверить отображение товара</div>
+
+      <div class="modal__bottom">
+        <button class="modal__btn modal__btn--download">Подтвердить</button>
+        <button class="modal__btn modal-close">Отменить</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal__container" data-target="resources-add-item">
+    <div class="modal__wrapper download">
+      <div class="modal__title">Введите артикул</div>
+
+      <div class="modal__message">
+        <input type="text">
+      </div>
 
       <div class="modal__bottom">
         <button class="modal__btn modal__btn--download">Сохранить</button>
