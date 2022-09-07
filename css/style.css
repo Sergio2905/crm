@@ -2088,29 +2088,29 @@ footer {
   }
 }
 
-.navigation__controls-item .navigation__controls-btn.active::before {
+.settings-page .navigation__controls-item .navigation__controls-btn.active::before {
   -webkit-mask-image: var(--active-category);
           mask-image: var(--active-category);
   background: #fff;
 }
 @media (max-width: 576px) {
-  .navigation__controls-item .navigation__controls-btn.active::before {
+  .settings-page .navigation__controls-item .navigation__controls-btn.active::before {
     -webkit-mask-image: var(--active-category-mob);
             mask-image: var(--active-category-mob);
   }
 }
-.navigation__controls-item:nth-child(1) .navigation__controls-btn.active::before, .navigation__controls-item:nth-child(2) .navigation__controls-btn.active::before, .navigation__controls-item:nth-child(3) .navigation__controls-btn.active::before {
+.settings-page .navigation__controls-item:nth-child(1) .navigation__controls-btn.active::before, .settings-page .navigation__controls-item:nth-child(2) .navigation__controls-btn.active::before, .settings-page .navigation__controls-item:nth-child(3) .navigation__controls-btn.active::before {
   -webkit-mask-image: var(--active-category);
           mask-image: var(--active-category);
   background: #DAEAE8;
 }
 @media (max-width: 768px) {
-  .navigation__controls-item:nth-child(1) .navigation__controls-btn.active::before, .navigation__controls-item:nth-child(2) .navigation__controls-btn.active::before, .navigation__controls-item:nth-child(3) .navigation__controls-btn.active::before {
+  .settings-page .navigation__controls-item:nth-child(1) .navigation__controls-btn.active::before, .settings-page .navigation__controls-item:nth-child(2) .navigation__controls-btn.active::before, .settings-page .navigation__controls-item:nth-child(3) .navigation__controls-btn.active::before {
     background: #fff;
   }
 }
 @media (max-width: 576px) {
-  .navigation__controls-item:nth-child(1) .navigation__controls-btn.active::before, .navigation__controls-item:nth-child(2) .navigation__controls-btn.active::before, .navigation__controls-item:nth-child(3) .navigation__controls-btn.active::before {
+  .settings-page .navigation__controls-item:nth-child(1) .navigation__controls-btn.active::before, .settings-page .navigation__controls-item:nth-child(2) .navigation__controls-btn.active::before, .settings-page .navigation__controls-item:nth-child(3) .navigation__controls-btn.active::before {
     -webkit-mask-image: var(--active-category-mob);
             mask-image: var(--active-category-mob);
     background: #fff;
