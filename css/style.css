@@ -2458,6 +2458,19 @@ footer {
   -webkit-box-shadow: none;
           box-shadow: none;
   grid-gap: 20px;
+  overflow: hidden;
+}
+.form-modal-resources .form-modal__info-wrapper {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+@media (max-width: 768px) {
+  .form-modal-resources .form-modal__info-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 .form-modal__btn-right {
   display: -webkit-box;
@@ -2944,14 +2957,8 @@ footer {
   grid-column-gap: 22px;
   grid-row-gap: 17px;
   margin-bottom: 20px;
-}
-@media (max-width: 768px) {
-  .form-modal__info-wrapper {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 @media (max-width: 480px) {
   .form-modal__info-wrapper .form-modal__input-block {
@@ -4213,6 +4220,24 @@ footer {
   display: none;
 }
 
+.unavailable-all .on {
+  display: none;
+}
+.unavailable-all .off {
+  display: block;
+}
+.unavailable-all .autorefresh__unavailable {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.unavailable-all .autorefresh__info-block {
+  display: none;
+}
+.unavailable-all .table__actions-btn {
+  display: none;
+}
+
 .content__table-matrix .table__product {
   min-width: 1070px;
 }
@@ -4555,8 +4580,8 @@ footer {
           transform: translate(-50%, -50%);
 }
 .special-table__product .table__product-price .filter__checkbox-name::before {
-  background-color: #D9D9D9;
-  border: 2px solid #D9D9D9;
+  background-color: #fff;
+  border: 2px solid #64B6AC;
 }
 .special-table__product .table__product-availability {
   width: 50px;
@@ -4581,8 +4606,8 @@ footer {
           transform: translate(-50%, -50%);
 }
 .special-table__product .table__product-availability .filter__checkbox-name::before {
-  background-color: #D9D9D9;
-  border: 2px solid #D9D9D9;
+  background-color: #fff;
+  border: 2px solid #64B6AC;
 }
 
 .table__resources-extra {
@@ -4743,6 +4768,11 @@ footer {
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
 }
+.filter__info.filter__info-change.active .filter__info-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 @media (max-width: 1600px) {
   .filter__info {
     grid-gap: 10px;
@@ -4769,9 +4799,7 @@ footer {
       flex-wrap: wrap;
 }
 .filter__info-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
 }
 .filter__info-wrapper .filter__info-block:first-child {
   -webkit-box-flex: 0;
