@@ -826,6 +826,18 @@ if (closeSearchBtns.length > 0) {
   }
 }
 
+const filterAutoBtn = document.querySelector('.filter__info-change .filter__checkbox-input');
+
+if (filterAutoBtn) {
+  filterAutoBtn.addEventListener('click', () => {
+    if (filterAutoBtn.checked == true) {
+      filterAutoBtn.closest('.filter__info-change').classList.add('active');
+    } else {
+      filterAutoBtn.closest('.filter__info-change').classList.remove('active');
+    }
+  });
+}
+
 /***/ }),
 
 /***/ "./source/js/components/uncover.js":
@@ -977,19 +989,19 @@ if (showAll) {
     warehouseLists.forEach(el => {
       if (el.classList.contains('hidden')) {
         el.classList.remove('hidden');
-        el.classList.add('.visible');
+        el.classList.add('visible');
       }
     });
     warehouseListsSecond.forEach(el => {
       if (el.classList.contains('hidden')) {
         el.classList.remove('hidden');
-        el.classList.add('.visible');
+        el.classList.add('visible');
       }
     });
     productLists.forEach(el => {
       if (el.classList.contains('hidden')) {
         el.classList.remove('hidden');
-        el.classList.add('.visible');
+        el.classList.add('visible');
         el.previousElementSibling.classList.add('uncovered');
       }
     });
