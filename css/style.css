@@ -4538,6 +4538,23 @@ footer {
       -ms-flex-pack: center;
           justify-content: center;
 }
+@media (max-width: 768px) {
+  .special-table__product .controls__wrapper {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .special-table__product .controls__wrapper .pagination {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    width: unset;
+  }
+  .special-table__product .controls__wrapper .show {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
 .special-table__product .table__product-item:not(:first-child) {
   height: 50px;
 }
