@@ -22,7 +22,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_replaceEl_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/replaceEl.js */ "./source/js/components/replaceEl.js");
 /* harmony import */ var _components_replaceEl_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_components_replaceEl_js__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var _components_switcher_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/switcher.js */ "./source/js/components/switcher.js");
-/* harmony import */ var _components_switcher_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_components_switcher_js__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var _components_check_all_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/check-all.js */ "./source/js/components/check-all.js");
 /* harmony import */ var _components_check_all_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_components_check_all_js__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var _components_autorefresh_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/autorefresh.js */ "./source/js/components/autorefresh.js");
@@ -52,6 +51,7 @@ function initUI() {
   _components_pagination_js__WEBPACK_IMPORTED_MODULE_11__.pagination();
   _components_modals_js__WEBPACK_IMPORTED_MODULE_3__.modal();
   _components_select_js__WEBPACK_IMPORTED_MODULE_0__.select();
+  _components_switcher_js__WEBPACK_IMPORTED_MODULE_7__.switchers();
 }
 
 initUI();
@@ -582,6 +582,7 @@ function select() {
       const selectCurrent = item.querySelector(".select__current");
       item.addEventListener("click", event => {
         const el = event.target.dataset.choice;
+        const id = event.target.dataset.id;
         const text = event.target.innerText;
 
         if (el === "choosen" && selectCurrent.innerHTML !== text) {
@@ -589,7 +590,7 @@ function select() {
           const inputHidden = selectCurrent.previousElementSibling;
 
           if (inputHidden) {
-            inputHidden.value = text;
+            inputHidden.value = "int " + id;
           }
         }
 
@@ -809,86 +810,93 @@ stickyElFunction(stickyBlocks, activeClass, stickyOffset);
 /*!******************************************!*\
   !*** ./source/js/components/switcher.js ***!
   \******************************************/
-/***/ (function() {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-const onSwitchers = document.querySelectorAll(".table__product-switcher.on");
-const offSwitchers = document.querySelectorAll(".table__product-switcher.off");
-const extraEl = document.querySelectorAll('.table__resources-extra .table__product-item');
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "switchers": function() { return /* binding */ switchers; }
+/* harmony export */ });
+function switchers() {
+  const onSwitchers = document.querySelectorAll(".table__product-switcher.on");
+  const offSwitchers = document.querySelectorAll(".table__product-switcher.off");
+  const extraEl = document.querySelectorAll('.table__resources-extra .table__product-item');
 
-if (onSwitchers.length > 0) {
-  for (let index = 0; index < onSwitchers.length; index++) {
-    const onSwitcher = onSwitchers[index];
-    const offSwitcher = offSwitchers[index];
-    onSwitcher.addEventListener('click', function () {
-      const parentEl = onSwitcher.closest('.table__product-item');
-      parentEl.classList.toggle('available');
-      parentEl.classList.toggle('unavailable');
+  if (onSwitchers.length > 0) {
+    for (let index = 0; index < onSwitchers.length; index++) {
+      const onSwitcher = onSwitchers[index];
+      const offSwitcher = offSwitchers[index];
+      onSwitcher.addEventListener('click', function () {
+        const parentEl = onSwitcher.closest('.table__product-item');
+        parentEl.classList.toggle('available');
+        parentEl.classList.toggle('unavailable');
 
-      if (extraEl.length > 0) {
-        extraEl[index + 1].classList.toggle('available');
-        extraEl[index + 1].classList.toggle('unavailable');
-      }
-    });
-    offSwitcher.addEventListener('click', function () {
-      const parentEl = offSwitcher.closest('.table__product-item');
-      parentEl.classList.toggle('available');
-      parentEl.classList.toggle('unavailable');
+        if (extraEl.length > 0) {
+          extraEl[index + 1].classList.toggle('available');
+          extraEl[index + 1].classList.toggle('unavailable');
+        }
+      });
+      offSwitcher.addEventListener('click', function () {
+        const parentEl = offSwitcher.closest('.table__product-item');
+        parentEl.classList.toggle('available');
+        parentEl.classList.toggle('unavailable');
 
-      if (extraEl.length > 0) {
-        extraEl[index + 1].classList.toggle('available');
-        extraEl[index + 1].classList.toggle('unavailable');
-      }
-    });
-  }
-}
-
-const singleSwitchers = document.querySelectorAll(".table__product-switcher-single");
-
-if (singleSwitchers.length > 0) {
-  for (let index = 0; index < singleSwitchers.length; index++) {
-    const singleSwitcher = singleSwitchers[index];
-    singleSwitcher.addEventListener('click', function () {
-      const parentEl = singleSwitcher.closest('.table__product-status');
-      parentEl.classList.toggle('available');
-      parentEl.classList.toggle('unavailable');
-    });
-  }
-}
-
-const showSearchBtns = document.querySelectorAll('.special-table__search-show');
-const closeSearchBtns = document.querySelectorAll('.special-table__search-close');
-
-if (showSearchBtns.length > 0) {
-  for (let index = 0; index < showSearchBtns.length; index++) {
-    const showSearchBtn = showSearchBtns[index];
-    showSearchBtn.addEventListener('click', () => {
-      showSearchBtn.nextElementSibling.classList.toggle('active');
-      showSearchBtn.classList.toggle('active');
-    });
-  }
-}
-
-if (closeSearchBtns.length > 0) {
-  for (let index = 0; index < closeSearchBtns.length; index++) {
-    const closeSearchBtn = closeSearchBtns[index];
-    closeSearchBtn.addEventListener('click', () => {
-      const parentEl = closeSearchBtn.closest('.special-table__search');
-      parentEl.classList.toggle('active');
-      parentEl.previousElementSibling.classList.toggle('active');
-    });
-  }
-}
-
-const filterAutoBtn = document.querySelector('.filter__info-change .filter__checkbox-input');
-
-if (filterAutoBtn) {
-  filterAutoBtn.addEventListener('click', () => {
-    if (filterAutoBtn.checked == true) {
-      filterAutoBtn.closest('.filter__info-change').classList.add('active');
-    } else {
-      filterAutoBtn.closest('.filter__info-change').classList.remove('active');
+        if (extraEl.length > 0) {
+          extraEl[index + 1].classList.toggle('available');
+          extraEl[index + 1].classList.toggle('unavailable');
+        }
+      });
     }
-  });
+  }
+
+  const singleSwitchers = document.querySelectorAll(".table__product-switcher-single");
+
+  if (singleSwitchers.length > 0) {
+    for (let index = 0; index < singleSwitchers.length; index++) {
+      const singleSwitcher = singleSwitchers[index];
+      singleSwitcher.addEventListener('click', function () {
+        const parentEl = singleSwitcher.closest('.table__product-status');
+        parentEl.classList.toggle('available');
+        parentEl.classList.toggle('unavailable');
+      });
+    }
+  }
+
+  const showSearchBtns = document.querySelectorAll('.special-table__search-show');
+  const closeSearchBtns = document.querySelectorAll('.special-table__search-close');
+
+  if (showSearchBtns.length > 0) {
+    for (let index = 0; index < showSearchBtns.length; index++) {
+      const showSearchBtn = showSearchBtns[index];
+      showSearchBtn.addEventListener('click', () => {
+        showSearchBtn.nextElementSibling.classList.toggle('active');
+        showSearchBtn.classList.toggle('active');
+      });
+    }
+  }
+
+  if (closeSearchBtns.length > 0) {
+    for (let index = 0; index < closeSearchBtns.length; index++) {
+      const closeSearchBtn = closeSearchBtns[index];
+      closeSearchBtn.addEventListener('click', () => {
+        const parentEl = closeSearchBtn.closest('.special-table__search');
+        parentEl.classList.toggle('active');
+        parentEl.previousElementSibling.classList.toggle('active');
+      });
+    }
+  }
+
+  const filterAutoBtn = document.querySelector('.filter__info-change .filter__checkbox-input');
+
+  if (filterAutoBtn) {
+    filterAutoBtn.addEventListener('click', () => {
+      if (filterAutoBtn.checked == true) {
+        filterAutoBtn.closest('.filter__info-change').classList.add('active');
+      } else {
+        filterAutoBtn.closest('.filter__info-change').classList.remove('active');
+      }
+    });
+  }
 }
 
 /***/ }),
