@@ -215,10 +215,10 @@
                                             <li class="filter__select-item select__item" data-id="1"
                                                 data-choice='choosen'>Каталог 1
                                             </li>
-                                            <li class="filter__select-item select__item" data-id="1"
+                                            <li class="filter__select-item select__item" data-id="2"
                                                 data-choice='choosen'>Каталог 2
                                             </li>
-                                            <li class="filter__select-item select__item" data-id="1"
+                                            <li class="filter__select-item select__item" data-id="3"
                                                 data-choice='choosen'>Каталог 3
                                             </li>
                                         </ul>
@@ -240,6 +240,7 @@
                                     <div class="filter__info-block">
                                         <div class="filter__select filter__select--time select">
                                             <div class="filter__select-header">
+                                                <input type="hidden" value="1">
                                                 <span class="filter__select-current select__current">
                                                     Минут
                                                 </span>
@@ -248,10 +249,16 @@
                                                 </svg>
                                             </div>
                                             <ul class="filter__select-body select__body">
-                                                <li class="filter__select-item select__item" data-choice='choosen'>
+                                                <li class="filter__select-item select__item" data-id="1"
+                                                    data-choice='choosen'>
                                                     Секунд
                                                 </li>
-                                                <li class="filter__select-item select__item" data-choice='choosen'>Часов
+                                                <li class="filter__select-item select__item" data-id="2"
+                                                    data-choice='choosen'>
+                                                    Минут
+                                                </li>
+                                                <li class="filter__select-item select__item" data-id="3"
+                                                    data-choice='choosen'>Часов
                                                 </li>
                                             </ul>
                                         </div>
@@ -421,6 +428,181 @@
                         </svg>
                         <span>Добавить каталог</span>
                     </button>
+
+                    <div class="modal">
+                        <div class="modal__container" data-target="catalog-refresh">
+                            <div class="modal__wrapper download">
+                                <div class="modal__title">Обновить каталог</div>
+
+                                <div class="modal__message">
+                                    Подтвердите загрузку данных для текущего каталога товаров. При подтверждении,
+                                    загрузка начнется в фоне и Вы
+                                    получите уведомление об окончании.
+                                </div>
+
+                                <div class="modal__bottom">
+                                    <button type="button" class="modal__btn modal__btn--download">Подтвердить</button>
+                                    <button type="button" class="modal__btn modal-close">Отменить</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal__container" data-target="catalog-clear">
+                            <div class="modal__wrapper download">
+                                <div class="modal__title">Очистить каталог</div>
+
+                                <div class="modal__message">
+                                    Подтвердите очистку всех данных для текущего каталога товаров. При подтверждении,
+                                    работа системи соответствия
+                                    товаров будет остановлена.
+                                </div>
+
+                                <div class="modal__bottom">
+                                    <button type="button" class="modal__btn modal__btn--download">Подтвердить</button>
+                                    <button type="button" class="modal__btn modal-close">Отменить</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal__container" data-target="catalog-save">
+                            <div class="modal__wrapper download">
+                                <div class="modal__title">Сохранить каталог</div>
+
+                                <div class="modal__message">
+                                    Подтвердите очистку всех данных для текущего каталога товаров. При подтверждении,
+                                    работа системи соответствия
+                                    товаров будет остановлена.
+                                </div>
+
+                                <div class="modal__bottom">
+                                    <button type="button" class="modal__btn modal__btn--download">Подтвердить</button>
+                                    <button type="button" class="modal__btn modal-close">Отменить</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal__container" data-target="catalog-delete">
+                            <div class="modal__wrapper download">
+                                <div class="modal__title">Удалить каталог</div>
+
+                                <div class="modal__message">
+                                    Подтвердите удаление всех данных для текущего каталога товаров. При подтверждении,
+                                    вся информация о данном
+                                    складе будет безвозвратно удалена.
+                                </div>
+
+                                <div class="modal__bottom">
+                                    <button type="button" class="modal__btn modal__btn--download">Подтвердить</button>
+                                    <button type="button" class="modal__btn modal-close">Отменить</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal__container" data-target="catalog-edit">
+                            <div class="modal__wrapper edit">
+                                <div class="modal__close modal-close">
+                                    <svg width='24' height='24'>
+                                        <use href='img/sprite/sprite.svg#close'></use>
+                                    </svg>
+                                </div>
+
+                                <div class="modal__title">Добавить новый каталог</div>
+
+                                <form class="modal__form form-modal">
+
+                                    <div class="form-modal__catalog">
+                                        <div class="form-modal__info-block">
+                                            <div class="form-modal__input-block">
+                                                <span class="form-modal__input-name">Название каталога</span>
+                                                <div class="form-modal__input-wrapper">
+                                                    <input type="text" class="form-modal__input">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-modal__info-block">
+                                            <div class="form__title">
+                                                Источник данных
+                                            </div>
+                                            <div class="form-modal__select form-modal__select--catalog select">
+                                                <div class="form-modal__select-header">
+                                                    <input type="hidden" value="1">
+                                                    <span class="form-modal__select-current select__current">
+                                                        YML-файл
+                                                    </span>
+                                                    <svg width='12' height='12'>
+                                                        <use href='img/sprite/sprite.svg#arrow'></use>
+                                                    </svg>
+                                                </div>
+                                                <ul class="form-modal__select-body select__body">
+                                                    <li class="form-modal__select-item select__item" data-id="1"
+                                                        data-choice='choosen'>YML-файл
+                                                    </li>
+                                                    <li class="form-modal__select-item select__item" data-id="2"
+                                                        data-choice='choosen'>XML-файл
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-modal__link">
+                                        <h3 class="form-modal__subtitle">Ссылка на файл</h3>
+                                        <div class="form-modal__info-block">
+                                            <div class="form-modal__input-block">
+                                                <div class="form-modal__input-wrapper">
+                                                    <input type="text" class="form-modal__input">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-modal__tags">
+                                        <h3 class="form-modal__subtitle">Соответствие тегов (YML)</h3>
+                                        <div class="form-modal__info-block">
+                                            <div class="form-modal__input-block">
+                                                <span class="form-modal__input-name">Название</span>
+                                                <input type="text" class="form-modal__input">
+                                            </div>
+                                            <div class="form-modal__input-block">
+                                                <span class="form-modal__input-name">Артикул</span>
+                                                <input type="text" class="form-modal__input">
+                                            </div>
+                                            <div class="form-modal__input-block">
+                                                <span class="form-modal__input-name">Ссылка на товар</span>
+                                                <input type="text" class="form-modal__input">
+                                            </div>
+                                            <div class="form-modal__input-block">
+                                                <span class="form-modal__input-name">Ссылка на фото</span>
+                                                <input type="text" class="form-modal__input">
+                                            </div>
+                                            <div class="form-modal__input-block">
+                                                <span class="form-modal__input-name">Цена</span>
+                                                <input type="text" class="form-modal__input">
+                                            </div>
+                                            <div class="form-modal__input-block">
+                                                <span class="form-modal__input-name">Количество</span>
+                                                <input type="text" class="form-modal__input">
+                                            </div>
+                                            <div class="form-modal__input-block">
+                                                <span class="form-modal__input-name">Категория</span>
+                                                <input type="text" class="form-modal__input">
+                                            </div>
+                                            <div class="form-modal__input-block">
+                                                <span class="form-modal__input-name">Продукт</span>
+                                                <input type="text" class="form-modal__input">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </form>
+
+                                <div class="modal__bottom">
+                                    <button type="button" class="modal__btn modal__btn--download">Сохранить</button>
+                                    <button type="button" class="modal__btn modal-close">Отменить</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -432,1811 +614,6 @@
   </div>
 </footer>
 
-        <div class="modal">
-  <!--<div class="modal__container" data-target="export">
-    <div class="modal__wrapper download">
-      <div class="modal__title">Выберите формат экспорта</div>
-
-      <div class="download__modal-content">
-        <div class="download__select select">
-          <div class="download__select-header select__header">
-            <span class="download__select-current select__current">
-              Таблица XLSX
-            </span>
-            <svg width='12' height='12'>
-              <use href='img/sprite/sprite.svg#arrow'></use>
-            </svg>
-          </div>
-
-          <ul class="download__select-body select__body">
-            <li class="download__select-item select__item" data-choice='choosen'>Таблица XLSX</li>
-            <li class="download__select-item select__item" data-choice='choosen'>Таблица XLS</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="modal__bottom">
-        <button type="button" class="modal__btn modal__btn--download">Загрузить</button>
-        <button type="button" class="modal__btn modal-close">Отменить</button>
-      </div>
-    </div>
-  </div>-->
-
-  <!--<div class="modal__container" data-target="filter">
-    <div class="modal__wrapper choose">
-      <div class="modal__close modal-close">
-        <svg width='24' height='24'>
-          <use href='img/sprite/sprite.svg#close'></use>
-        </svg>
-      </div>
-
-      <div class="choose__modal-content">
-        <div class="modal__title">Выберите категорию</div>
-
-        <div class="choose__content">
-          <div class="choose__categories">
-            <div class="choose__category">
-              <div class="choose__categories-title">Категория</div>
-
-              <ul class="choose__categories-list">
-                <li class="choose__categories-item">
-                  <label class="choose__label sort__label">
-                    <input class="choose__input sort__input" type="checkbox" name="category">
-                    <span class="choose__name sort__name">Автотовары</span>
-                  </label>
-                </li>
-                <li class="choose__categories-item">
-                  <label class="choose__label sort__label">
-                    <input class="choose__input sort__input" type="checkbox" name="category">
-                    <span class="choose__name sort__name">Аксессуары</span>
-                  </label>
-                </li>
-                <li class="choose__categories-item">
-                  <label class="choose__label sort__label">
-                    <input class="choose__input sort__input" type="checkbox" name="category">
-                    <span class="choose__name sort__name">Техника</span>
-                  </label>
-                </li>
-                <li class="choose__categories-item">
-                  <label class="choose__label sort__label">
-                    <input class="choose__input sort__input" type="checkbox" name="category">
-                    <span class="choose__name sort__name">Аудио</span>
-                  </label>
-                </li>
-                <li class="choose__categories-item">
-                  <label class="choose__label sort__label">
-                    <input class="choose__input sort__input" type="checkbox" name="category">
-                    <span class="choose__name sort__name">Чехлы-аккумуляторы</span>
-                  </label>
-                </li>
-                <li class="choose__categories-item">
-                  <label class="choose__label sort__label">
-                    <input class="choose__input sort__input" type="checkbox" name="category">
-                    <span class="choose__name sort__name">Зарядные устройства</span>
-                  </label>
-                </li>
-                <li class="choose__categories-item">
-                  <label class="choose__label sort__label">
-                    <input class="choose__input sort__input" type="checkbox" name="category">
-                    <span class="choose__name sort__name">Здоровье</span>
-                  </label>
-                </li>
-              </ul>
-            </div>
-
-            <div class="choose__category">
-              <div class="choose__categories-title">Подкатегория 1</div>
-
-              <ul class="choose__categories-list">
-                <li class="choose__categories-item">
-                  <label class="choose__label sort__label">
-                    <input class="choose__input sort__input" type="checkbox" name="category1">
-                    <span class="choose__name sort__name">Для iPhone</span>
-                  </label>
-                </li>
-                <li class="choose__categories-item">
-                  <label class="choose__label sort__label">
-                    <input class="choose__input sort__input" type="checkbox" name="category1">
-                    <span class="choose__name sort__name">Для iPhone 6</span>
-                  </label>
-                </li>
-                <li class="choose__categories-item">
-                  <label class="choose__label sort__label">
-                    <input class="choose__input sort__input" type="checkbox" name="category1">
-                    <span class="choose__name sort__name">Для iPhone 7</span>
-                  </label>
-                </li>
-                <li class="choose__categories-item">
-                  <label class="choose__label sort__label">
-                    <input class="choose__input sort__input" type="checkbox" name="category1">
-                    <span class="choose__name sort__name">Для iPhone 8</span>
-                  </label>
-                </li>
-                <li class="choose__categories-item">
-                  <label class="choose__label sort__label">
-                    <input class="choose__input sort__input" type="checkbox" name="category1">
-                    <span class="choose__name sort__name">Для iPhone 9</span>
-                  </label>
-                </li>
-                <li class="choose__categories-item">
-                  <label class="choose__label sort__label">
-                    <input class="choose__input sort__input" type="checkbox" name="category1">
-                    <span class="choose__name sort__name">Для iPhone 10</span>
-                  </label>
-                </li>
-                <li class="choose__categories-item">
-                  <label class="choose__label sort__label">
-                    <input class="choose__input sort__input" type="checkbox" name="category1">
-                    <span class="choose__name sort__name">Для iPhone 11</span>
-                  </label>
-                </li>
-                <li class="choose__categories-item">
-                  <label class="choose__label sort__label">
-                    <input class="choose__input sort__input" type="checkbox" name="category1">
-                    <span class="choose__name sort__name">Для iPhone 12</span>
-                  </label>
-                </li>
-                <li class="choose__categories-item">
-                  <label class="choose__label sort__label">
-                    <input class="choose__input sort__input" type="checkbox" name="category1">
-                    <span class="choose__name sort__name">Для iPhone 13</span>
-                  </label>
-                </li>
-                <li class="choose__categories-item">
-                  <label class="choose__label sort__label">
-                    <input class="choose__input sort__input" type="checkbox" name="category1">
-                    <span class="choose__name sort__name">Защитные стекла и пленки</span>
-                  </label>
-                </li>
-              </ul>
-            </div>
-
-            <div class="choose__category">
-              <div class="choose__categories-title">Подкатегория 2</div>
-
-              <ul class="choose__categories-list">
-                <li class="choose__categories-item">
-                  <label class="choose__label sort__label">
-                    <input class="choose__input sort__input" type="checkbox" name="category2">
-                    <span class="choose__name sort__name">Портативный </span>
-                  </label>
-                </li>
-                <li class="choose__categories-item">
-                  <label class="choose__label sort__label">
-                    <input class="choose__input sort__input" type="checkbox" name="category2">
-                    <span class="choose__name sort__name">Солнечный</span>
-                  </label>
-                </li>
-                <li class="choose__categories-item">
-                  <label class="choose__label sort__label">
-                    <input class="choose__input sort__input" type="checkbox" name="category2">
-                    <span class="choose__name sort__name">Безпроводной</span>
-                  </label>
-                </li>
-                <li class="choose__categories-item">
-                  <label class="choose__label sort__label">
-                    <input class="choose__input sort__input" type="checkbox" name="category2">
-                    <span class="choose__name sort__name">Серии А</span>
-                  </label>
-                </li>
-                <li class="choose__categories-item">
-                  <label class="choose__label sort__label">
-                    <input class="choose__input sort__input" type="checkbox" name="category2">
-                    <span class="choose__name sort__name">Для Samsunge S</span>
-                  </label>
-                </li>
-                <li class="choose__categories-item">
-                  <label class="choose__label sort__label">
-                    <input class="choose__input sort__input" type="checkbox" name="category2">
-                    <span class="choose__name sort__name">Для Samsunge A10</span>
-                  </label>
-                </li>
-                <li class="choose__categories-item">
-                  <label class="choose__label sort__label">
-                    <input class="choose__input sort__input" type="checkbox" name="category2">
-                    <span class="choose__name sort__name">Для Samsunge A20</span>
-                  </label>
-                </li>
-                <li class="choose__categories-item">
-                  <label class="choose__label sort__label">
-                    <input class="choose__input sort__input" type="checkbox" name="category2">
-                    <span class="choose__name sort__name">Для Samsunge Note A10</span>
-                  </label>
-                </li>
-                <li class="choose__categories-item">
-                  <label class="choose__label sort__label">
-                    <input class="choose__input sort__input" type="checkbox" name="category2">
-                    <span class="choose__name sort__name">Для Samsunge Note S10</span>
-                  </label>
-                </li>
-                <li class="choose__categories-item">
-                  <label class="choose__label sort__label">
-                    <input class="choose__input sort__input" type="checkbox" name="category2">
-                    <span class="choose__name sort__name">Для Samsunge</span>
-                  </label>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="modal__bottom">
-        <button class="modal__btn modal__btn--choose">Выбрать</button>
-        <button class="modal__btn">Очистить</button>
-      </div>
-    </div>
-  </div>-->
-
-  <!--<div class="modal__container" data-target="categories">
-    <div class="modal__wrapper choose">
-      <div class="modal__close modal-close">
-        <svg width='24' height='24'>
-          <use href='img/sprite/sprite.svg#close'></use>
-        </svg>
-      </div>
-
-      <div class="choose__modal-content">
-        <div class="modal__title">Конструктор таблицы</div>
-
-        <div class="choose__content">
-          <div class="choose__categories">
-            <div class="choose__category">
-              <div class="choose__categories-title">Товары</div>
-
-              <ul class="choose__categories-list">
-                <li class="choose__categories-item">
-                  <label class="choose__label sort__label">
-                    <input class="choose__input sort__input" type="checkbox" name="category">
-                    <span class="choose__name sort__name">Категория</span>
-                  </label>
-                </li>
-                <li class="choose__categories-item">
-                  <label class="choose__label sort__label">
-                    <input class="choose__input sort__input" type="checkbox" name="category">
-                    <span class="choose__name sort__name">Подкатегория 1</span>
-                  </label>
-                </li>
-                <li class="choose__categories-item">
-                  <label class="choose__label sort__label">
-                    <input class="choose__input sort__input" type="checkbox" name="category">
-                    <span class="choose__name sort__name">Подкатегория 2</span>
-                  </label>
-                </li>
-                <li class="choose__categories-item">
-                  <label class="choose__label sort__label">
-                    <input class="choose__input sort__input" type="checkbox" name="category" checked>
-                    <span class="choose__name sort__name">Артикул</span>
-                  </label>
-                </li>
-                <li class="choose__categories-item">
-                  <label class="choose__label sort__label">
-                    <input class="choose__input sort__input" type="checkbox" name="category">
-                    <span class="choose__name sort__name">Фото</span>
-                  </label>
-                </li>
-                <li class="choose__categories-item">
-                  <label class="choose__label sort__label">
-                    <input class="choose__input sort__input" type="checkbox" name="category">
-                    <span class="choose__name sort__name">Название</span>
-                  </label>
-                </li>
-              </ul>
-            </div>
-
-            <div class="choose__category">
-              <div class="choose__categories-title">Ресурсы продаж</div>
-
-              <ul class="choose__categories-list">
-                <li class="choose__categories-item">
-                  <label class="choose__label sort__label">
-                    <input class="choose__input sort__input" type="checkbox" name="category1">
-                    <span class="choose__name sort__name">Сайт</span>
-                  </label>
-                </li>
-                <li class="choose__categories-item">
-                  <label class="choose__label sort__label">
-                    <input class="choose__input sort__input" type="checkbox" name="category1" checked>
-                    <span class="choose__name sort__name">Rozetka</span>
-                  </label>
-                </li>
-                <li class="choose__categories-item">
-                  <label class="choose__label sort__label">
-                    <input class="choose__input sort__input" type="checkbox" name="category1">
-                    <span class="choose__name sort__name">Prom</span>
-                  </label>
-                </li>
-              </ul>
-            </div>
-
-            <div class="choose__category">
-              <div class="choose__categories-title">Склады</div>
-
-              <ul class="choose__categories-list">
-                <li class="choose__categories-item">
-                  <label class="choose__label sort__label">
-                    <input class="choose__input sort__input" type="checkbox" name="category2" checked>
-                    <span class="choose__name sort__name">Склад 1</span>
-                  </label>
-                </li>
-                <li class="choose__categories-item">
-                  <label class="choose__label sort__label">
-                    <input class="choose__input sort__input" type="checkbox" name="category2">
-                    <span class="choose__name sort__name">Склад 2</span>
-                  </label>
-                </li>
-                <li class="choose__categories-item">
-                  <label class="choose__label sort__label">
-                    <input class="choose__input sort__input" type="checkbox" name="category2" checked>
-                    <span class="choose__name sort__name">Склад 3</span>
-                  </label>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-
-
-      <div class="modal__bottom">
-        <button class="modal__btn modal__btn--choose">Выбрать</button>
-        <button class="modal__btn">Очистить</button>
-      </div>
-    </div>
-  </div>-->
-
-  <div class="modal__container" data-target="catalog-refresh">
-    <div class="modal__wrapper download">
-      <div class="modal__title">Обновить каталог</div>
-
-      <div class="modal__message">
-        Подтвердите загрузку данных для текущего каталога товаров. При подтверждении, загрузка начнется в фоне и Вы
-        получите уведомление об окончании.
-      </div>
-
-      <div class="modal__bottom">
-        <button type="button" class="modal__btn modal__btn--download">Подтвердить</button>
-        <button type="button" class="modal__btn modal-close">Отменить</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal__container" data-target="catalog-clear">
-    <div class="modal__wrapper download">
-      <div class="modal__title">Очистить каталог</div>
-
-      <div class="modal__message">
-        Подтвердите очистку всех данных для текущего каталога товаров. При подтверждении, работа системи соответствия
-        товаров будет остановлена.
-      </div>
-
-      <div class="modal__bottom">
-        <button type="button" class="modal__btn modal__btn--download">Подтвердить</button>
-        <button type="button" class="modal__btn modal-close">Отменить</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal__container" data-target="catalog-save">
-    <div class="modal__wrapper download">
-      <div class="modal__title">Сохранить каталог</div>
-
-      <div class="modal__message">
-        Подтвердите очистку всех данных для текущего каталога товаров. При подтверждении, работа системи соответствия
-        товаров будет остановлена.
-      </div>
-
-      <div class="modal__bottom">
-        <button type="button" class="modal__btn modal__btn--download">Подтвердить</button>
-        <button type="button" class="modal__btn modal-close">Отменить</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal__container" data-target="catalog-delete">
-    <div class="modal__wrapper download">
-      <div class="modal__title">Удалить каталог</div>
-
-      <div class="modal__message">
-        Подтвердите удаление всех данных для текущего каталога товаров. При подтверждении, вся информация о данном
-        складе будет безвозвратно удалена.
-      </div>
-
-      <div class="modal__bottom">
-        <button type="button" class="modal__btn modal__btn--download">Подтвердить</button>
-        <button type="button" class="modal__btn modal-close">Отменить</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal__container" data-target="catalog-edit">
-    <div class="modal__wrapper edit">
-      <div class="modal__close modal-close">
-        <svg width='24' height='24'>
-          <use href='img/sprite/sprite.svg#close'></use>
-        </svg>
-      </div>
-
-      <div class="modal__title">Добавить новый каталог</div>
-
-      <form class="modal__form form-modal">
-
-        <div class="form-modal__catalog">
-          <div class="form-modal__info-block">
-            <div class="form-modal__input-block">
-              <span class="form-modal__input-name">Название каталога</span>
-              <div class="form-modal__input-wrapper">
-                <input type="text" class="form-modal__input">
-              </div>
-            </div>
-          </div>
-          <div class="form-modal__info-block">
-            <div class="form__title">
-              Источник данных
-            </div>
-            <div class="form-modal__select form-modal__select--catalog select">
-              <div class="form-modal__select-header">
-                <input type="hidden" value="1">
-                <span class="form-modal__select-current select__current">
-                  YML-файл
-                </span>
-                <svg width='12' height='12'>
-                  <use href='img/sprite/sprite.svg#arrow'></use>
-                </svg>
-              </div>
-              <ul class="form-modal__select-body select__body">
-                <li class="form-modal__select-item select__item" data-id="1" data-choice='choosen'>YML-файл
-                </li>
-                <li class="form-modal__select-item select__item" data-id="2" data-choice='choosen'>XML-файл
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="form-modal__link">
-          <h3 class="form-modal__subtitle">Ссылка на файл</h3>
-          <div class="form-modal__info-block">
-            <div class="form-modal__input-block">
-              <div class="form-modal__input-wrapper">
-                <input type="text" class="form-modal__input">
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="form-modal__tags">
-          <h3 class="form-modal__subtitle">Соответствие тегов (YML)</h3>
-          <div class="form-modal__info-block">
-            <div class="form-modal__input-block">
-              <span class="form-modal__input-name">Название</span>
-              <input type="text" class="form-modal__input">
-            </div>
-            <div class="form-modal__input-block">
-              <span class="form-modal__input-name">Артикул</span>
-              <input type="text" class="form-modal__input">
-            </div>
-            <div class="form-modal__input-block">
-              <span class="form-modal__input-name">Ссылка на товар</span>
-              <input type="text" class="form-modal__input">
-            </div>
-            <div class="form-modal__input-block">
-              <span class="form-modal__input-name">Ссылка на фото</span>
-              <input type="text" class="form-modal__input">
-            </div>
-            <div class="form-modal__input-block">
-              <span class="form-modal__input-name">Цена</span>
-              <input type="text" class="form-modal__input">
-            </div>
-            <div class="form-modal__input-block">
-              <span class="form-modal__input-name">Количество</span>
-              <input type="text" class="form-modal__input">
-            </div>
-            <div class="form-modal__input-block">
-              <span class="form-modal__input-name">Категория</span>
-              <input type="text" class="form-modal__input">
-            </div>
-            <div class="form-modal__input-block">
-              <span class="form-modal__input-name">Продукт</span>
-              <input type="text" class="form-modal__input">
-            </div>
-          </div>
-        </div>
-
-      </form>
-
-      <div class="modal__bottom">
-        <button type="button" class="modal__btn modal__btn--download">Сохранить</button>
-        <button type="button" class="modal__btn modal-close">Отменить</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal__container" data-target="warehouse-refresh">
-    <div class="modal__wrapper download">
-      <div class="modal__title">Обновить склад</div>
-
-      <div class="modal__message">
-        Подтвердите загрузку данных для текущего склада. При подтверждении, загрузка начнется в фоне и Вы получите
-        уведомление об окончании.
-      </div>
-
-      <div class="modal__bottom">
-        <button type="button" class="modal__btn modal__btn--download">Подтвердить</button>
-        <button type="button" class="modal__btn modal-close">Отменить</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal__container" data-target="matrix-refresh">
-    <div class="modal__wrapper download">
-      <div class="modal__title">Обновить каталог</div>
-
-      <div class="modal__message">
-        Подтвердите загрузку данных для текущего каталога. При подтверждении, загрузка начнется в фоне и Вы получите
-        уведомление об окончании.
-      </div>
-
-      <div class="modal__bottom">
-        <button type="button" class="modal__btn modal__btn--download">Подтвердить</button>
-        <button type="button" class="modal__btn modal-close">Отменить</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal__container" data-target="matrix-rearesh-percentage">
-    <div class="modal__wrapper download">
-      <div class="modal__title">Введите процент прибыли</div>
-
-      <div class="modal__message">
-        <input type="text">
-      </div>
-
-      <div class="modal__bottom">
-        <button type="button" class="modal__btn modal__btn--download">Сохранить</button>
-        <button type="button" class="modal__btn modal-close">Отменить</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal__container" data-target="warehouse-refresh-all">
-    <div class="modal__wrapper download">
-      <div class="modal__title">Обновить все склады</div>
-
-      <div class="modal__message">
-        Подтвердите загрузку данных информации всех доступных складов. При подтверждении, загрузка начнется в фоне и Вы
-        получите уведомление об окончании.
-      </div>
-
-      <div class="modal__bottom">
-        <button type="button" class="modal__btn modal__btn--download">Подтвердить</button>
-        <button type="button" class="modal__btn modal-close">Отменить</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal__container" data-target="warehouse-show-all">
-    <div class="modal__wrapper download">
-      <div class="modal__title">Раскрыть категории</div>
-
-      <div class="modal__message">
-        Подтвердите раскрытие всех подкатегорий 1-го и 2-го уровней.
-      </div>
-
-      <div class="modal__bottom">
-        <button type="button" class="modal__btn modal__btn--download btn-show-all">Подтвердить</button>
-        <button type="button" class="modal__btn modal-close">Отменить</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal__container" data-target="warehouse-delete">
-    <div class="modal__wrapper download">
-      <div class="modal__title">Удалить склад</div>
-
-      <div class="modal__message">
-        Подтвердите удаление всех данных для текущего склада. При подтверждении, вся информация о данном складе будет
-        безвозвратно удалена.
-      </div>
-
-      <div class="modal__bottom">
-        <button type="button" class="modal__btn modal__btn--download">Подтвердить</button>
-        <button type="button" class="modal__btn modal-close">Отменить</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal__container" data-target="warehouse-add">
-    <div class="modal__wrapper edit">
-      <div class="modal__close modal-close">
-        <svg width='24' height='24'>
-          <use href='img/sprite/sprite.svg#close'></use>
-        </svg>
-      </div>
-
-      <div class="modal__title">Добавить новый склад</div>
-
-      <form class="modal__form form-modal">
-
-        <div class="form-modal__catalog">
-          <div class="form-modal__info-block">
-            <div class="form-modal__input-block">
-              <span class="form-modal__input-name">Название склада</span>
-              <div class="form-modal__input-wrapper">
-                <input type="text" class="form-modal__input">
-              </div>
-            </div>
-          </div>
-          <div class="form-modal__info-block">
-            <div class="form__title">
-              Источник данных
-            </div>
-            <div class="form-modal__select form-modal__select--catalog select">
-              <div class="form-modal__select-header">
-                <input type="hidden" value="1">
-                <span class="form-modal__select-current select__current">
-                  YML-файл
-                </span>
-                <svg width='12' height='12'>
-                  <use href='img/sprite/sprite.svg#arrow'></use>
-                </svg>
-              </div>
-              <ul class="form-modal__select-body select__body">
-                <li class="form-modal__select-item select__item" data-id="1" data-choice='choosen'>YML-файл
-                </li>
-                <li class="form-modal__select-item select__item" data-id="2" data-choice='choosen'>XML-файл
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="form-modal__autorefresh">
-          <div class="form-modal__info-block">
-            <label class="filter__checkbox-label ">
-              <input class="filter__checkbox-input" type="checkbox" name="auto-refresh">
-              <span class="filter__checkbox-name">Включить</span>
-            </label>
-            <div class="autorefresh__input-block">
-              <input type="text" class="autorefresh__input" value="60">
-            </div>
-            <div class="autorefresh__info-block">
-              <div class="autorefresh__select autorefresh__select--time select">
-                <div class="autorefresh__select-header">
-                  <input type="hidden" value="1">
-                  <span class="autorefresh__select-current select__current">
-                    мин
-                  </span>
-                  <svg width='8' height='8'>
-                    <use href='img/sprite/sprite.svg#arrow'></use>
-                  </svg>
-                </div>
-                <ul class="autorefresh__select-body select__body">
-                  <li class="autorefresh__select-item select__item" data-id="1" data-choice='choosen'>
-                    сек
-                  </li>
-                  <li class="autorefresh__select-item select__item" data-id="2" data-choice='choosen'>
-                    мин
-                  </li>
-                  <li class="autorefresh__select-item select__item" data-id="3" data-choice='choosen'>час
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="form-modal__info-block">
-            <div class="autorefresh__input-block">
-              <div class="form-modal__input-name">Приоритет</div>
-              <input type="text" class="autorefresh__input">
-            </div>
-          </div>
-        </div>
-
-        <div class="form-modal__link">
-          <h3 class="form-modal__subtitle">Ссылка на файл</h3>
-          <div class="form-modal__info-block">
-            <div class="form-modal__input-block">
-              <div class="form-modal__input-wrapper">
-                <input type="text" class="form-modal__input">
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="form-modal__tags">
-          <h3 class="form-modal__subtitle">Соответствие тегов (YML)</h3>
-          <div class="form-modal__info-block">
-            <div class="form-modal__input-block">
-              <span class="form-modal__input-name">Название товара</span>
-              <input type="text" class="form-modal__input">
-            </div>
-            <div class="form-modal__input-block">
-              <span class="form-modal__input-name">Артикул</span>
-              <input type="text" class="form-modal__input">
-            </div>
-            <div class="form-modal__input-block">
-              <span class="form-modal__input-name">Цена</span>
-              <input type="text" class="form-modal__input">
-            </div>
-            <div class="form-modal__input-block">
-              <span class="form-modal__input-name">Наличие</span>
-              <input type="text" class="form-modal__input">
-            </div>
-          </div>
-        </div>
-
-        <div class="form-modal__extra">
-          <h3 class="form-modal__subtitle">Дополнительные настройки</h3>
-          <div class="form-modal__info-wrapper">
-            <div class="form-modal__info-block">
-              <div class="form__title">
-                Тип склада
-              </div>
-              <div class="form-modal__select form-modal__select--warehouse select">
-                <div class="form-modal__select-header">
-                  <input type="hidden" value="1">
-                  <span class="form-modal__select-current select__current">
-                    партнерский
-                  </span>
-                  <svg width='12' height='12'>
-                    <use href='img/sprite/sprite.svg#arrow'></use>
-                  </svg>
-                </div>
-                <ul class="form-modal__select-body select__body">
-                  <li class="form-modal__select-item select__item" data-id="1" data-choice='choosen'>партнерский
-                  </li>
-                  <li class="form-modal__select-item select__item" data-id="2" data-choice='choosen'>свой
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="form-modal__info-block">
-              <div class="form__title">
-                Валюта
-              </div>
-              <div class="form-modal__select form-modal__select--warehouse select">
-                <div class="form-modal__select-header">
-                  <input type="hidden" value="1">
-                  <span class="form-modal__select-current select__current">
-                    Доллар USD
-                  </span>
-                  <svg width='12' height='12'>
-                    <use href='img/sprite/sprite.svg#arrow'></use>
-                  </svg>
-                </div>
-                <ul class="form-modal__select-body select__body">
-                  <li class="form-modal__select-item select__item" data-id="1" data-choice='choosen'>Доллар USD
-                  </li>
-                  <li class="form-modal__select-item select__item" data-id="2" data-choice='choosen'>Гривна UAH
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="form-modal__info-block">
-              <div class="form__title">
-                Курс
-              </div>
-              <div class="form-modal__select form-modal__select--warehouse select">
-                <div class="form-modal__select-header">
-                  <input type="hidden" value="1">
-                  <span class="form-modal__select-current select__current">
-                    свой
-                  </span>
-                  <svg width='12' height='12'>
-                    <use href='img/sprite/sprite.svg#arrow'></use>
-                  </svg>
-                </div>
-                <ul class="form-modal__select-body select__body">
-                  <li class="form-modal__select-item select__item" data-id="1" data-choice='choosen'>свой
-                  </li>
-                  <li class="form-modal__select-item select__item" data-id="2" data-choice='choosen'>Партнерский
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="form-modal__info-block">
-              <div class="form__title">
-                Источник курса
-              </div>
-              <div class="form-modal__select form-modal__select--warehouse select">
-                <div class="form-modal__select-header">
-                  <input type="hidden" value="1">
-                  <span class="form-modal__select-current select__current">
-                    YML-файл
-                  </span>
-                  <svg width='12' height='12'>
-                    <use href='img/sprite/sprite.svg#arrow'></use>
-                  </svg>
-                </div>
-                <ul class="form-modal__select-body select__body">
-                  <li class="form-modal__select-item select__item" data-id="1" data-choice='choosen'>YML-файл
-                  </li>
-                  <li class="form-modal__select-item select__item" data-id="2" data-choice='choosen'>XML-файл
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="form-modal__info-block">
-              <div class="form-modal__input-block">
-                <span class="form-modal__input-name">Ссылка</span>
-                <input type="text" class="form-modal__input">
-              </div>
-            </div>
-            <div class="form-modal__info-block">
-              <div class="form-modal__input-block">
-                <span class="form-modal__input-name">Тэг</span>
-                <input type="text" class="form-modal__input">
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </form>
-
-      <div class="modal__bottom">
-        <button type="button" class="modal__btn modal__btn--download">Сохранить</button>
-        <button type="button" class="modal__btn modal-close">Отменить</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal__container" data-target="warehouse-edit">
-    <div class="modal__wrapper edit">
-      <div class="modal__close modal-close">
-        <svg width='24' height='24'>
-          <use href='img/sprite/sprite.svg#close'></use>
-        </svg>
-      </div>
-
-      <div class="modal__title">Работа со складом</div>
-
-      <form class="modal__form form-modal">
-
-        <div class="form-modal__catalog">
-          <div class="form-modal__info-block">
-            <div class="form-modal__input-block">
-              <span class="form-modal__input-name">Название склада</span>
-              <div class="form-modal__input-wrapper">
-                <input type="text" class="form-modal__input">
-              </div>
-            </div>
-          </div>
-          <div class="form-modal__info-block">
-            <div class="form__title">
-              Источник данных
-            </div>
-            <div class="form-modal__select form-modal__select--catalog select">
-              <div class="form-modal__select-header">
-                <input type="hidden" value="1">
-                <span class="form-modal__select-current select__current">
-                  YML-файл
-                </span>
-                <svg width='12' height='12'>
-                  <use href='img/sprite/sprite.svg#arrow'></use>
-                </svg>
-              </div>
-              <ul class="form-modal__select-body select__body">
-                <li class="form-modal__select-item select__item" data-id="1" data-choice='choosen'>YML-файл
-                </li>
-                <li class="form-modal__select-item select__item" data-id="2" data-choice='choosen'>XML-файл
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="form-modal__autorefresh">
-          <div class="form-modal__info-block">
-            <label class="filter__checkbox-label">
-              <input class="filter__checkbox-input" type="checkbox" name="auto-refresh">
-              <span class="filter__checkbox-name">Включить</span>
-            </label>
-            <div class="autorefresh__input-block">
-              <input type="text" class="autorefresh__input" value="60">
-            </div>
-            <div class="autorefresh__info-block">
-              <div class="autorefresh__select autorefresh__select--time select">
-                <div class="autorefresh__select-header">
-                  <input type="hidden" value="1">
-                  <span class="autorefresh__select-current select__current">
-                    мин
-                  </span>
-                  <svg width='8' height='8'>
-                    <use href='img/sprite/sprite.svg#arrow'></use>
-                  </svg>
-                </div>
-                <ul class="autorefresh__select-body select__body">
-                  <li class="autorefresh__select-item select__item" data-id="1" data-choice='choosen'>
-                    сек
-                  </li>
-                  <li class="autorefresh__select-item select__item" data-id="2" data-choice='choosen'>
-                    мин
-                  </li>
-                  <li class="autorefresh__select-item select__item" data-id="3" data-choice='choosen'>час
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="form-modal__info-block">
-            <div class="autorefresh__input-block">
-              <div class="form-modal__input-name">Приоритет</div>
-              <input type="text" class="autorefresh__input">
-            </div>
-          </div>
-        </div>
-
-        <div class="form-modal__link">
-          <h3 class="form-modal__subtitle">Ссылка на файл</h3>
-          <div class="form-modal__info-block">
-            <div class="form-modal__input-block">
-              <div class="form-modal__input-wrapper">
-                <input type="text" class="form-modal__input">
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="form-modal__tags">
-          <h3 class="form-modal__subtitle">Соответствие тегов (YML)</h3>
-          <div class="form-modal__info-block">
-            <div class="form-modal__input-block">
-              <span class="form-modal__input-name">Название товара</span>
-              <input type="text" class="form-modal__input">
-            </div>
-            <div class="form-modal__input-block">
-              <span class="form-modal__input-name">Артикул</span>
-              <input type="text" class="form-modal__input">
-            </div>
-            <div class="form-modal__input-block">
-              <span class="form-modal__input-name">Цена</span>
-              <input type="text" class="form-modal__input">
-            </div>
-            <div class="form-modal__input-block">
-              <span class="form-modal__input-name">Наличие</span>
-              <input type="text" class="form-modal__input">
-            </div>
-          </div>
-        </div>
-
-        <div class="form-modal__extra">
-          <h3 class="form-modal__subtitle">Дополнительные настройки</h3>
-          <div class="form-modal__info-wrapper">
-            <div class="form-modal__info-block">
-              <div class="form__title">
-                Тип склада
-              </div>
-              <div class="form-modal__select form-modal__select--warehouse select">
-                <div class="form-modal__select-header">
-                  <input type="hidden" value="1">
-                  <span class="form-modal__select-current select__current">
-                    партнерский
-                  </span>
-                  <svg width='12' height='12'>
-                    <use href='img/sprite/sprite.svg#arrow'></use>
-                  </svg>
-                </div>
-                <ul class="form-modal__select-body select__body">
-                  <li class="form-modal__select-item select__item" data-id="1" data-choice='choosen'>партнерский
-                  </li>
-                  <li class="form-modal__select-item select__item" data-id="2" data-choice='choosen'>свой
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="form-modal__info-block">
-              <div class="form__title">
-                Валюта
-              </div>
-              <div class="form-modal__select form-modal__select--warehouse select">
-                <div class="form-modal__select-header">
-                  <input type="hidden" value="1">
-                  <span class="form-modal__select-current select__current">
-                    Доллар USD
-                  </span>
-                  <svg width='12' height='12'>
-                    <use href='img/sprite/sprite.svg#arrow'></use>
-                  </svg>
-                </div>
-                <ul class="form-modal__select-body select__body">
-                  <li class="form-modal__select-item select__item" data-id="1" data-choice='choosen'>Доллар USD
-                  </li>
-                  <li class="form-modal__select-item select__item" data-id="2" data-choice='choosen'>Гривна UAH
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="form-modal__info-block">
-              <div class="form__title">
-                Курс
-              </div>
-              <div class="form-modal__select form-modal__select--warehouse select">
-                <div class="form-modal__select-header">
-                  <input type="hidden" value="1">
-                  <span class="form-modal__select-current select__current">
-                    свой
-                  </span>
-                  <svg width='12' height='12'>
-                    <use href='img/sprite/sprite.svg#arrow'></use>
-                  </svg>
-                </div>
-                <ul class="form-modal__select-body select__body">
-                  <li class="form-modal__select-item select__item" data-id="1" data-choice='choosen'>свой
-                  </li>
-                  <li class="form-modal__select-item select__item" data-id="2" data-choice='choosen'>Партнерский
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="form-modal__info-block">
-              <div class="form__title">
-                Источник курса
-              </div>
-              <div class="form-modal__select form-modal__select--warehouse select">
-                <div class="form-modal__select-header">
-                  <input type="hidden" value="1">
-                  <span class="form-modal__select-current select__current">
-                    YML-файл
-                  </span>
-                  <svg width='12' height='12'>
-                    <use href='img/sprite/sprite.svg#arrow'></use>
-                  </svg>
-                </div>
-                <ul class="form-modal__select-body select__body">
-                  <li class="form-modal__select-item select__item" data-id="1" data-choice='choosen'>YML-файл
-                  </li>
-                  <li class="form-modal__select-item select__item" data-id="2" data-choice='choosen'>XML-файл
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="form-modal__info-block">
-              <div class="form-modal__input-block">
-                <span class="form-modal__input-name">Ссылка</span>
-                <input type="text" class="form-modal__input">
-              </div>
-            </div>
-            <div class="form-modal__info-block">
-              <div class="form-modal__input-block">
-                <span class="form-modal__input-name">Тэг</span>
-                <input type="text" class="form-modal__input">
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </form>
-
-      <div class="modal__bottom">
-        <button type="button" class="modal__btn modal__btn--download">Сохранить</button>
-        <button type="button" class="modal__btn modal-close">Отменить</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal__container" data-target="warehouse-compare">
-    <div class="modal__wrapper edit">
-      <div class="modal__close modal-close">
-        <svg width='24' height='24'>
-          <use href='img/sprite/sprite.svg#close'></use>
-        </svg>
-      </div>
-
-      <div class="modal__title">Сопоставление артикулов</div>
-
-      <div class="content__table content__table-campare table">
-        <div class="table__wrapp">
-          <div class="table__product">
-            <ul class="table__product-list">
-              <li class="table__product-item" data-sticky="sticky">
-                <button class="table__product-title table__btn">
-                  <span>Название</span>
-                  <svg width='14' height='14'>
-                    <use href='img/sprite/sprite.svg#sorting'></use>
-                  </svg>
-                </button>
-                <button class="table__product-partner-art table__btn">
-                  <span>Артикул партнера</span>
-                  <svg width='14' height='14'>
-                    <use href='img/sprite/sprite.svg#sorting'></use>
-                  </svg>
-                </button>
-                <button class="table__product-art table__btn">
-                  <span>Артикул</span>
-                  <svg width='14' height='14'>
-                    <use href='img/sprite/sprite.svg#sorting'></use>
-                  </svg>
-                </button>
-              </li>
-              <li class="table__product-item">
-                <div class="table__product-title">
-                  <span>Мобильный телефон Samsung Galaxy S8 Plus Black на 188гб
-                  </span>
-                  <div class="table__product-titlefull">Мобильный телефон Samsung Galaxy S8 Plus Black на 188гб
-
-                  </div>
-                </div>
-                <div class="table__product-partner-art">
-                  <span>198382939482190</span>
-                  <div class="table__product-titlefull">198382939482190</div>
-                </div>
-                <div class="table__product-art">
-                  <span>bci-0001</span>
-                  <div class="table__product-titlefull">bci-0001</div>
-                </div>
-              </li>
-              <li class="table__product-item">
-                <div class="table__product-title">
-                  <span>Мобильный телефон Samsung Galaxy S8 Plus Black на 188гб
-                  </span>
-                  <div class="table__product-titlefull">Мобильный телефон Samsung Galaxy S8 Plus Black на 188гб
-
-                  </div>
-                </div>
-                <div class="table__product-partner-art">
-                  <span>198382939482190</span>
-                  <div class="table__product-titlefull">198382939482190</div>
-                </div>
-                <div class="table__product-art">
-                  <span>bci-0001</span>
-                  <div class="table__product-titlefull">bci-0001</div>
-                </div>
-              </li>
-              <li class="table__product-item">
-                <div class="table__product-title">
-                  <span>Мобильный телефон Samsung Galaxy S8 Plus Black на 188гб
-                  </span>
-                  <div class="table__product-titlefull">Мобильный телефон Samsung Galaxy S8 Plus Black на 188гб
-
-                  </div>
-                </div>
-                <div class="table__product-partner-art">
-                  <span>198382939482190</span>
-                  <div class="table__product-titlefull">198382939482190</div>
-                </div>
-                <div class="table__product-art">
-                  <span>bci-0001</span>
-                  <div class="table__product-titlefull">bci-0001</div>
-                </div>
-              </li>
-              <li class="table__product-item">
-                <div class="table__product-title">
-                  <span>Мобильный телефон Samsung Galaxy S8 Plus Black на 188гб
-                  </span>
-                  <div class="table__product-titlefull">Мобильный телефон Samsung Galaxy S8 Plus Black на 188гб
-
-                  </div>
-                </div>
-                <div class="table__product-partner-art">
-                  <span>198382939482190</span>
-                  <div class="table__product-titlefull">198382939482190</div>
-                </div>
-                <div class="table__product-art">
-                  <span>bci-0001</span>
-                  <div class="table__product-titlefull">bci-0001</div>
-                </div>
-              </li>
-              <li class="table__product-item">
-                <div class="table__product-title">
-                  <span>Мобильный телефон Samsung Galaxy S8 Plus Black на 188гб
-                  </span>
-                  <div class="table__product-titlefull">Мобильный телефон Samsung Galaxy S8 Plus Black на 188гб
-
-                  </div>
-                </div>
-                <div class="table__product-partner-art">
-                  <span>198382939482190</span>
-                  <div class="table__product-titlefull">198382939482190</div>
-                </div>
-                <div class="table__product-art">
-                  <span>bci-0001</span>
-                  <div class="table__product-titlefull">bci-0001</div>
-                </div>
-              </li>
-              <li class="table__product-item">
-                <div class="table__product-title">
-                  <span>Мобильный телефон Samsung Galaxy S8 Plus Black на 188гб
-                  </span>
-                  <div class="table__product-titlefull">Мобильный телефон Samsung Galaxy S8 Plus Black на 188гб
-
-                  </div>
-                </div>
-                <div class="table__product-partner-art">
-                  <span>198382939482190</span>
-                  <div class="table__product-titlefull">198382939482190</div>
-                </div>
-                <div class="table__product-art">
-                  <span>bci-0001</span>
-                  <div class="table__product-titlefull">bci-0001</div>
-                </div>
-              </li>
-              <li class="table__product-item">
-                <div class="table__product-title">
-                  <span>Мобильный телефон Samsung Galaxy S8 Plus Black на 188гб
-                  </span>
-                  <div class="table__product-titlefull">Мобильный телефон Samsung Galaxy S8 Plus Black на 188гб
-
-                  </div>
-                </div>
-                <div class="table__product-partner-art">
-                  <span>198382939482190</span>
-                  <div class="table__product-titlefull">198382939482190</div>
-                </div>
-                <div class="table__product-art">
-                  <span>bci-0001</span>
-                  <div class="table__product-titlefull">bci-0001</div>
-                </div>
-              </li>
-              <li class="table__product-item">
-                <div class="table__product-title">
-                  <span>Мобильный телефон Samsung Galaxy S8 Plus Black на 188гб
-                  </span>
-                  <div class="table__product-titlefull">Мобильный телефон Samsung Galaxy S8 Plus Black на 188гб
-
-                  </div>
-                </div>
-                <div class="table__product-partner-art">
-                  <span>198382939482190</span>
-                  <div class="table__product-titlefull">198382939482190</div>
-                </div>
-                <div class="table__product-art">
-                  <span>bci-0001</span>
-                  <div class="table__product-titlefull">bci-0001</div>
-                </div>
-              </li>
-              <li class="table__product-item">
-                <div class="table__product-title">
-                  <span>Мобильный телефон Samsung Galaxy S8 Plus Black на 188гб
-                  </span>
-                  <div class="table__product-titlefull">Мобильный телефон Samsung Galaxy S8 Plus Black на 188гб
-
-                  </div>
-                </div>
-                <div class="table__product-partner-art">
-                  <span>198382939482190</span>
-                  <div class="table__product-titlefull">198382939482190</div>
-                </div>
-                <div class="table__product-art">
-                  <span>bci-0001</span>
-                  <div class="table__product-titlefull">bci-0001</div>
-                </div>
-              </li>
-              <li class="table__product-item">
-                <div class="table__product-title">
-                  <span>Мобильный телефон Samsung Galaxy S8 Plus Black на 188гб
-                  </span>
-                  <div class="table__product-titlefull">Мобильный телефон Samsung Galaxy S8 Plus Black на 188гб
-
-                  </div>
-                </div>
-                <div class="table__product-partner-art">
-                  <span>198382939482190</span>
-                  <div class="table__product-titlefull">198382939482190</div>
-                </div>
-                <div class="table__product-art">
-                  <span>bci-0001</span>
-                  <div class="table__product-titlefull">bci-0001</div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="pagination">
-        <a class="pagination__nav pagination__nav--prev" href="#">
-          <svg width='11' height='15'>
-            <use href='img/sprite/sprite.svg#arrow'></use>
-          </svg>
-        </a>
-        <ul class="pagination__list">
-          <li class="pagination__list-item">
-            <a class="pagination__list-link pagination__list-link--active" href="#">1</a>
-          </li>
-          <li class="pagination__list-item">
-            <a class="pagination__list-link" href="#">2</a>
-          </li>
-          <li class="pagination__list-item">
-            <a class="pagination__list-link" href="#">3</a>
-          </li>
-          <li class="pagination__list-item">
-            <span>…</span>
-          </li>
-          <li class="pagination__list-item">
-            <a class="pagination__list-link" href="#">18</a>
-          </li>
-          <li class="pagination__list-item">
-            <a class="pagination__list-link" href="#">19</a>
-          </li>
-        </ul>
-        <a class="pagination__nav pagination__nav--next" href="#">
-          <svg width='11' height='15'>
-            <use href='img/sprite/sprite.svg#arrow'></use>
-          </svg>
-        </a>
-      </div>
-
-      <div class="modal__bottom">
-        <button type="button" class="modal__btn modal__btn--download">Сохранить</button>
-        <button type="button" class="modal__btn modal-close">Отменить</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal__container" data-target="resources-delete">
-    <div class="modal__wrapper download">
-      <div class="modal__title">Удалить ресурс</div>
-
-      <div class="modal__message">
-        Подтвердите удаление всех данных для текущего ресурса продажи. При подтверждении, вся информация о данном складе
-        будет безвозвратно удалена.
-      </div>
-
-      <div class="modal__bottom">
-        <button type="button" class="modal__btn modal__btn--download">Подтвердить</button>
-        <button type="button" class="modal__btn modal-close">Отменить</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal__container" data-target="resources-refresh">
-    <div class="modal__wrapper download">
-      <div class="modal__title">Обновить ресурс</div>
-
-      <div class="modal__message">
-        Подтвердите загрузку данных для текущего ресурса продажи. При подтверждении, загрузка начнется в фоне и Вы
-        получите уведомление об окончании.
-      </div>
-
-      <div class="modal__bottom">
-        <button type="button" class="modal__btn modal__btn--download">Подтвердить</button>
-        <button type="button" class="modal__btn modal-close">Отменить</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal__container" data-target="resources-refresh-all">
-    <div class="modal__wrapper download">
-      <div class="modal__title">Обновить все ресурсы</div>
-
-      <div class="modal__message">
-        Подтвердите загрузку данных информации всех доступных ресурсов. При подтверждении, загрузка начнется в фоне и Вы
-        получите уведомление об окончании.
-      </div>
-
-      <div class="modal__bottom">
-        <button type="button" class="modal__btn modal__btn--download">Подтвердить</button>
-        <button type="button" class="modal__btn modal-close">Отменить</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal__container" data-target="resources-save">
-    <div class="modal__wrapper download">
-      <div class="modal__title">Сохранить ресурсы</div>
-
-      <div class="modal__message">
-        Подтвердите сохранение всех данных для текущего ресурса товаров. При подтверждении, работа системи соответствия
-        ресурсов будет остановлена.
-      </div>
-
-      <div class="modal__bottom">
-        <button type="button" class="modal__btn modal__btn--download">Подтвердить</button>
-        <button type="button" class="modal__btn modal-close">Отменить</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal__container" data-target="resources-add">
-    <div class="modal__wrapper edit">
-      <div class="modal__close modal-close">
-        <svg width='24' height='24'>
-          <use href='img/sprite/sprite.svg#close'></use>
-        </svg>
-      </div>
-
-      <div class="modal__title">Добавить новый ресурс</div>
-
-      <form class="modal__form form-modal form-modal-resources">
-
-        <div class="form-modal__catalog">
-          <div class="form-modal__info-block">
-            <div class="form-modal__input-block">
-              <span class="form-modal__input-name">Название ресурса</span>
-              <div class="form-modal__input-wrapper">
-                <input type="text" class="form-modal__input">
-              </div>
-            </div>
-          </div>
-          <div class="form-modal__info-block">
-            <div class="form__title">
-              Источник данных
-            </div>
-            <div class="form-modal__select form-modal__select--catalog select">
-              <div class="form-modal__select-header">
-                <input type="hidden" value="1">
-                <span class="form-modal__select-current select__current">
-                  YML-файл
-                </span>
-                <svg width='12' height='12'>
-                  <use href='img/sprite/sprite.svg#arrow'></use>
-                </svg>
-              </div>
-              <ul class="form-modal__select-body select__body">
-                <li class="form-modal__select-item select__item" data-id="1" data-choice='choosen'>YML-файл
-                </li>
-                <li class="form-modal__select-item select__item" data-id="2" data-choice='choosen'>XML-файл
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="form-modal__autorefresh">
-          <div class="form-modal__info-block">
-            <label class="filter__checkbox-label ">
-              <input class="filter__checkbox-input" type="checkbox" name="auto-refresh">
-              <span class="filter__checkbox-name">Включить</span>
-            </label>
-            <div class="autorefresh__input-block">
-              <input type="text" class="autorefresh__input" value="60">
-            </div>
-            <div class="autorefresh__info-block">
-              <div class="autorefresh__select autorefresh__select--time select">
-                <div class="autorefresh__select-header">
-                  <input type="hidden" value="1">
-                  <span class="autorefresh__select-current select__current">
-                    мин
-                  </span>
-                  <svg width='8' height='8'>
-                    <use href='img/sprite/sprite.svg#arrow'></use>
-                  </svg>
-                </div>
-                <ul class="autorefresh__select-body select__body">
-                  <li class="autorefresh__select-item select__item" data-id="1" data-choice='choosen'>
-                    сек
-                  </li>
-                  <li class="autorefresh__select-item select__item" data-id="2" data-choice='choosen'>
-                    мин
-                  </li>
-                  <li class="autorefresh__select-item select__item" data-id="3" data-choice='choosen'>час
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="form-modal__info-block">
-            <div class="autorefresh__input-block">
-              <div class="form-modal__input-name">Приоритет</div>
-              <input type="text" class="autorefresh__input">
-            </div>
-          </div>
-        </div>
-
-        <div class="form-modal__link">
-          <h3 class="form-modal__subtitle">Ссылка на файл</h3>
-          <div class="form-modal__info-block">
-            <div class="form-modal__input-block">
-              <div class="form-modal__input-wrapper">
-                <input type="text" class="form-modal__input">
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="form-modal__tags">
-          <h3 class="form-modal__subtitle">Соответствие тегов (YML)</h3>
-          <div class="form-modal__info-block">
-            <div class="form-modal__input-block">
-              <span class="form-modal__input-name">Артикул</span>
-              <input type="text" class="form-modal__input">
-            </div>
-            <div class="form-modal__input-block">
-              <span class="form-modal__input-name">Ссылка</span>
-              <input type="text" class="form-modal__input">
-            </div>
-            <div class="form-modal__input-block">
-              <span class="form-modal__input-name">Цена</span>
-              <input type="text" class="form-modal__input">
-            </div>
-            <div class="form-modal__input-block">
-              <span class="form-modal__input-name">Наличие</span>
-              <input type="text" class="form-modal__input">
-            </div>
-          </div>
-        </div>
-
-        <div class="form-modal__extra">
-          <h3 class="form-modal__subtitle">Процент от продаж</h3>
-          <div class="form-modal__info-wrapper">
-            <div class="form-modal__info-block">
-              <div class="form__title">
-                Наличие процента
-              </div>
-              <div class="form-modal__select form-modal__select--warehouse select">
-                <div class="form-modal__select-header">
-                  <input type="hidden" value="1">
-                  <span class="form-modal__select-current select__current">
-                    да
-                  </span>
-                  <svg width='12' height='12'>
-                    <use href='img/sprite/sprite.svg#arrow'></use>
-                  </svg>
-                </div>
-                <ul class="form-modal__select-body select__body">
-                  <li class="form-modal__select-item select__item" data-id="1" data-choice='choosen'>да
-                  </li>
-                  <li class="form-modal__select-item select__item" data-id="2" data-choice='choosen'>нет
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="form-modal__info-block">
-              <div class="form__title">
-                Тип процента
-              </div>
-              <div class="form-modal__select form-modal__select--warehouse select">
-                <div class="form-modal__select-header">
-                  <input type="hidden" value="1">
-                  <span class="form-modal__select-current select__current">
-                    фиксированный
-                  </span>
-                  <svg width='12' height='12'>
-                    <use href='img/sprite/sprite.svg#arrow'></use>
-                  </svg>
-                </div>
-                <ul class="form-modal__select-body select__body">
-                  <li class="form-modal__select-item select__item" data-id="1" data-choice='choosen'>фиксированный
-                  </li>
-                  <li class="form-modal__select-item select__item" data-id="2" data-choice='choosen'>еще какой-то
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="form-modal__info-block">
-              <div class="form-modal__input-block">
-                <span class="form-modal__input-name">Процент</span>
-                <input type="text" class="form-modal__input">
-              </div>
-            </div>
-          </div>
-          <div class="form-modal__btn-right">
-            <button type="button" class="modal__btn modal__btn--download">Отобразить</button>
-          </div>
-        </div>
-
-        <div class="content__table content__table-add-resource table">
-          <div class="table__wrapp">
-            <div class="table__product">
-              <ul class="table__product-list">
-                <li class="table__product-item" data-sticky="sticky">
-                  <button class="table__product-id table__btn">
-                    <span>ID</span>
-                    <svg width='14' height='14'>
-                      <use href='img/sprite/sprite.svg#sorting'></use>
-                    </svg>
-                  </button>
-                  <button class="table__product-title table__btn">
-                    <span>Название</span>
-                    <svg width='14' height='14'>
-                      <use href='img/sprite/sprite.svg#sorting'></use>
-                    </svg>
-                  </button>
-                  <button class="table__product-value table__btn">
-                    <span>Процент</span>
-                    <svg width='14' height='14'>
-                      <use href='img/sprite/sprite.svg#sorting'></use>
-                    </svg>
-                  </button>
-                </li>
-                <li class="table__product-item">
-                  <div class="table__product-id">
-                    <span>1737810</span>
-                  </div>
-                  <div class="table__product-title">
-                    <span>Смартфоны и телефоны
-                    </span>
-                    <div class="table__product-titlefull">Смартфоны и телефоны
-                    </div>
-                  </div>
-                  <div class="table__product-value">
-                    <span>50</span>
-                  </div>
-                </li>
-                <li class="table__product-item">
-                  <div class="table__product-id">
-                    <span>1737810</span>
-                  </div>
-                  <div class="table__product-title">
-                    <span>Смартфоны и телефоны
-                    </span>
-                    <div class="table__product-titlefull">Смартфоны и телефоны
-                    </div>
-                  </div>
-                  <div class="table__product-value">
-                    <span>50</span>
-                  </div>
-                </li>
-                <li class="table__product-item">
-                  <div class="table__product-id">
-                    <span>1737810</span>
-                  </div>
-                  <div class="table__product-title">
-                    <span>Смартфоны и телефоны
-                    </span>
-                    <div class="table__product-titlefull">Смартфоны и телефоны
-                    </div>
-                  </div>
-                  <div class="table__product-value">
-                    <span>50</span>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-      </form>
-
-      <div class="modal__bottom">
-        <button type="button" class="modal__btn modal__btn--download">Сохранить</button>
-        <button type="button" class="modal__btn modal-close">Отменить</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal__container" data-target="resources-login">
-    <div class="modal__wrapper edit">
-      <div class="modal__close modal-close">
-        <svg width='24' height='24'>
-          <use href='img/sprite/sprite.svg#close'></use>
-        </svg>
-      </div>
-
-      <div class="modal__title">Добавить новый ресурс</div>
-
-      <form class="modal__form form-modal">
-
-        <div class="form-modal__catalog">
-          <div class="form-modal__info-block">
-            <div class="form-modal__input-block">
-              <span class="form-modal__input-name">Название ресурса</span>
-              <div class="form-modal__input-wrapper">
-                <input type="text" class="form-modal__input">
-              </div>
-            </div>
-          </div>
-          <div class="form-modal__info-block">
-            <div class="form__title">
-              Источник данных
-            </div>
-            <div class="form-modal__select form-modal__select--catalog select">
-              <div class="form-modal__select-header">
-                <input type="hidden" value="1">
-                <span class="form-modal__select-current select__current">
-                  YML-файл
-                </span>
-                <svg width='12' height='12'>
-                  <use href='img/sprite/sprite.svg#arrow'></use>
-                </svg>
-              </div>
-              <ul class="form-modal__select-body select__body">
-                <li class="form-modal__select-item select__item" data-id="1" data-choice='choosen'>YML-файл
-                </li>
-                <li class="form-modal__select-item select__item" data-id="2" data-choice='choosen'>XML-файл
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="form-modal__autorefresh">
-          <div class="form-modal__info-block">
-            <label class="filter__checkbox-label ">
-              <input class="filter__checkbox-input" type="checkbox" name="auto-refresh">
-              <span class="filter__checkbox-name">Включить</span>
-            </label>
-            <div class="autorefresh__input-block">
-              <input type="text" class="autorefresh__input" value="60">
-            </div>
-            <div class="autorefresh__info-block">
-              <div class="autorefresh__select autorefresh__select--time select">
-                <div class="autorefresh__select-header">
-                  <input type="hidden" value="1">
-                  <span class="autorefresh__select-current select__current">
-                    мин
-                  </span>
-                  <svg width='8' height='8'>
-                    <use href='img/sprite/sprite.svg#arrow'></use>
-                  </svg>
-                </div>
-                <ul class="autorefresh__select-body select__body">
-                  <li class="autorefresh__select-item select__item" data-id="1" data-choice='choosen'>
-                    сек
-                  </li>
-                  <li class="autorefresh__select-item select__item" data-id="2" data-choice='choosen'>
-                    мин
-                  </li>
-                  <li class="autorefresh__select-item select__item" data-id="3" data-choice='choosen'>час
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="form-modal__info-block">
-            <div class="autorefresh__input-block">
-              <div class="form-modal__input-name">Приоритет</div>
-              <input type="text" class="autorefresh__input">
-            </div>
-          </div>
-        </div>
-
-        <div class="form-modal__tags">
-          <h3 class="form-modal__subtitle">Данные от аккаунта</h3>
-          <div class="form-modal__info-block">
-            <div class="form-modal__input-block">
-              <span class="form-modal__input-name">Логин</span>
-              <div class="form-modal__input-wrapper"><input type="text" class="form-modal__input"></div>
-            </div>
-            <div class="form-modal__input-block">
-              <span class="form-modal__input-name">Пароль</span>
-              <div class="form-modal__input-wrapper"><input type="text" class="form-modal__input"></div>
-            </div>
-          </div>
-        </div>
-
-      </form>
-
-      <div class="modal__bottom">
-        <button type="button" class="modal__btn modal__btn--download">Сохранить</button>
-        <button type="button" class="modal__btn modal-close">Отменить</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal__container" data-target="resources-del">
-    <div class="modal__wrapper download">
-      <div class="modal__title">Удалить товар</div>
-
-      <div class="modal__bottom">
-        <button type="button" class="modal__btn modal__btn--download">Подтвердить</button>
-        <button type="button" class="modal__btn modal-close">Отменить</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal__container" data-target="resources-check">
-    <div class="modal__wrapper download">
-      <div class="modal__title">Проверить отображение товара</div>
-
-      <div class="modal__bottom">
-        <button type="button" class="modal__btn modal__btn--download">Подтвердить</button>
-        <button type="button" class="modal__btn modal-close">Отменить</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal__container" data-target="resources-add-item">
-    <div class="modal__wrapper download">
-      <div class="modal__title">Введите артикул</div>
-
-      <div class="modal__message">
-        <input type="text">
-      </div>
-
-      <div class="modal__bottom">
-        <button type="button" class="modal__btn modal__btn--download">Сохранить</button>
-        <button type="button" class="modal__btn modal-close">Отменить</button>
-      </div>
-    </div>
-  </div>
-
-</div>
     </div>
 
     <script type="text/javascript" src="js/main.js"></script>
