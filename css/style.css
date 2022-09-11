@@ -2452,13 +2452,14 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 10px 60px 18px;
+  padding: 10px 60px 70px;
   background: var(--white);
   border-radius: 20px;
   -webkit-box-shadow: none;
           box-shadow: none;
   grid-gap: 20px;
   overflow: hidden;
+  margin-bottom: -52px;
 }
 .form-modal-resources .form-modal__info-wrapper {
   -ms-flex-wrap: nowrap;
