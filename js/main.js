@@ -315,13 +315,21 @@ function autorefresh() {
     if (refreshBlocks.length > 0) {
         for (let index = 0; index < refreshBlocks.length; index++) {
             const refreshBlock = refreshBlocks[index];
-            const refreshBtn = refreshBlock.querySelector('.filter__checkbox-name');
+            const refreshBtn = refreshBlock.querySelector('.filter__checkbox-input');
+
+            modalCheckIfActive();
 
             refreshBtn.addEventListener('click', function (e) {
-                const refreshForm = refreshBtn.closest('.form-modal__info-block');
-                console.log(e.target);
-                refreshForm.classList.toggle('active');
+                modalCheckIfActive();
             });
+
+            function modalCheckIfActive() {
+                if (refreshBtn.checked == true) {
+                    refreshBtn.closest('.form-modal__info-block').classList.add('active');
+                } else {
+                    refreshBtn.closest('.form-modal__info-block').classList.remove('active');
+                }
+            }
         }
     }
 }
