@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="Ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="Description" content="default">
+  <title>BatteryCRM</title>
+  <link href="img/logo.png" rel="icon"/>
+  <link rel="preload" href="fonts/FuturaNewRegular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/FuturaNewMedium.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/FuturaNewDemi.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/FuturaNewBold.woff2" as="font" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+  <div class="header">
+    <!--<div class="header__title">Система управления</div>-->
+    <div class="header__title">Система управления</div>
+    <a class="header__logo" href="$">
+      <svg width='8' height='16'>
+        <use href='img/sprite/sprite.svg#logo-battery'></use>
+      </svg>
+      <svg width='122' height='13'>
+        <use href='img/sprite/sprite.svg#logo-title'></use>
+      </svg>
+    </a>
+    <div class="header__btns">
+      <!--<a href="settings.html" class="header__btn">-->
+      <a href="settings.html" class="header__btn">
+        <svg width='13.7' height='13.7'>
+          <use href='img/sprite/sprite.svg#setting'></use>
+        </svg>
+      </a>
+      <div class="header__user-btn">
+        <button class="header__btn">
+          <svg width='13.7' height='13.7'>
+            <use href='img/sprite/sprite.svg#user'></use>
+          </svg>
+        </button>
+        <div class="header__user-settings">
+          <div class="user">
+            <div class="user__personal">
+              <div class="user__avatar">
+                <picture>
+                  <source type='image/webp' srcset='img/agnes.webp'>
+                  <img width='40' height='40' src='img/agnes.png' alt='Агнес Толстопятко'>
+                </picture>
+              </div>
+              <div class="user__name">Агнес Толстопятко</div>
+            </div>
+            <ul class="user__btns">
+              <li class="user__btns-item">
+                <button class="user__btn">
+                  <svg width='14' height='14'>
+                    <use href='img/sprite/sprite.svg#account'></use>
+                  </svg>
+                  <span>Личный кабинет</span>
+                </button>
+              </li>
+              <li class="user__btns-item">
+                <button class="user__btn">
+                  <svg width='14' height='14'>
+                    <use href='img/sprite/sprite.svg#theme'></use>
+                  </svg>
+                  <span>Темная тема</span>
+                </button>
+              </li>
+              <li class="user__btns-item">
+                <button class="user__btn">
+                  <svg width='14' height='14'>
+                    <use href='img/sprite/sprite.svg#exit'></use>
+                  </svg>
+                  <span>Выйти</span>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+        <div class="analytics">
+
+            <div class="analytics__navigation navigation">
+                <div class="navigation__wrapper">
+                    <ul class="navigation__controls">
+                        <li class="navigation__controls-item">
+                            <div class="navigation__controls-btn">
+                                <svg width='19' height='19'>
+                                    <use href='img/sprite/sprite.svg#bag'></use>
+                                </svg>
+                                <span>Заказы</span>
+                            </div>
+                        </li>
+                        <li class="navigation__controls-item">
+                            <div class="navigation__controls-btn">
+                                <svg width='19' height='19'>
+                                    <use href='img/sprite/sprite.svg#clients'></use>
+                                </svg>
+                                <span>Клиенты</span>
+                            </div>
+                        </li>
+                        <li class="navigation__controls-item">
+                            <div class="navigation__controls-btn">
+                                <svg width='19' height='19'>
+                                    <use href='img/sprite/sprite.svg#shop'></use>
+                                </svg>
+                                <span>Товары</span>
+                            </div>
+                        </li>
+                        <li class="navigation__controls-item">
+                            <div class="navigation__controls-btn">
+                                <svg width='19' height='19'>
+                                    <use href='img/sprite/sprite.svg#wallet'></use>
+                                </svg>
+                                <span>Финансы</span>
+                            </div>
+                        </li>
+                        <li class="navigation__controls-item">
+                            <div class="navigation__controls-btn">
+                                <svg width='19' height='19'>
+                                    <use href='img/sprite/sprite.svg#tag'></use>
+                                </svg>
+                                <span>Соответствия товаров</span>
+                            </div>
+                        </li>
+                        <li class="navigation__controls-item">
+                            <div class="navigation__controls-btn active">
+                                <svg width='19' height='19'>
+                                    <use href='img/sprite/sprite.svg#activity'></use>
+                                </svg>
+                                <span>Аналитика</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="analytics__content content-analytics">
+                <div class="content-analytics__header">
+                    <h1 class="content-analytics__title">Финансовая аналитика</h1>
+                    <div class="content-analytics__date date-analytics">
+                        <button type="button" class="date-analytics__btn">
+                            <span>01.01.2021</span>
+                            —
+                            <span>01.05.2022</span>
+                            <svg>
+                                <use href='img/sprite/sprite.svg#arrow'></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="content-analytics__table table-analytics">
+                    <ul class="table-analytics__list">
+                        <li class="table-analytics__row table-analytics__row-header">
+                            <div class="table-analytics__item">Статья расходов</div>
+                            <div class="table-analytics__item">12.2021</div>
+                            <div class="table-analytics__item">01.2022</div>
+                            <div class="table-analytics__item">02.2022</div>
+                            <div class="table-analytics__item">03.2022</div>
+                            <div class="table-analytics__item">04.2022</div>
+                            <div class="table-analytics__item">05.2022</div>
+                        </li>
+                        <li class="table-analytics__row table-analytics__row-subheader">
+                            <div class="table-analytics__item">Доход</div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">280 824</div>
+                                <div class="table-analytics__percent">100%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">364 824</div>
+                                <div class="table-analytics__percent">100%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">786 024</div>
+                                <div class="table-analytics__percent">100%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">865 748</div>
+                                <div class="table-analytics__percent">100%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">963 321</div>
+                                <div class="table-analytics__percent">100%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">280 824</div>
+                                <div class="table-analytics__percent">100%</div>
+                            </div>
+                        </li>
+                        <li class="table-analytics__row table-analytics__row-type">
+                            Комиссия
+                        </li>
+                        <li class="table-analytics__row table-analytics__row-data-first">
+                            <div class="table-analytics__item">Комиссия за заказ Rozetka</div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">12 545</div>
+                                <div class="table-analytics__percent">15%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">1285</div>
+                                <div class="table-analytics__percent">0.22%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">258</div>
+                                <div class="table-analytics__percent">0.22%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">896</div>
+                                <div class="table-analytics__percent">0.24%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">854</div>
+                                <div class="table-analytics__percent">0.22%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">852</div>
+                                <div class="table-analytics__percent">0.20%</div>
+                            </div>
+                        </li>
+                        <li class="table-analytics__row table-analytics__row-data">
+                            <div class="table-analytics__item">Комиссия за оплату on-line</div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">786</div>
+                                <div class="table-analytics__percent">0.22%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">215</div>
+                                <div class="table-analytics__percent">0.15%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">254</div>
+                                <div class="table-analytics__percent">15%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">756</div>
+                                <div class="table-analytics__percent">0.22%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">756</div>
+                                <div class="table-analytics__percent">0.24%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">985</div>
+                                <div class="table-analytics__percent">15%</div>
+                            </div>
+                        </li>
+                        <li class="table-analytics__row table-analytics__row-data">
+                            <div class="table-analytics__item">Комиссия за заказ Prom</div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">789</div>
+                                <div class="table-analytics__percent">0.24%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">365</div>
+                                <div class="table-analytics__percent">100%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">895</div>
+                                <div class="table-analytics__percent">0.24%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">3214</div>
+                                <div class="table-analytics__percent">0.7%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">236</div>
+                                <div class="table-analytics__percent">15%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">895</div>
+                                <div class="table-analytics__percent">0.7%</div>
+                            </div>
+                        </li>
+                        <li class="table-analytics__row table-analytics__row-data-last">
+                            <div class="table-analytics__item">Комиссия за заказ Epicentr</div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">365</div>
+                                <div class="table-analytics__percent">0.15%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">789</div>
+                                <div class="table-analytics__percent">0.22%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">365</div>
+                                <div class="table-analytics__percent">15%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">740</div>
+                                <div class="table-analytics__percent">0.20%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">965</div>
+                                <div class="table-analytics__percent">0.20%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">748</div>
+                                <div class="table-analytics__percent">0.20%</div>
+                            </div>
+                        </li>
+                        <li class="table-analytics__row table-analytics__row-type">
+                            Маркетинг
+                        </li>
+                        <li class="table-analytics__row table-analytics__row-data-first">
+                            <div class="table-analytics__item">Factbook Ads</div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">159</div>
+                                <div class="table-analytics__percent">0.7%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">753</div>
+                                <div class="table-analytics__percent">0.24%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">753</div>
+                                <div class="table-analytics__percent">0.22%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">520</div>
+                                <div class="table-analytics__percent">0.22%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">741</div>
+                                <div class="table-analytics__percent">15%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">741</div>
+                                <div class="table-analytics__percent">0.22%</div>
+                            </div>
+                        </li>
+                        <li class="table-analytics__row table-analytics__row-data">
+                            <div class="table-analytics__item">Оплата OLX</div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">745</div>
+                                <div class="table-analytics__percent">0.20%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">365</div>
+                                <div class="table-analytics__percent">0.7%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">745</div>
+                                <div class="table-analytics__percent">0.15%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">654</div>
+                                <div class="table-analytics__percent">15%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">102</div>
+                                <div class="table-analytics__percent">0.7%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">2014</div>
+                                <div class="table-analytics__percent">0.15%</div>
+                            </div>
+                        </li>
+                        <li class="table-analytics__row table-analytics__row-data">
+                            <div class="table-analytics__item">AdSense</div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">745</div>
+                                <div class="table-analytics__percent">0.20%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">365</div>
+                                <div class="table-analytics__percent">0.7%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">745</div>
+                                <div class="table-analytics__percent">0.15%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">654</div>
+                                <div class="table-analytics__percent">15%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">102</div>
+                                <div class="table-analytics__percent">0.7%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">2014</div>
+                                <div class="table-analytics__percent">0.15%</div>
+                            </div>
+                        </li>
+                        <li class="table-analytics__row table-analytics__row-data">
+                            <div class="table-analytics__item">Расходы на SEO</div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">745</div>
+                                <div class="table-analytics__percent">0.20%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">365</div>
+                                <div class="table-analytics__percent">0.7%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">745</div>
+                                <div class="table-analytics__percent">0.15%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">654</div>
+                                <div class="table-analytics__percent">15%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">102</div>
+                                <div class="table-analytics__percent">0.7%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">2014</div>
+                                <div class="table-analytics__percent">0.15%</div>
+                            </div>
+                        </li>
+                        <li class="table-analytics__row table-analytics__row-data-last">
+                            <div class="table-analytics__item">TurboSmS</div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">745</div>
+                                <div class="table-analytics__percent">0.20%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">365</div>
+                                <div class="table-analytics__percent">0.7%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">745</div>
+                                <div class="table-analytics__percent">0.15%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">654</div>
+                                <div class="table-analytics__percent">15%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">102</div>
+                                <div class="table-analytics__percent">0.7%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">2014</div>
+                                <div class="table-analytics__percent">0.15%</div>
+                            </div>
+                        </li>
+                        <li class="table-analytics__row table-analytics__row-type">
+                            Дропшиппинг
+                        </li>
+                        <li class="table-analytics__row table-analytics__row-data-single">
+                            <div class="table-analytics__item">Выплата заказчику</div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">745</div>
+                                <div class="table-analytics__percent">0.20%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">365</div>
+                                <div class="table-analytics__percent">0.7%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">745</div>
+                                <div class="table-analytics__percent">0.15%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">654</div>
+                                <div class="table-analytics__percent">15%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">102</div>
+                                <div class="table-analytics__percent">0.7%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">2014</div>
+                                <div class="table-analytics__percent">0.15%</div>
+                            </div>
+                        </li>
+                        <li class="table-analytics__row table-analytics__row-type">
+                            Закупки товаров
+                        </li>
+                        <li class="table-analytics__row table-analytics__row-data-first">
+                            <div class="table-analytics__item">Закупка товаров — UKR</div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">159</div>
+                                <div class="table-analytics__percent">0.7%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">753</div>
+                                <div class="table-analytics__percent">0.24%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">753</div>
+                                <div class="table-analytics__percent">0.22%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">520</div>
+                                <div class="table-analytics__percent">0.22%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">741</div>
+                                <div class="table-analytics__percent">15%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">741</div>
+                                <div class="table-analytics__percent">0.22%</div>
+                            </div>
+                        </li>
+                        <li class="table-analytics__row table-analytics__row-data-last">
+                            <div class="table-analytics__item">Закупка товаров — CH</div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">745</div>
+                                <div class="table-analytics__percent">0.20%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">365</div>
+                                <div class="table-analytics__percent">0.7%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">745</div>
+                                <div class="table-analytics__percent">0.15%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">654</div>
+                                <div class="table-analytics__percent">15%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">102</div>
+                                <div class="table-analytics__percent">0.7%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">2014</div>
+                                <div class="table-analytics__percent">0.15%</div>
+                            </div>
+                        </li>
+                        <li class="table-analytics__row table-analytics__row-type">
+                            Доставка
+                        </li>
+                        <li class="table-analytics__row table-analytics__row-data-first">
+                            <div class="table-analytics__item">Стоимость доставки</div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">159</div>
+                                <div class="table-analytics__percent">0.7%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">753</div>
+                                <div class="table-analytics__percent">0.24%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">753</div>
+                                <div class="table-analytics__percent">0.22%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">520</div>
+                                <div class="table-analytics__percent">0.22%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">741</div>
+                                <div class="table-analytics__percent">15%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">741</div>
+                                <div class="table-analytics__percent">0.22%</div>
+                            </div>
+                        </li>
+                        <li class="table-analytics__row table-analytics__row-data">
+                            <div class="table-analytics__item">Доставка возврата заказов</div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">745</div>
+                                <div class="table-analytics__percent">0.20%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">365</div>
+                                <div class="table-analytics__percent">0.7%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">745</div>
+                                <div class="table-analytics__percent">0.15%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">654</div>
+                                <div class="table-analytics__percent">15%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">102</div>
+                                <div class="table-analytics__percent">0.7%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">2014</div>
+                                <div class="table-analytics__percent">0.15%</div>
+                            </div>
+                        </li>
+                        <li class="table-analytics__row table-analytics__row-data-last">
+                            <div class="table-analytics__item">Оплата бесплатных доставок</div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">745</div>
+                                <div class="table-analytics__percent">0.20%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">365</div>
+                                <div class="table-analytics__percent">0.7%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">745</div>
+                                <div class="table-analytics__percent">0.15%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">654</div>
+                                <div class="table-analytics__percent">15%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">102</div>
+                                <div class="table-analytics__percent">0.7%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">2014</div>
+                                <div class="table-analytics__percent">0.15%</div>
+                            </div>
+                        </li>
+                        <li class="table-analytics__row table-analytics__row-type">
+                            Прочие расходы
+                        </li>
+                        <li class="table-analytics__row table-analytics__row-data-first">
+                            <div class="table-analytics__item">Работы по сайту</div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">159</div>
+                                <div class="table-analytics__percent">0.7%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">753</div>
+                                <div class="table-analytics__percent">0.24%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">753</div>
+                                <div class="table-analytics__percent">0.22%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">520</div>
+                                <div class="table-analytics__percent">0.22%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">741</div>
+                                <div class="table-analytics__percent">15%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">741</div>
+                                <div class="table-analytics__percent">0.22%</div>
+                            </div>
+                        </li>
+                        <li class="table-analytics__row table-analytics__row-data">
+                            <div class="table-analytics__item">Оплата CRM системы Asteril</div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">745</div>
+                                <div class="table-analytics__percent">0.20%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">365</div>
+                                <div class="table-analytics__percent">0.7%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">745</div>
+                                <div class="table-analytics__percent">0.15%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">654</div>
+                                <div class="table-analytics__percent">15%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">102</div>
+                                <div class="table-analytics__percent">0.7%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">2014</div>
+                                <div class="table-analytics__percent">0.15%</div>
+                            </div>
+                        </li>
+                        <li class="table-analytics__row table-analytics__row-data">
+                            <div class="table-analytics__item">Налоги и бухгалтерия</div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">745</div>
+                                <div class="table-analytics__percent">0.20%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">365</div>
+                                <div class="table-analytics__percent">0.7%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">745</div>
+                                <div class="table-analytics__percent">0.15%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">654</div>
+                                <div class="table-analytics__percent">15%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">102</div>
+                                <div class="table-analytics__percent">0.7%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">2014</div>
+                                <div class="table-analytics__percent">0.15%</div>
+                            </div>
+                        </li>
+                        <li class="table-analytics__row table-analytics__row-data">
+                            <div class="table-analytics__item">Другое</div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">745</div>
+                                <div class="table-analytics__percent">0.20%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">365</div>
+                                <div class="table-analytics__percent">0.7%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">745</div>
+                                <div class="table-analytics__percent">0.15%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">654</div>
+                                <div class="table-analytics__percent">15%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">102</div>
+                                <div class="table-analytics__percent">0.7%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">2014</div>
+                                <div class="table-analytics__percent">0.15%</div>
+                            </div>
+                        </li>
+                        <li class="table-analytics__row table-analytics__row-data">
+                            <div class="table-analytics__item">Вывод прибыли</div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">745</div>
+                                <div class="table-analytics__percent">0.20%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">365</div>
+                                <div class="table-analytics__percent">0.7%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">745</div>
+                                <div class="table-analytics__percent">0.15%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">654</div>
+                                <div class="table-analytics__percent">15%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">102</div>
+                                <div class="table-analytics__percent">0.7%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">2014</div>
+                                <div class="table-analytics__percent">0.15%</div>
+                            </div>
+                        </li>
+                        <li class="table-analytics__row table-analytics__row-data-last">
+                            <div class="table-analytics__item">Покупка валюты</div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">745</div>
+                                <div class="table-analytics__percent">0.20%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">365</div>
+                                <div class="table-analytics__percent">0.7%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">745</div>
+                                <div class="table-analytics__percent">0.15%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">654</div>
+                                <div class="table-analytics__percent">15%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">102</div>
+                                <div class="table-analytics__percent">0.7%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">2014</div>
+                                <div class="table-analytics__percent">0.15%</div>
+                            </div>
+                        </li>
+                        <li class="table-analytics__row table-analytics__row-type">
+                            Первоначальная стоимость товара
+                        </li>
+                        <li class="table-analytics__row table-analytics__row-data-single">
+                            <div class="table-analytics__item">Цега закупки товара</div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">745</div>
+                                <div class="table-analytics__percent">0.20%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">365</div>
+                                <div class="table-analytics__percent">0.7%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">745</div>
+                                <div class="table-analytics__percent">0.15%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">654</div>
+                                <div class="table-analytics__percent">15%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">102</div>
+                                <div class="table-analytics__percent">0.7%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">2014</div>
+                                <div class="table-analytics__percent">0.15%</div>
+                            </div>
+                        </li>
+                        <li class="table-analytics__row table-analytics__row-footer">
+                            <div class="table-analytics__item">Прибыль</div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">280 824</div>
+                                <div class="table-analytics__percent">100%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">364 824</div>
+                                <div class="table-analytics__percent table-analytics__percent-minus">-2.58%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">786 024</div>
+                                <div class="table-analytics__percent">100%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">865 748</div>
+                                <div class="table-analytics__percent">100%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">963 321</div>
+                                <div class="table-analytics__percent">100%</div>
+                            </div>
+                            <div class="table-analytics__item table-analytics__item-double">
+                                <div class="table-analytics__value">280 824</div>
+                                <div class="table-analytics__percent">100%</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="content-analytics__btns">
+                    <button type="button" class="content-analytics__export btn-blue">
+                        <svg width='24' height='24'>
+                            <use href='img/sprite/sprite.svg#export'></use>
+                        </svg>
+                        Експорт
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <footer>
+  <div class="footer">
+    <p class="copyright">© 2022. iBattery CRM. Все права защищены.</p>
+  </div>
+</footer>
+
+    </div>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>
