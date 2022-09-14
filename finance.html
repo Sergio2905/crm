@@ -128,11 +128,27 @@
                             </div>
                         </li>
                         <li class="navigation__controls-item">
-                            <div class="navigation__controls-btn active">
-                                <svg width='19' height='19'>
-                                    <use href='img/sprite/sprite.svg#activity'></use>
-                                </svg>
-                                <span>Аналитика</span>
+                            <div class="navigation__controls-btn navigation-analytics active">
+                                <button type="button" class="navigation-analytics__btn">
+                                    <svg width='19' height='19'>
+                                        <use href='img/sprite/sprite.svg#activity'></use>
+                                    </svg>
+                                    <span>Аналитика</span>
+                                </button>
+                                <div class="navigation-analytics__menu">
+                                    <ul class="navigation-analytics__list">
+                                        <li class="navigation-analytics__item">
+                                            <a href="general.html" class="navigation-analytics__link">Общая</a>
+                                        </li>
+                                        <li class="navigation-analytics__item">
+                                            <a href="products.html" class="navigation-analytics__link">Товары</a>
+                                        </li>
+                                        <li class="navigation-analytics__item">
+                                            <a href="finance.html" class="navigation-analytics__link">Финансы</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
                             </div>
                         </li>
                     </ul>
@@ -838,12 +854,45 @@
                 </div>
 
                 <div class="content-analytics__btns">
-                    <button type="button" class="content-analytics__export btn-blue">
+                    <button type="button" class="content-analytics__export btn-blue" data-path="export">
                         <svg width='24' height='24'>
                             <use href='img/sprite/sprite.svg#export'></use>
                         </svg>
                         Експорт
                     </button>
+                </div>
+            </div>
+
+            <div class="modal">
+                <div class="modal__container" data-target="export">
+                    <div class="modal__wrapper download">
+                        <div class="modal__title">Выберите формат экспорта</div>
+
+                        <div class="download__modal-content">
+                            <div class="download__select select">
+                                <div class="download__select-header select__header">
+                                    <span class="download__select-current select__current">
+                                        Таблица XLSX
+                                    </span>
+                                    <svg width='12' height='12'>
+                                        <use href='img/sprite/sprite.svg#arrow'></use>
+                                    </svg>
+                                </div>
+
+                                <ul class="download__select-body select__body">
+                                    <li class="download__select-item select__item" data-choice='choosen'>Таблица XLSX
+                                    </li>
+                                    <li class="download__select-item select__item" data-choice='choosen'>Таблица XLS
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="modal__bottom">
+                            <button type="button" class="modal__btn modal__btn--download">Загрузить</button>
+                            <button type="button" class="modal__btn modal-close">Отменить</button>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -856,6 +905,7 @@
 </footer>
 
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script type="text/javascript" src="js/main.js"></script>
 </body>
 

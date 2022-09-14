@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="Ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="Description" content="default">
+  <title>BatteryCRM</title>
+  <link href="img/logo.png" rel="icon"/>
+  <link rel="preload" href="fonts/FuturaNewRegular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/FuturaNewMedium.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/FuturaNewDemi.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/FuturaNewBold.woff2" as="font" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+  <div class="header">
+    <div class="header__title">Система управления</div>
+    <a class="header__logo" href="$">
+      <svg width='8' height='16'>
+        <use href='img/sprite/sprite.svg#logo-battery'></use>
+      </svg>
+      <svg width='122' height='13'>
+        <use href='img/sprite/sprite.svg#logo-title'></use>
+      </svg>
+    </a>
+    <div class="header__btns">
+      <a href="settings.html" class="header__btn">
+        <svg width='13.7' height='13.7'>
+          <use href='img/sprite/sprite.svg#setting'></use>
+        </svg>
+      </a>
+      <div class="header__user-btn">
+        <button class="header__btn">
+          <svg width='13.7' height='13.7'>
+            <use href='img/sprite/sprite.svg#user'></use>
+          </svg>
+        </button>
+        <div class="header__user-settings">
+          <div class="user">
+            <div class="user__personal">
+              <div class="user__avatar">
+                <picture>
+                  <source type='image/webp' srcset='img/agnes.webp'>
+                  <img width='40' height='40' src='img/agnes.png' alt='Агнес Толстопятко'>
+                </picture>
+              </div>
+              <div class="user__name">Агнес Толстопятко</div>
+            </div>
+            <ul class="user__btns">
+              <li class="user__btns-item">
+                <button class="user__btn">
+                  <svg width='14' height='14'>
+                    <use href='img/sprite/sprite.svg#account'></use>
+                  </svg>
+                  <span>Личный кабинет</span>
+                </button>
+              </li>
+              <li class="user__btns-item">
+                <button class="user__btn">
+                  <svg width='14' height='14'>
+                    <use href='img/sprite/sprite.svg#theme'></use>
+                  </svg>
+                  <span>Темная тема</span>
+                </button>
+              </li>
+              <li class="user__btns-item">
+                <button class="user__btn">
+                  <svg width='14' height='14'>
+                    <use href='img/sprite/sprite.svg#exit'></use>
+                  </svg>
+                  <span>Выйти</span>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+        <div class="analytics">
+
+            <div class="analytics__navigation navigation">
+                <div class="navigation__wrapper">
+                    <ul class="navigation__controls">
+                        <li class="navigation__controls-item">
+                            <div class="navigation__controls-btn">
+                                <svg width='19' height='19'>
+                                    <use href='img/sprite/sprite.svg#bag'></use>
+                                </svg>
+                                <span>Заказы</span>
+                            </div>
+                        </li>
+                        <li class="navigation__controls-item">
+                            <div class="navigation__controls-btn">
+                                <svg width='19' height='19'>
+                                    <use href='img/sprite/sprite.svg#clients'></use>
+                                </svg>
+                                <span>Клиенты</span>
+                            </div>
+                        </li>
+                        <li class="navigation__controls-item">
+                            <div class="navigation__controls-btn">
+                                <svg width='19' height='19'>
+                                    <use href='img/sprite/sprite.svg#shop'></use>
+                                </svg>
+                                <span>Товары</span>
+                            </div>
+                        </li>
+                        <li class="navigation__controls-item">
+                            <div class="navigation__controls-btn">
+                                <svg width='19' height='19'>
+                                    <use href='img/sprite/sprite.svg#wallet'></use>
+                                </svg>
+                                <span>Финансы</span>
+                            </div>
+                        </li>
+                        <li class="navigation__controls-item">
+                            <div class="navigation__controls-btn">
+                                <svg width='19' height='19'>
+                                    <use href='img/sprite/sprite.svg#tag'></use>
+                                </svg>
+                                <span>Соответствия товаров</span>
+                            </div>
+                        </li>
+                        <li class="navigation__controls-item">
+                            <div class="navigation__controls-btn navigation-analytics active">
+                                <button type="button" class="navigation-analytics__btn">
+                                    <svg width='19' height='19'>
+                                        <use href='img/sprite/sprite.svg#activity'></use>
+                                    </svg>
+                                    <span>Аналитика</span>
+                                </button>
+                                <div class="navigation-analytics__menu">
+                                    <ul class="navigation-analytics__list">
+                                        <li class="navigation-analytics__item">
+                                            <a href="general.html" class="navigation-analytics__link">Общая</a>
+                                        </li>
+                                        <li class="navigation-analytics__item">
+                                            <a href="products.html" class="navigation-analytics__link">Товары</a>
+                                        </li>
+                                        <li class="navigation-analytics__item">
+                                            <a href="finance.html" class="navigation-analytics__link">Финансы</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="analytics__content content-analytics ">
+                <div class="content-analytics__header">
+                    <h1 class="content-analytics__title">Товары и категории
+                    </h1>
+                    <div class="content-analytics__options-body" data-spollers data-one-spoller>
+                        <button tabindex="-1" type="button" data-spoller class="navigation__filter-btn">
+                            <span>Фильтры</span>
+                            <svg width='24' height='24'>
+                                <use href='img/sprite/sprite.svg#filter'></use>
+                            </svg>
+                        </button>
+                        <div class="content-analytics__options">
+                            <div class="content-analytics__select select-charts">
+                                <button type="button" class="select-charts__btn select-charts__btn--groups">
+                                    Магазины
+                                    <span class="select-charts__selected">0</span>
+                                    из
+                                    <span class="select-charts__from">0</span>
+                                    <svg>
+                                        <use href='img/sprite/sprite.svg#arrow'></use>
+                                    </svg>
+                                </button>
+                                <div class="select-charts__menu">
+                                    <ul class="select-charts__list">
+                                        <li class="select-charts__item">
+                                            <label class="select-charts__checkbox-label">
+                                                <input class="select-charts__checkbox-input" type="checkbox"
+                                                    name="auto-refresh">
+                                                <span class="select-charts__checkbox-name">Магазин 1</span>
+                                            </label>
+                                        </li>
+                                        <li class="select-charts__item">
+                                            <label class="select-charts__checkbox-label">
+                                                <input class="select-charts__checkbox-input" type="checkbox"
+                                                    name="auto-refresh">
+                                                <span class="select-charts__checkbox-name">Магазин 2</span>
+                                            </label>
+                                        </li>
+                                        <li class="select-charts__item">
+                                            <label class="select-charts__checkbox-label">
+                                                <input class="select-charts__checkbox-input" type="checkbox"
+                                                    name="auto-refresh">
+                                                <span class="select-charts__checkbox-name">Магазин 3</span>
+                                            </label>
+                                        </li>
+                                        <li class="select-charts__item">
+                                            <label class="select-charts__checkbox-label">
+                                                <input class="select-charts__checkbox-input" type="checkbox"
+                                                    name="auto-refresh">
+                                                <span class="select-charts__checkbox-name">Магазин 4</span>
+                                            </label>
+                                        </li>
+                                        <li class="select-charts__item">
+                                            <label class="select-charts__checkbox-label">
+                                                <input class="select-charts__checkbox-input" type="checkbox"
+                                                    name="auto-refresh">
+                                                <span class="select-charts__checkbox-name">Магазин 5</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="content-analytics__select select-charts">
+                                <button type="button" class="select-charts__btn select-charts__btn--groups">
+                                    Ответственные
+                                    <span class="select-charts__selected">0</span>
+                                    из
+                                    <span class="select-charts__from">0</span>
+                                    <svg>
+                                        <use href='img/sprite/sprite.svg#arrow'></use>
+                                    </svg>
+                                </button>
+                                <div class="select-charts__menu">
+                                    <ul class="select-charts__list">
+                                        <li class="select-charts__item">
+                                            <label class="select-charts__checkbox-label">
+                                                <input class="select-charts__checkbox-input" type="checkbox"
+                                                    name="auto-refresh">
+                                                <span class="select-charts__checkbox-name">Ответственный 1</span>
+                                            </label>
+                                        </li>
+                                        <li class="select-charts__item">
+                                            <label class="select-charts__checkbox-label">
+                                                <input class="select-charts__checkbox-input" type="checkbox"
+                                                    name="auto-refresh">
+                                                <span class="select-charts__checkbox-name">Ответственный 2</span>
+                                            </label>
+                                        </li>
+                                        <li class="select-charts__item">
+                                            <label class="select-charts__checkbox-label">
+                                                <input class="select-charts__checkbox-input" type="checkbox"
+                                                    name="auto-refresh">
+                                                <span class="select-charts__checkbox-name">Ответственный 3</span>
+                                            </label>
+                                        </li>
+                                        <li class="select-charts__item">
+                                            <label class="select-charts__checkbox-label">
+                                                <input class="select-charts__checkbox-input" type="checkbox"
+                                                    name="auto-refresh">
+                                                <span class="select-charts__checkbox-name">Ответственный 4</span>
+                                            </label>
+                                        </li>
+                                        <li class="select-charts__item">
+                                            <label class="select-charts__checkbox-label">
+                                                <input class="select-charts__checkbox-input" type="checkbox"
+                                                    name="auto-refresh">
+                                                <span class="select-charts__checkbox-name">Ответственный 5</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="content-analytics__select select-charts">
+                                <button type="button" class="select-charts__btn select-charts__btn--groups">
+                                    Источники заказов
+                                    <span class="select-charts__selected">0</span>
+                                    из
+                                    <span class="select-charts__from">0</span>
+                                    <svg>
+                                        <use href='img/sprite/sprite.svg#arrow'></use>
+                                    </svg>
+                                </button>
+                                <div class="select-charts__menu">
+                                    <ul class="select-charts__list">
+                                        <li class="select-charts__item">
+                                            <label class="select-charts__checkbox-label">
+                                                <input class="select-charts__checkbox-input" type="checkbox"
+                                                    name="auto-refresh">
+                                                <span class="select-charts__checkbox-name">Источник 1</span>
+                                            </label>
+                                        </li>
+                                        <li class="select-charts__item">
+                                            <label class="select-charts__checkbox-label">
+                                                <input class="select-charts__checkbox-input" type="checkbox"
+                                                    name="auto-refresh">
+                                                <span class="select-charts__checkbox-name">Источник 2</span>
+                                            </label>
+                                        </li>
+                                        <li class="select-charts__item">
+                                            <label class="select-charts__checkbox-label">
+                                                <input class="select-charts__checkbox-input" type="checkbox"
+                                                    name="auto-refresh">
+                                                <span class="select-charts__checkbox-name">Источник 3</span>
+                                            </label>
+                                        </li>
+                                        <li class="select-charts__item">
+                                            <label class="select-charts__checkbox-label">
+                                                <input class="select-charts__checkbox-input" type="checkbox"
+                                                    name="auto-refresh">
+                                                <span class="select-charts__checkbox-name">Источник 4</span>
+                                            </label>
+                                        </li>
+                                        <li class="select-charts__item">
+                                            <label class="select-charts__checkbox-label">
+                                                <input class="select-charts__checkbox-input" type="checkbox"
+                                                    name="auto-refresh">
+                                                <span class="select-charts__checkbox-name">Источник 5</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="content-analytics__date date-analytics">
+                                <button type="button" class="date-analytics__btn">
+                                    <span>01.01.2021</span>
+                                    —
+                                    <span>01.05.2022</span>
+                                    <svg>
+                                        <use href='img/sprite/sprite.svg#arrow'></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-analytics__charts charts">
+                    <div class="charts__block">
+                        <div class="charts__header">
+                            <h2 class="charts__title">Категории</h2>
+                            <div class="charts__sort left">
+                                <span class="charts__sort-sum">по сумме</span>
+                                <button type="button" class="charts__sort-switcher"></button>
+                                <span class="charts__sort-count">по кол-ву</span>
+                            </div>
+                            <div class="charts__select-wrapper">
+                                <div class="charts__select select-charts">
+                                    <button type="button" class="select-charts__btn select-charts__btn--groups">
+                                        Группы статусов
+                                        <span class="select-charts__selected">0</span>
+                                        из
+                                        <span class="select-charts__from">0</span>
+                                        <svg>
+                                            <use href='img/sprite/sprite.svg#arrow'></use>
+                                        </svg>
+                                    </button>
+                                    <div class="select-charts__menu">
+                                        <ul class="select-charts__list">
+                                            <li class="select-charts__item">
+                                                <label class="select-charts__checkbox-label">
+                                                    <input class="select-charts__checkbox-input" type="checkbox"
+                                                        name="auto-refresh">
+                                                    <span class="select-charts__checkbox-name">Новый</span>
+                                                </label>
+                                            </li>
+                                            <li class="select-charts__item">
+                                                <label class="select-charts__checkbox-label">
+                                                    <input class="select-charts__checkbox-input" type="checkbox"
+                                                        name="auto-refresh">
+                                                    <span class="select-charts__checkbox-name">Согласование</span>
+                                                </label>
+                                            </li>
+                                            <li class="select-charts__item">
+                                                <label class="select-charts__checkbox-label">
+                                                    <input class="select-charts__checkbox-input" type="checkbox"
+                                                        name="auto-refresh">
+                                                    <span class="select-charts__checkbox-name">Доставка</span>
+                                                </label>
+                                            </li>
+                                            <li class="select-charts__item">
+                                                <label class="select-charts__checkbox-label">
+                                                    <input class="select-charts__checkbox-input" type="checkbox"
+                                                        name="auto-refresh">
+                                                    <span class="select-charts__checkbox-name">Ожидание</span>
+                                                </label>
+                                            </li>
+                                            <li class="select-charts__item">
+                                                <label class="select-charts__checkbox-label">
+                                                    <input class="select-charts__checkbox-input" type="checkbox"
+                                                        name="auto-refresh">
+                                                    <span class="select-charts__checkbox-name">Завершен</span>
+                                                </label>
+                                            </li>
+                                            <li class="select-charts__item">
+                                                <label class="select-charts__checkbox-label">
+                                                    <input class="select-charts__checkbox-input" type="checkbox"
+                                                        name="auto-refresh">
+                                                    <span class="select-charts__checkbox-name">Отмена</span>
+                                                </label>
+                                            </li>
+                                            <li class="select-charts__item">
+                                                <label class="select-charts__checkbox-label">
+                                                    <input class="select-charts__checkbox-input" type="checkbox"
+                                                        name="auto-refresh">
+                                                    <span class="select-charts__checkbox-name">Возврат</span>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="charts__bar-horizontal">
+                            <div class="charts__bar-wrapper">
+                                <div id="cat-chart"></div>
+                            </div>
+                        </div>
+                        <div class="content-analytics__btns">
+                            <button type="button" class="content-analytics__export btn-blue" data-path="export">
+                                <svg width='24' height='24'>
+                                    <use href='img/sprite/sprite.svg#export'></use>
+                                </svg>
+                                Експорт
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-analytics__charts charts">
+                    <div class="charts__block">
+                        <div class="charts__header">
+                            <h2 class="charts__title">Товары</h2>
+                            <div class="charts__sort left">
+                                <span class="charts__sort-sum">по сумме</span>
+                                <button type="button" class="charts__sort-switcher"></button>
+                                <span class="charts__sort-count">по кол-ву</span>
+                            </div>
+                            <div class="charts__select-wrapper">
+                                <div class="charts__select select-charts">
+                                    <button type="button" class="select-charts__btn select-charts__btn--categories">
+                                        Категории
+                                        <span class="select-charts__selected">0</span>
+                                        из
+                                        <span class="select-charts__from">0</span>
+                                        <svg>
+                                            <use href='img/sprite/sprite.svg#arrow'></use>
+                                        </svg>
+                                    </button>
+                                    <div class="select-charts__menu">
+                                        <ul class="select-charts__list">
+                                            <li class="select-charts__item">
+                                                <label class="select-charts__checkbox-label">
+                                                    <input class="select-charts__checkbox-input" type="checkbox"
+                                                        name="auto-refresh">
+                                                    <span class="select-charts__checkbox-name">Категория 1</span>
+                                                </label>
+                                            </li>
+                                            <li class="select-charts__item">
+                                                <label class="select-charts__checkbox-label">
+                                                    <input class="select-charts__checkbox-input" type="checkbox"
+                                                        name="auto-refresh">
+                                                    <span class="select-charts__checkbox-name">Категория 2</span>
+                                                </label>
+                                            </li>
+                                            <li class="select-charts__item">
+                                                <label class="select-charts__checkbox-label">
+                                                    <input class="select-charts__checkbox-input" type="checkbox"
+                                                        name="auto-refresh">
+                                                    <span class="select-charts__checkbox-name">Категория 3</span>
+                                                </label>
+                                            </li>
+                                            <li class="select-charts__item">
+                                                <label class="select-charts__checkbox-label">
+                                                    <input class="select-charts__checkbox-input" type="checkbox"
+                                                        name="auto-refresh">
+                                                    <span class="select-charts__checkbox-name">Категория 4</span>
+                                                </label>
+                                            </li>
+                                            <li class="select-charts__item">
+                                                <label class="select-charts__checkbox-label">
+                                                    <input class="select-charts__checkbox-input" type="checkbox"
+                                                        name="auto-refresh">
+                                                    <span class="select-charts__checkbox-name">Категория 5</span>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="charts__select select-charts">
+                                    <button type="button" class="select-charts__btn select-charts__btn--groups">
+                                        Группы статусов
+                                        <span class="select-charts__selected">0</span>
+                                        из
+                                        <span class="select-charts__from">0</span>
+                                        <svg>
+                                            <use href='img/sprite/sprite.svg#arrow'></use>
+                                        </svg>
+                                    </button>
+                                    <div class="select-charts__menu">
+                                        <ul class="select-charts__list">
+                                            <li class="select-charts__item">
+                                                <label class="select-charts__checkbox-label">
+                                                    <input class="select-charts__checkbox-input" type="checkbox"
+                                                        name="auto-refresh">
+                                                    <span class="select-charts__checkbox-name">Новый</span>
+                                                </label>
+                                            </li>
+                                            <li class="select-charts__item">
+                                                <label class="select-charts__checkbox-label">
+                                                    <input class="select-charts__checkbox-input" type="checkbox"
+                                                        name="auto-refresh">
+                                                    <span class="select-charts__checkbox-name">Согласование</span>
+                                                </label>
+                                            </li>
+                                            <li class="select-charts__item">
+                                                <label class="select-charts__checkbox-label">
+                                                    <input class="select-charts__checkbox-input" type="checkbox"
+                                                        name="auto-refresh">
+                                                    <span class="select-charts__checkbox-name">Доставка</span>
+                                                </label>
+                                            </li>
+                                            <li class="select-charts__item">
+                                                <label class="select-charts__checkbox-label">
+                                                    <input class="select-charts__checkbox-input" type="checkbox"
+                                                        name="auto-refresh">
+                                                    <span class="select-charts__checkbox-name">Ожидание</span>
+                                                </label>
+                                            </li>
+                                            <li class="select-charts__item">
+                                                <label class="select-charts__checkbox-label">
+                                                    <input class="select-charts__checkbox-input" type="checkbox"
+                                                        name="auto-refresh">
+                                                    <span class="select-charts__checkbox-name">Завершен</span>
+                                                </label>
+                                            </li>
+                                            <li class="select-charts__item">
+                                                <label class="select-charts__checkbox-label">
+                                                    <input class="select-charts__checkbox-input" type="checkbox"
+                                                        name="auto-refresh">
+                                                    <span class="select-charts__checkbox-name">Отмена</span>
+                                                </label>
+                                            </li>
+                                            <li class="select-charts__item">
+                                                <label class="select-charts__checkbox-label">
+                                                    <input class="select-charts__checkbox-input" type="checkbox"
+                                                        name="auto-refresh">
+                                                    <span class="select-charts__checkbox-name">Возврат</span>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="charts__bar-horizontal">
+                            <div class="charts__bar-wrapper">
+                                <div id="prod-chart"></div>
+                            </div>
+                        </div>
+                        <div class="content-analytics__btns">
+                            <button type="button" class="content-analytics__export btn-blue" data-path="export">
+                                <svg width='24' height='24'>
+                                    <use href='img/sprite/sprite.svg#export'></use>
+                                </svg>
+                                Експорт
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal">
+                <div class="modal__container" data-target="export">
+                    <div class="modal__wrapper download">
+                        <div class="modal__title">Выберите формат экспорта</div>
+
+                        <div class="download__modal-content">
+                            <div class="download__select select">
+                                <div class="download__select-header select__header">
+                                    <span class="download__select-current select__current">
+                                        Таблица XLSX
+                                    </span>
+                                    <svg width='12' height='12'>
+                                        <use href='img/sprite/sprite.svg#arrow'></use>
+                                    </svg>
+                                </div>
+
+                                <ul class="download__select-body select__body">
+                                    <li class="download__select-item select__item" data-choice='choosen'>Таблица XLSX
+                                    </li>
+                                    <li class="download__select-item select__item" data-choice='choosen'>Таблица XLS
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="modal__bottom">
+                            <button type="button" class="modal__btn modal__btn--download">Загрузить</button>
+                            <button type="button" class="modal__btn modal-close">Отменить</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <footer>
+  <div class="footer">
+    <p class="copyright">© 2022. iBattery CRM. Все права защищены.</p>
+  </div>
+</footer>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>

@@ -17,7 +17,6 @@
     <div class="wrapper">
         <header>
   <div class="header">
-    <!--<div class="header__title">Система управления</div>-->
     <div class="header__title">Настройки</div>
     <a class="header__logo" href="$">
       <svg width='8' height='16'>
@@ -28,7 +27,6 @@
       </svg>
     </a>
     <div class="header__btns">
-      <!--<a href="settings.html" class="header__btn">-->
       <a href="./" class="header__btn">
         <svg width='13.7' height='13.7'>
           <use href='img/sprite/sprite.svg#setting'></use>
@@ -130,11 +128,27 @@
                             </div>
                         </li>
                         <li class="navigation__controls-item">
-                            <div class="navigation__controls-btn">
-                                <svg width='19' height='19'>
-                                    <use href='img/sprite/sprite.svg#activity'></use>
-                                </svg>
-                                <span>Аналитика</span>
+                            <div class="navigation__controls-btn navigation-analytics">
+                                <button type="button" class="navigation-analytics__btn">
+                                    <svg width='19' height='19'>
+                                        <use href='img/sprite/sprite.svg#activity'></use>
+                                    </svg>
+                                    <span>Аналитика</span>
+                                </button>
+                                <div class="navigation-analytics__menu">
+                                    <ul class="navigation-analytics__list">
+                                        <li class="navigation-analytics__item">
+                                            <a href="general.html" class="navigation-analytics__link">Общая</a>
+                                        </li>
+                                        <li class="navigation-analytics__item">
+                                            <a href="products.html" class="navigation-analytics__link">Товары</a>
+                                        </li>
+                                        <li class="navigation-analytics__item">
+                                            <a href="finance.html" class="navigation-analytics__link">Финансы</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
                             </div>
                         </li>
                     </ul>
@@ -1154,7 +1168,7 @@
 </footer>
 
     </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script type="text/javascript" src="js/main.js"></script>
 </body>
 
