@@ -1,3 +1,361 @@
+// Диаграмма категорий
+var catOptions = {
+    chart: {
+        type: 'bar',
+        height: 692,
+        toolbar: {
+            show: false,
+        },
+    },
+    plotOptions: {
+        bar: {
+            borderRadius: 8,
+            horizontal: true,
+            barHeight: 45,
+        }
+    },
+    dataLabels: {
+        enabled: false,
+    },
+    series: [{
+        name: 'Categories',
+        data: [
+            {
+                x: 'Электронные компоненты',
+                y: [0, 190000],
+                fillColor: "#143127",
+            },
+            {
+                x: 'Гирлянды',
+                y: [0, 165000],
+                fillColor: "#64B6AC",
+            },
+            {
+                x: 'Штаны',
+                y: [0, 155000],
+                fillColor: "#64B6AC",
+            },
+            {
+                x: 'Посуда',
+                y: [0, 115000],
+                fillColor: "#64B6AC",
+            },
+            {
+                x: 'Круассаны',
+                y: [0, 110000],
+                fillColor: "#BDDEDA",
+            },
+            {
+                x: 'Столы',
+                y: [0, 100000],
+                fillColor: "#BDDEDA",
+            },
+            {
+                x: 'Стиральный порошок',
+                y: [0, 95000],
+                fillColor: "#BDDEDA",
+            },
+            {
+                x: 'Линзы',
+                y: [0, 95000],
+                fillColor: "#BDDEDA",
+            },
+            {
+                x: 'Кофемашины',
+                y: [0, 90000],
+                fillColor: "#143127",
+            },
+            {
+                x: 'Освежители воздуха',
+                y: [0, 85000],
+                fillColor: "#64B6AC",
+            },
+            {
+                x: 'Постеры “Сумерки',
+                y: [0, 75000],
+                fillColor: "#64B6AC",
+            },
+            {
+                x: 'Шины и диски',
+                y: [0, 70000],
+                fillColor: "#64B6AC",
+            },
+            {
+                x: 'Матрасы',
+                y: [0, 65000],
+                fillColor: "#BDDEDA",
+            },
+            {
+                x: 'Болгарки',
+                y: [0, 63000],
+                fillColor: "#BDDEDA",
+            },
+            {
+                x: 'Средства связи',
+                y: [0, 60000],
+                fillColor: "#BDDEDA",
+            },
+            {
+                x: 'Чайный сервиз',
+                y: [0, 55000],
+                fillColor: "#143127",
+            },
+            {
+                x: 'Ноутбуки',
+                y: [0, 52000],
+                fillColor: "#64B6AC",
+            },
+            {
+                x: 'Стаканы',
+                y: [0, 45000],
+                fillColor: "#64B6AC",
+            },
+            {
+                x: 'Картины',
+                y: [0, 38000],
+                fillColor: "#BDDEDA",
+            },
+            {
+                x: 'Пуховики',
+                y: [0, 18000],
+                fillColor: "#BDDEDA",
+            },
+        ],
+    }],
+    xaxis: {
+        min: 0,
+        max: 240000,
+        tickAmount: 12,
+        labels: {
+            style: {
+                colors: ['#626F6A'],
+                fontSize: '18px',
+                fontFamily: 'FuturaNew, sans-serif',
+                fontWeight: 400,
+            },
+            offsetY: 7,
+        },
+        axisBorder: {
+            show: false,
+        },
+    },
+    grid: {
+        show: true,
+        borderColor: '#90A4AE',
+        xaxis: {
+            lines: {
+                show: true
+            },
+        },
+        yaxis: {
+            lines: {
+                show: false
+            },
+        },
+    },
+    tooltip: {
+        followCursor: true,
+        custom: function ({ series, seriesIndex, dataPointIndex, w }) {
+            return '<div class="charts-tooltip">' +
+                '<span class="charts-tooltip__name">' + w.globals.labels[dataPointIndex] + '</span>' +
+                '<span class="charts-tooltip__value">' + series[seriesIndex][dataPointIndex] + '</span>' +
+                '</div>'
+        },
+    },
+    yaxis: {
+        labels: {
+            maxWidth: 250,
+            style: {
+                colors: ['#143127'],
+                fontSize: '18px',
+                fontFamily: 'FuturaNew, sans-serif',
+                fontWeight: 400,
+            }
+        }
+    },
+}
+var catChart = new ApexCharts(document.querySelector("#cat-chart"), catOptions);
+catChart.render();
+
+// Диаграмма товаров
+var prodOptions = {
+    chart: {
+        type: 'bar',
+        height: 692,
+        toolbar: {
+            show: false,
+        },
+    },
+    plotOptions: {
+        bar: {
+            borderRadius: 8,
+            horizontal: true,
+            barHeight: 45,
+        }
+    },
+    dataLabels: {
+        enabled: false,
+    },
+    series: [{
+        name: 'Categories',
+        data: [
+            {
+                x: 'Электронные компоненты',
+                y: [0, 190000],
+                fillColor: "#143127",
+            },
+            {
+                x: 'Гирлянды',
+                y: [0, 165000],
+                fillColor: "#64B6AC",
+            },
+            {
+                x: 'Штаны',
+                y: [0, 155000],
+                fillColor: "#64B6AC",
+            },
+            {
+                x: 'Посуда',
+                y: [0, 115000],
+                fillColor: "#64B6AC",
+            },
+            {
+                x: 'Круассаны',
+                y: [0, 110000],
+                fillColor: "#BDDEDA",
+            },
+            {
+                x: 'Столы',
+                y: [0, 100000],
+                fillColor: "#BDDEDA",
+            },
+            {
+                x: 'Стиральный порошок',
+                y: [0, 95000],
+                fillColor: "#BDDEDA",
+            },
+            {
+                x: 'Линзы',
+                y: [0, 95000],
+                fillColor: "#BDDEDA",
+            },
+            {
+                x: 'Кофемашины',
+                y: [0, 90000],
+                fillColor: "#143127",
+            },
+            {
+                x: 'Освежители воздуха',
+                y: [0, 85000],
+                fillColor: "#64B6AC",
+            },
+            {
+                x: 'Постеры “Сумерки',
+                y: [0, 75000],
+                fillColor: "#64B6AC",
+            },
+            {
+                x: 'Шины и диски',
+                y: [0, 70000],
+                fillColor: "#64B6AC",
+            },
+            {
+                x: 'Матрасы',
+                y: [0, 65000],
+                fillColor: "#BDDEDA",
+            },
+            {
+                x: 'Болгарки',
+                y: [0, 63000],
+                fillColor: "#BDDEDA",
+            },
+            {
+                x: 'Средства связи',
+                y: [0, 60000],
+                fillColor: "#BDDEDA",
+            },
+            {
+                x: 'Чайный сервиз',
+                y: [0, 55000],
+                fillColor: "#143127",
+            },
+            {
+                x: 'Ноутбуки',
+                y: [0, 52000],
+                fillColor: "#64B6AC",
+            },
+            {
+                x: 'Стаканы',
+                y: [0, 45000],
+                fillColor: "#64B6AC",
+            },
+            {
+                x: 'Картины',
+                y: [0, 38000],
+                fillColor: "#BDDEDA",
+            },
+            {
+                x: 'Пуховики',
+                y: [0, 18000],
+                fillColor: "#BDDEDA",
+            },
+        ],
+    }],
+    xaxis: {
+        min: 0,
+        max: 240000,
+        tickAmount: 12,
+        labels: {
+            style: {
+                colors: ['#626F6A'],
+                fontSize: '18px',
+                fontFamily: 'FuturaNew, sans-serif',
+                fontWeight: 400,
+            },
+            offsetY: 7,
+        },
+        axisBorder: {
+            show: false,
+        },
+    },
+    grid: {
+        show: true,
+        borderColor: '#90A4AE',
+        xaxis: {
+            lines: {
+                show: true
+            },
+        },
+        yaxis: {
+            lines: {
+                show: false
+            },
+        },
+    },
+    tooltip: {
+        followCursor: true,
+        custom: function ({ series, seriesIndex, dataPointIndex, w }) {
+            return '<div class="charts-tooltip">' +
+                '<span class="charts-tooltip__name">' + w.globals.labels[dataPointIndex] + '</span>' +
+                '<span class="charts-tooltip__value">' + series[seriesIndex][dataPointIndex] + '</span>' +
+                '</div>'
+        },
+    },
+    yaxis: {
+        labels: {
+            maxWidth: 250,
+            style: {
+                colors: ['#143127'],
+                fontSize: '18px',
+                fontFamily: 'FuturaNew, sans-serif',
+                fontWeight: 400,
+            }
+        }
+    },
+}
+var prodChart = new ApexCharts(document.querySelector("#prod-chart"), prodOptions);
+prodChart.render();
+
 
 function initUI() {
     select();
@@ -6,6 +364,8 @@ function initUI() {
     autorefresh();
     uncover();
     pagination();
+    analyticsMenu();
+    chartSelect();
 }
 
 initUI();
@@ -213,6 +573,15 @@ function modal() {
     });
 }
 
+function analyticsMenu() {
+    const analyticsBtn = document.querySelector('.navigation-analytics__btn');
+    if (analyticsBtn) {
+        analyticsBtn.addEventListener('click', () => {
+            document.querySelector('.navigation-analytics').classList.toggle('visible');
+        });
+    }
+}
+
 function switchers() {
     const onSwitchers = document.querySelectorAll(".table__product-switcher.on");
     const offSwitchers = document.querySelectorAll(".table__product-switcher.off");
@@ -306,6 +675,16 @@ function switchers() {
         } else {
             filterAutoBtn.closest('.filter__info-change').classList.remove('active');
         }
+    }
+
+    const chartsSortSwitchers = document.querySelectorAll('.charts__sort-switcher');
+    if (chartsSortSwitchers.length > 0) {
+        chartsSortSwitchers.forEach((chartsSortSwitcher) => {
+            chartsSortSwitcher.addEventListener('click', () => {
+                chartsSortSwitcher.closest('.charts__sort').classList.toggle('left');
+                chartsSortSwitcher.closest('.charts__sort').classList.toggle('right');
+            });
+        });
     }
 }
 
@@ -513,6 +892,48 @@ function uncover() {
                 }
             });
         });
+    }
+}
+
+function chartSelect() {
+    const chartSelects = document.querySelectorAll('.select-charts');
+    if (chartSelects.length > 0) {
+        for (let index = 0; index < chartSelects.length; index++) {
+            const chartSelect = chartSelects[index];
+            const chartSelectBtn = chartSelect.querySelector('.select-charts__btn');
+
+            let count = chartSelect.querySelectorAll('.select-charts__item').length;
+            chartSelect.querySelector('.select-charts__from').innerHTML = count;
+
+            chartSelectBtn.addEventListener('click', () => {
+                if (!chartSelectBtn.closest('.select-charts').classList.contains('active')) {
+                    chartSelects.forEach((el) => {
+                        el.classList.remove('active');
+                    });
+                    chartSelectBtn.closest('.select-charts').classList.add('active');
+                } else {
+                    chartSelectBtn.closest('.select-charts').classList.remove('active');
+                }
+            });
+
+            const options = chartSelect.querySelectorAll('.select-charts__checkbox-input');
+
+            let selected = 0;
+            options.forEach((option) => {
+                if (option.checked == true) {
+                    selected++;
+                    chartSelect.querySelector('.select-charts__selected').innerHTML = selected;
+                }
+                option.addEventListener('click', () => {
+                    if (option.checked == true) {
+                        selected++;
+                    } else {
+                        selected--;
+                    }
+                    chartSelect.querySelector('.select-charts__selected').innerHTML = selected;
+                });
+            });
+        }
     }
 }
 
