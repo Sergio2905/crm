@@ -563,6 +563,234 @@ var cartOptions8 = {
 var cartChart8 = new ApexCharts(document.querySelector("#card-chart8"), cartOptions8);
 cartChart8.render();
 
+// Линейный график 1
+var lineChartOptions1 = {
+    series: [
+        {
+            name: 'Сумма заказов по дням',
+            data: [4000, 3000, 10000, 22000, 29000, 19000, 22000, 40000, 45000, 7000, 19000, 28000],
+        },
+        {
+            name: 'Сумма завершенных заказов',
+            data: [3000, 12000, 4000, 5000, 50000, 22000, 13000, 35000, 11000, 22000, 19000, 48000],
+        },
+        {
+            name: 'Чистая прибыль',
+            data: [6000, 18000, 5000, 7000, 40000, 26000, 10000, 33000, 15000, 26000, 13000, 44000],
+        },
+        {
+            name: 'Прибыль по завершенным заказам',
+            data: [10000, 23000, 20000, 40000, 45000, 35000, 32000, 37000, 25000, 28000, 29000, 59000],
+        },
+    ],
+    chart: {
+        height: 580,
+        type: 'line',
+        toolbar: {
+            show: false,
+        },
+    },
+    stroke: {
+        width: 4,
+        curve: 'smooth',
+        colors: ['#FDC300', '#64B6AC', '#EB6767', '#143127'],
+    },
+    xaxis: {
+        type: 'category',
+        categories: [
+            '02.02.2022',
+            '04.02.2022',
+            '06.02.2022',
+            '08.02.2022',
+            '11.02.2022',
+            '14.02.2022',
+            '15.02.2022',
+            '17.02.2022',
+            '19.02.2022',
+            '22.02.2022',
+            '25.02.2022',
+            '27.02.2022'],
+        tickAmount: 10,
+        labels: {
+            style: {
+                colors: ['#626F6A'],
+                fontSize: '18px',
+                fontFamily: 'FuturaNew, sans-serif',
+                fontWeight: 400,
+            },
+            offsetX: 5,
+            offsetY: 7,
+        }
+    },
+    fill: {
+        type: 'solid',
+    },
+    yaxis: {
+        min: 0,
+        max: 70000,
+        tickAmount: 7,
+        labels: {
+            style: {
+                colors: ['#626F6A'],
+                fontSize: '18px',
+                fontFamily: 'FuturaNew, sans-serif',
+                fontWeight: 400,
+            },
+            align: 'left',
+        },
+    },
+    legend: {
+        position: 'top',
+        markers: {
+            width: 40,
+            height: 5,
+            fillColors: ['#FDC300', '#64B6AC', '#EB6767', '#143127'],
+            offsetX: -13,
+        },
+        fontSize: '18px',
+        fontFamily: 'FuturaNew, sans-serif',
+        fontWeight: 400,
+        itemMargin: {
+            horizontal: 24,
+        },
+    },
+    tooltip: {
+        followCursor: true,
+        custom: function ({ series, seriesIndex, dataPointIndex, w }) {
+            var data = w.globals.initialSeries[seriesIndex].name;
+            var date = w.globals.lastXAxis.categories[dataPointIndex];
+            return '<div class="charts-tooltip">' +
+                '<span class="charts-tooltip__name">' + data + '</span>' +
+                '<span class="charts-tooltip__value">' + w.globals.series[seriesIndex][dataPointIndex] + '</span>' +
+                '<span class="charts-tooltip__date">' + date + '</span>' +
+                '</div>'
+        },
+    },
+    grid: {
+        strokeDashArray: 20,
+    },
+    markers: {
+        colors: ['#FDC300', '#64B6AC', '#EB6767', '#143127'],
+        strokeWidth: 5,
+        hover: {
+            size: 7,
+        }
+    }
+};
+
+var lineChart1 = new ApexCharts(document.querySelector("#line-chart1"), lineChartOptions1);
+lineChart1.render();
+
+// Линейный график 2
+var lineChartOptions2 = {
+    series: [
+        {
+            name: 'Кол-во заказов',
+            data: [4000, 3000, 10000, 22000, 29000, 19000, 22000, 40000, 45000, 7000, 19000, 28000],
+        },
+        {
+            name: 'Кол-во продаж',
+            data: [3000, 12000, 4000, 5000, 50000, 22000, 13000, 35000, 11000, 22000, 19000, 48000],
+        },
+    ],
+    chart: {
+        height: 580,
+        type: 'line',
+        toolbar: {
+            show: false,
+        },
+    },
+    stroke: {
+        width: 4,
+        curve: 'smooth',
+        colors: ['#FDC300', '#64B6AC'],
+    },
+    xaxis: {
+        type: 'category',
+        categories: [
+            '02.02.2022',
+            '04.02.2022',
+            '06.02.2022',
+            '08.02.2022',
+            '11.02.2022',
+            '14.02.2022',
+            '15.02.2022',
+            '17.02.2022',
+            '19.02.2022',
+            '22.02.2022',
+            '25.02.2022',
+            '27.02.2022'],
+        tickAmount: 10,
+        labels: {
+            style: {
+                colors: ['#626F6A'],
+                fontSize: '18px',
+                fontFamily: 'FuturaNew, sans-serif',
+                fontWeight: 400,
+            },
+            offsetX: 5,
+            offsetY: 7,
+        }
+    },
+    fill: {
+        type: 'solid',
+    },
+    yaxis: {
+        min: 0,
+        max: 70000,
+        tickAmount: 7,
+        labels: {
+            style: {
+                colors: ['#626F6A'],
+                fontSize: '18px',
+                fontFamily: 'FuturaNew, sans-serif',
+                fontWeight: 400,
+            },
+            align: 'left',
+        },
+    },
+    legend: {
+        position: 'top',
+        markers: {
+            width: 40,
+            height: 5,
+            fillColors: ['#FDC300', '#64B6AC'],
+            offsetX: -13,
+        },
+        fontSize: '18px',
+        fontFamily: 'FuturaNew, sans-serif',
+        fontWeight: 400,
+        itemMargin: {
+            horizontal: 24,
+        },
+    },
+    tooltip: {
+        followCursor: true,
+        custom: function ({ series, seriesIndex, dataPointIndex, w }) {
+            var data = w.globals.initialSeries[seriesIndex].name;
+            var date = w.globals.lastXAxis.categories[dataPointIndex];
+            return '<div class="charts-tooltip">' +
+                '<span class="charts-tooltip__name">' + data + '</span>' +
+                '<span class="charts-tooltip__value">' + w.globals.series[seriesIndex][dataPointIndex] + '</span>' +
+                '<span class="charts-tooltip__date">' + date + '</span>' +
+                '</div>'
+        },
+    },
+    grid: {
+        strokeDashArray: 20,
+    },
+    markers: {
+        colors: ['#FDC300', '#64B6AC'],
+        strokeWidth: 5,
+        hover: {
+            size: 7,
+        }
+    }
+};
+
+var lineChart2 = new ApexCharts(document.querySelector("#line-chart2"), lineChartOptions2);
+lineChart2.render();
+
 
 // Диаграмма категорий
 var catOptions = {
