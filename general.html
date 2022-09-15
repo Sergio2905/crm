@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="Ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="Description" content="default">
+  <title>BatteryCRM</title>
+  <link href="img/logo.png" rel="icon"/>
+  <link rel="preload" href="fonts/FuturaNewRegular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/FuturaNewMedium.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/FuturaNewDemi.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/FuturaNewBold.woff2" as="font" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+  <div class="header">
+    <div class="header__title">Система управления</div>
+    <a class="header__logo" href="$">
+      <svg width='8' height='16'>
+        <use href='img/sprite/sprite.svg#logo-battery'></use>
+      </svg>
+      <svg width='122' height='13'>
+        <use href='img/sprite/sprite.svg#logo-title'></use>
+      </svg>
+    </a>
+    <div class="header__btns">
+      <a href="settings.html" class="header__btn">
+        <svg width='13.7' height='13.7'>
+          <use href='img/sprite/sprite.svg#setting'></use>
+        </svg>
+      </a>
+      <div class="header__user-btn">
+        <button class="header__btn">
+          <svg width='13.7' height='13.7'>
+            <use href='img/sprite/sprite.svg#user'></use>
+          </svg>
+        </button>
+        <div class="header__user-settings">
+          <div class="user">
+            <div class="user__personal">
+              <div class="user__avatar">
+                <picture>
+                  <source type='image/webp' srcset='img/agnes.webp'>
+                  <img width='40' height='40' src='img/agnes.png' alt='Агнес Толстопятко'>
+                </picture>
+              </div>
+              <div class="user__name">Агнес Толстопятко</div>
+            </div>
+            <ul class="user__btns">
+              <li class="user__btns-item">
+                <button class="user__btn">
+                  <svg width='14' height='14'>
+                    <use href='img/sprite/sprite.svg#account'></use>
+                  </svg>
+                  <span>Личный кабинет</span>
+                </button>
+              </li>
+              <li class="user__btns-item">
+                <button class="user__btn">
+                  <svg width='14' height='14'>
+                    <use href='img/sprite/sprite.svg#theme'></use>
+                  </svg>
+                  <span>Темная тема</span>
+                </button>
+              </li>
+              <li class="user__btns-item">
+                <button class="user__btn">
+                  <svg width='14' height='14'>
+                    <use href='img/sprite/sprite.svg#exit'></use>
+                  </svg>
+                  <span>Выйти</span>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+        <div class="analytics">
+
+            <div class="analytics__navigation navigation">
+                <div class="navigation__wrapper">
+                    <ul class="navigation__controls">
+                        <li class="navigation__controls-item">
+                            <div class="navigation__controls-btn">
+                                <svg width='19' height='19'>
+                                    <use href='img/sprite/sprite.svg#bag'></use>
+                                </svg>
+                                <span>Заказы</span>
+                            </div>
+                        </li>
+                        <li class="navigation__controls-item">
+                            <div class="navigation__controls-btn">
+                                <svg width='19' height='19'>
+                                    <use href='img/sprite/sprite.svg#clients'></use>
+                                </svg>
+                                <span>Клиенты</span>
+                            </div>
+                        </li>
+                        <li class="navigation__controls-item">
+                            <div class="navigation__controls-btn">
+                                <svg width='19' height='19'>
+                                    <use href='img/sprite/sprite.svg#shop'></use>
+                                </svg>
+                                <span>Товары</span>
+                            </div>
+                        </li>
+                        <li class="navigation__controls-item">
+                            <div class="navigation__controls-btn">
+                                <svg width='19' height='19'>
+                                    <use href='img/sprite/sprite.svg#wallet'></use>
+                                </svg>
+                                <span>Финансы</span>
+                            </div>
+                        </li>
+                        <li class="navigation__controls-item">
+                            <div class="navigation__controls-btn">
+                                <svg width='19' height='19'>
+                                    <use href='img/sprite/sprite.svg#tag'></use>
+                                </svg>
+                                <span>Соответствия товаров</span>
+                            </div>
+                        </li>
+                        <li class="navigation__controls-item">
+                            <div class="navigation__controls-btn navigation-analytics active">
+                                <button type="button" class="navigation-analytics__btn">
+                                    <svg width='19' height='19'>
+                                        <use href='img/sprite/sprite.svg#activity'></use>
+                                    </svg>
+                                    <span>Аналитика</span>
+                                </button>
+                                <div class="navigation-analytics__menu">
+                                    <ul class="navigation-analytics__list">
+                                        <li class="navigation-analytics__item">
+                                            <a href="general.html" class="navigation-analytics__link">Общая</a>
+                                        </li>
+                                        <li class="navigation-analytics__item">
+                                            <a href="products.html" class="navigation-analytics__link">Товары</a>
+                                        </li>
+                                        <li class="navigation-analytics__item">
+                                            <a href="finance.html" class="navigation-analytics__link">Финансы</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="analytics__content content-analytics">
+                <div class="content-analytics__header">
+                    <h1 class="content-analytics__title">Общая
+                    </h1>
+                    <div class="content-analytics__options-body" data-spollers data-one-spoller>
+                        <button tabindex="-1" type="button" data-spoller class="navigation__filter-btn">
+                            <span>Фильтры</span>
+                            <svg width='24' height='24'>
+                                <use href='img/sprite/sprite.svg#filter'></use>
+                            </svg>
+                        </button>
+                        <div class="content-analytics__options">
+                            <div class="content-analytics__select select-charts">
+                                <button type="button" class="select-charts__btn select-charts__btn--stores">
+                                    Магазины
+                                    <span class="select-charts__selected">0</span>
+                                    из
+                                    <span class="select-charts__from">0</span>
+                                    <svg>
+                                        <use href='img/sprite/sprite.svg#arrow'></use>
+                                    </svg>
+                                </button>
+                                <div class="select-charts__menu">
+                                    <ul class="select-charts__list">
+                                        <li class="select-charts__item">
+                                            <label class="select-charts__checkbox-label">
+                                                <input class="select-charts__checkbox-input" type="checkbox"
+                                                    name="auto-refresh">
+                                                <span class="select-charts__checkbox-name">Магазин 1</span>
+                                            </label>
+                                        </li>
+                                        <li class="select-charts__item">
+                                            <label class="select-charts__checkbox-label">
+                                                <input class="select-charts__checkbox-input" type="checkbox"
+                                                    name="auto-refresh">
+                                                <span class="select-charts__checkbox-name">Магазин 2</span>
+                                            </label>
+                                        </li>
+                                        <li class="select-charts__item">
+                                            <label class="select-charts__checkbox-label">
+                                                <input class="select-charts__checkbox-input" type="checkbox"
+                                                    name="auto-refresh">
+                                                <span class="select-charts__checkbox-name">Магазин 3</span>
+                                            </label>
+                                        </li>
+                                        <li class="select-charts__item">
+                                            <label class="select-charts__checkbox-label">
+                                                <input class="select-charts__checkbox-input" type="checkbox"
+                                                    name="auto-refresh">
+                                                <span class="select-charts__checkbox-name">Магазин 4</span>
+                                            </label>
+                                        </li>
+                                        <li class="select-charts__item">
+                                            <label class="select-charts__checkbox-label">
+                                                <input class="select-charts__checkbox-input" type="checkbox"
+                                                    name="auto-refresh">
+                                                <span class="select-charts__checkbox-name">Магазин 5</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="content-analytics__select select-charts">
+                                <button type="button" class="select-charts__btn select-charts__btn--crowns">
+                                    Ответственные
+                                    <span class="select-charts__selected">0</span>
+                                    из
+                                    <span class="select-charts__from">0</span>
+                                    <svg>
+                                        <use href='img/sprite/sprite.svg#arrow'></use>
+                                    </svg>
+                                </button>
+                                <div class="select-charts__menu">
+                                    <ul class="select-charts__list">
+                                        <li class="select-charts__item">
+                                            <label class="select-charts__checkbox-label">
+                                                <input class="select-charts__checkbox-input" type="checkbox"
+                                                    name="auto-refresh">
+                                                <span class="select-charts__checkbox-name">Ответственный 1</span>
+                                            </label>
+                                        </li>
+                                        <li class="select-charts__item">
+                                            <label class="select-charts__checkbox-label">
+                                                <input class="select-charts__checkbox-input" type="checkbox"
+                                                    name="auto-refresh">
+                                                <span class="select-charts__checkbox-name">Ответственный 2</span>
+                                            </label>
+                                        </li>
+                                        <li class="select-charts__item">
+                                            <label class="select-charts__checkbox-label">
+                                                <input class="select-charts__checkbox-input" type="checkbox"
+                                                    name="auto-refresh">
+                                                <span class="select-charts__checkbox-name">Ответственный 3</span>
+                                            </label>
+                                        </li>
+                                        <li class="select-charts__item">
+                                            <label class="select-charts__checkbox-label">
+                                                <input class="select-charts__checkbox-input" type="checkbox"
+                                                    name="auto-refresh">
+                                                <span class="select-charts__checkbox-name">Ответственный 4</span>
+                                            </label>
+                                        </li>
+                                        <li class="select-charts__item">
+                                            <label class="select-charts__checkbox-label">
+                                                <input class="select-charts__checkbox-input" type="checkbox"
+                                                    name="auto-refresh">
+                                                <span class="select-charts__checkbox-name">Ответственный 5</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="content-analytics__select select-charts">
+                                <button type="button" class="select-charts__btn select-charts__btn--sources">
+                                    Источники заказов
+                                    <span class="select-charts__selected">0</span>
+                                    из
+                                    <span class="select-charts__from">0</span>
+                                    <svg>
+                                        <use href='img/sprite/sprite.svg#arrow'></use>
+                                    </svg>
+                                </button>
+                                <div class="select-charts__menu">
+                                    <ul class="select-charts__list">
+                                        <li class="select-charts__item">
+                                            <label class="select-charts__checkbox-label">
+                                                <input class="select-charts__checkbox-input" type="checkbox"
+                                                    name="auto-refresh">
+                                                <span class="select-charts__checkbox-name">Источник 1</span>
+                                            </label>
+                                        </li>
+                                        <li class="select-charts__item">
+                                            <label class="select-charts__checkbox-label">
+                                                <input class="select-charts__checkbox-input" type="checkbox"
+                                                    name="auto-refresh">
+                                                <span class="select-charts__checkbox-name">Источник 2</span>
+                                            </label>
+                                        </li>
+                                        <li class="select-charts__item">
+                                            <label class="select-charts__checkbox-label">
+                                                <input class="select-charts__checkbox-input" type="checkbox"
+                                                    name="auto-refresh">
+                                                <span class="select-charts__checkbox-name">Источник 3</span>
+                                            </label>
+                                        </li>
+                                        <li class="select-charts__item">
+                                            <label class="select-charts__checkbox-label">
+                                                <input class="select-charts__checkbox-input" type="checkbox"
+                                                    name="auto-refresh">
+                                                <span class="select-charts__checkbox-name">Источник 4</span>
+                                            </label>
+                                        </li>
+                                        <li class="select-charts__item">
+                                            <label class="select-charts__checkbox-label">
+                                                <input class="select-charts__checkbox-input" type="checkbox"
+                                                    name="auto-refresh">
+                                                <span class="select-charts__checkbox-name">Источник 5</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="content-analytics__date date-analytics">
+                                <button type="button" class="date-analytics__btn">
+                                    <span>01.01.2021</span>
+                                    —
+                                    <span>01.05.2022</span>
+                                    <svg>
+                                        <use href='img/sprite/sprite.svg#arrow'></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-analytics__main main-analytics">
+                    <div class="main-analytics__cards">
+                        <div class="main-analytics__card card-analytics">
+                            <div class="card-analytics__header">
+                                <div class="card-analytics__label">
+                                    <svg>
+                                        <use xlink: href="img/sprite/sprite.svg#card-sum"></use>
+                                    </svg>
+                                </div>
+                                <h5 class="card-analytics__title">Сумма заказов</h5>
+                                <div class="card-analytics__percent">-90%</div>
+                            </div>
+                            <div class="card-analytics__info">
+                                <div class="card-analytics__value">
+                                    <span class="card-analytics__value-main">76 261</span>
+                                    <span class="card-analytics__value-extra">≈ 1421.50 в день</span>
+                                </div>
+                                <div class="card-analytics__graph">
+                                    <div id="card-chart1"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-analytics__card card-analytics">
+                            <div class="card-analytics__header">
+                                <div class="card-analytics__label">
+                                    <svg>
+                                        <use xlink: href="img/sprite/sprite.svg#card-count"></use>
+                                    </svg>
+                                </div>
+                                <h5 class="card-analytics__title">Количество заказов</h5>
+                                <div class="card-analytics__percent">-90%</div>
+                            </div>
+                            <div class="card-analytics__info">
+                                <div class="card-analytics__value">
+                                    <span class="card-analytics__value-main">54</span>
+                                    <span class="card-analytics__value-extra">≈ 1.93 в день</span>
+                                </div>
+                                <div class="card-analytics__graph">
+                                    <div id="card-chart2"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-analytics__card card-analytics">
+                            <div class="card-analytics__header">
+                                <div class="card-analytics__label">
+                                    <svg>
+                                        <use xlink: href="img/sprite/sprite.svg#card-receipt"></use>
+                                    </svg>
+                                </div>
+                                <h5 class="card-analytics__title">Средний чек</h5>
+                                <div class="card-analytics__percent">-90%</div>
+                            </div>
+                            <div class="card-analytics__info">
+                                <div class="card-analytics__value">
+                                    <span class="card-analytics__value-main">1451</span>
+                                </div>
+                                <div class="card-analytics__graph">
+                                    <div id="card-chart3"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-analytics__card card-analytics">
+                            <div class="card-analytics__header">
+                                <div class="card-analytics__label">
+                                    <svg>
+                                        <use xlink: href="img/sprite/sprite.svg#card-coin"></use>
+                                    </svg>
+                                </div>
+                                <h5 class="card-analytics__title">Средняя чистая прибыль с заказа</h5>
+                                <div class="card-analytics__percent">-90%</div>
+                            </div>
+                            <div class="card-analytics__info">
+                                <div class="card-analytics__value">
+                                    <span class="card-analytics__value-main">3</span>
+                                </div>
+                                <div class="card-analytics__graph">
+                                    <div id="card-chart4"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-analytics__card card-analytics card-analytics-last">
+                            <div class="card-analytics__left">
+                                <h5 class="card-analytics__title">Мин кол-во заказов</h5>
+                                <div class="card-analytics__value">
+                                    <span class="card-analytics__value-main">3</span>
+                                </div>
+                                <div class="card-analytics__percent">-90%</div>
+                            </div>
+                            <div class="card-analytics__right">
+                                <h5 class="card-analytics__title">Макс кол-во заказов</h5>
+                                <div class="card-analytics__value">
+                                    <span class="card-analytics__value-main">3</span>
+                                </div>
+                                <div class="card-analytics__percent">-90%</div>
+                            </div>
+                        </div>
+                        <div class="main-analytics__card card-analytics secondary">
+                            <div class="card-analytics__header">
+                                <div class="card-analytics__label">
+                                    <svg>
+                                        <use xlink: href="img/sprite/sprite.svg#card-dollar"></use>
+                                    </svg>
+                                </div>
+                                <h5 class="card-analytics__title">Чистая прибыль</h5>
+                                <div class="card-analytics__percent">-90%</div>
+                            </div>
+                            <div class="card-analytics__info">
+                                <div class="card-analytics__value">
+                                    <span class="card-analytics__value-main">76 261</span>
+                                    <span class="card-analytics__value-extra">≈ 1421.50 в день</span>
+                                </div>
+                                <div class="card-analytics__graph">
+                                    <div id="card-chart5"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-analytics__card card-analytics secondary">
+                            <div class="card-analytics__header">
+                                <div class="card-analytics__label">
+                                    <svg>
+                                        <use xlink: href="img/sprite/sprite.svg#card-tag"></use>
+                                    </svg>
+                                </div>
+                                <h5 class="card-analytics__title">Количество продаж</h5>
+                                <div class="card-analytics__percent">-90%</div>
+                            </div>
+                            <div class="card-analytics__info">
+                                <div class="card-analytics__value">
+                                    <span class="card-analytics__value-main">76 261</span>
+                                    <span class="card-analytics__value-extra">≈ 1421.50 в день</span>
+                                </div>
+                                <div class="card-analytics__graph">
+                                    <div id="card-chart6"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-analytics__card card-analytics secondary">
+                            <div class="card-analytics__header">
+                                <div class="card-analytics__label">
+                                    <svg>
+                                        <use xlink: href="img/sprite/sprite.svg#card-receipt2"></use>
+                                    </svg>
+                                </div>
+                                <h5 class="card-analytics__title">Средняя цена продажи</h5>
+                                <div class="card-analytics__percent">-90%</div>
+                            </div>
+                            <div class="card-analytics__info">
+                                <div class="card-analytics__value">
+                                    <span class="card-analytics__value-main">76 261</span>
+                                </div>
+                                <div class="card-analytics__graph">
+                                    <div id="card-chart7"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-analytics__card card-analytics secondary">
+                            <div class="card-analytics__header">
+                                <div class="card-analytics__label">
+                                    <svg>
+                                        <use xlink: href="img/sprite/sprite.svg#card-wallet"></use>
+                                    </svg>
+                                </div>
+                                <h5 class="card-analytics__title">Средняя чистая прибыль с продажи</h5>
+                                <div class="card-analytics__percent">-90%</div>
+                            </div>
+                            <div class="card-analytics__info">
+                                <div class="card-analytics__value">
+                                    <span class="card-analytics__value-main">76 261</span>
+                                </div>
+                                <div class="card-analytics__graph">
+                                    <div id="card-chart8"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-analytics__card card-analytics card-analytics-last secondary">
+                            <div class="card-analytics__left">
+                                <h5 class="card-analytics__title">Мин кол-во заказов</h5>
+                                <div class="card-analytics__value">
+                                    <span class="card-analytics__value-main">3</span>
+                                </div>
+                                <div class="card-analytics__percent">-90%</div>
+                            </div>
+                            <div class="card-analytics__right">
+                                <h5 class="card-analytics__title">Макс кол-во заказов</h5>
+                                <div class="card-analytics__value">
+                                    <span class="card-analytics__value-main">3</span>
+                                </div>
+                                <div class="card-analytics__percent">-90%</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="main-analytics__subcards">
+                        <div class="main-analytics__subcard subcard-analytics">
+                            <div class="subcard-analytics__left">
+                                <div class="subcard-analytics__label">
+                                    <svg>
+                                        <use xlink: href="img/sprite/sprite.svg#3d-rotate"></use>
+                                    </svg>
+                                </div>
+                                <div class="subcard-analytics__info">
+                                    <h5 class="subcard-analytics__title">Количество возвратов</h5>
+                                    <div class="subcard-analytics__value">7</div>
+                                </div>
+                            </div>
+                            <div class="subcard-analytics__right">
+                                <div class="subcard-analytics__percent">-90%</div>
+                            </div>
+                        </div>
+                        <div class="main-analytics__subcard subcard-analytics">
+                            <div class="subcard-analytics__left">
+                                <div class="subcard-analytics__label">
+                                    <svg>
+                                        <use xlink: href="img/sprite/sprite.svg#box-remove"></use>
+                                    </svg>
+                                </div>
+                                <div class="subcard-analytics__info">
+                                    <h5 class="subcard-analytics__title">Количество отказов</h5>
+                                    <div class="subcard-analytics__value">13</div>
+                                </div>
+                            </div>
+                            <div class="subcard-analytics__right">
+                                <div class="subcard-analytics__percent">-90%</div>
+                            </div>
+                        </div>
+                        <div class="main-analytics__subcard subcard-analytics">
+                            <div class="subcard-analytics__left">
+                                <div class="subcard-analytics__label">
+                                    <svg>
+                                        <use xlink: href="img/sprite/sprite.svg#receipt-minus"></use>
+                                    </svg>
+                                </div>
+                                <div class="subcard-analytics__info">
+                                    <h5 class="subcard-analytics__title">Убыток по отказам</h5>
+                                    <div class="subcard-analytics__value">2783</div>
+                                </div>
+                            </div>
+                            <div class="subcard-analytics__right">
+                                <div class="subcard-analytics__percent">-90%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <footer>
+  <div class="footer">
+    <p class="copyright">© 2022. iBattery CRM. Все права защищены.</p>
+  </div>
+</footer>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>
