@@ -1,3 +1,569 @@
+// Диаграммы карточек
+// Карточка 1
+var cartOptions1 = {
+    chart: {
+        type: 'bar',
+        height: 130,
+        toolbar: {
+            show: false,
+        },
+    },
+    plotOptions: {
+        bar: {
+            borderRadius: 9,
+            columnWidth: '60%',
+        }
+    },
+    dataLabels: {
+        enabled: false,
+    },
+    series: [{
+        name: 'Categories',
+        data: [
+            {
+                x: '1',
+                y: [0, 5],
+            },
+            {
+                x: '2',
+                y: [0, 4],
+            },
+            {
+                x: '3',
+                y: [0, 2],
+            },
+            {
+                x: '4',
+                y: [0, 3],
+            },
+            {
+                x: '5',
+                y: [0, 4],
+            },
+        ],
+    }],
+    fill: {
+        colors: ['#83C5BD'],
+    },
+    xaxis: {
+        labels: {
+            show: false,
+        },
+        axisBorder: {
+            show: false,
+        },
+        axisTicks: {
+            show: false,
+        }
+    },
+    grid: {
+        show: false,
+    },
+    tooltip: {
+        enabled: false,
+    },
+    yaxis: {
+        show: false,
+    },
+}
+var cartChart1 = new ApexCharts(document.querySelector("#card-chart1"), cartOptions1);
+cartChart1.render();
+
+// Карточка 2
+var cartOptions2 = {
+    chart: {
+        type: 'bar',
+        height: 130,
+        toolbar: {
+            show: false,
+        },
+    },
+    plotOptions: {
+        bar: {
+            borderRadius: 9,
+            columnWidth: '60%',
+        }
+    },
+    dataLabels: {
+        enabled: false,
+    },
+    series: [{
+        name: 'Categories',
+        data: [
+            {
+                x: '1',
+                y: [0, 5],
+            },
+            {
+                x: '2',
+                y: [0, 4],
+            },
+            {
+                x: '3',
+                y: [0, 2],
+            },
+            {
+                x: '4',
+                y: [0, 3],
+            },
+            {
+                x: '5',
+                y: [0, 4],
+            },
+        ],
+    }],
+    fill: {
+        colors: ['#83C5BD'],
+    },
+    xaxis: {
+        labels: {
+            show: false,
+        },
+        axisBorder: {
+            show: false,
+        },
+        axisTicks: {
+            show: false,
+        }
+    },
+    grid: {
+        show: false,
+    },
+    tooltip: {
+        enabled: false,
+    },
+    yaxis: {
+        show: false,
+    },
+}
+var cartChart2 = new ApexCharts(document.querySelector("#card-chart2"), cartOptions2);
+cartChart2.render();
+
+// Карточка 3
+var cartOptions3 = {
+    chart: {
+        type: 'bar',
+        height: 130,
+        toolbar: {
+            show: false,
+        },
+    },
+    plotOptions: {
+        bar: {
+            borderRadius: 9,
+            columnWidth: '60%',
+        }
+    },
+    dataLabels: {
+        enabled: false,
+    },
+    series: [{
+        name: 'Categories',
+        data: [
+            {
+                x: '1',
+                y: [0, 5],
+            },
+            {
+                x: '2',
+                y: [0, 4],
+            },
+            {
+                x: '3',
+                y: [0, 2],
+            },
+            {
+                x: '4',
+                y: [0, 3],
+            },
+            {
+                x: '5',
+                y: [0, 4],
+            },
+        ],
+    }],
+    fill: {
+        colors: ['#83C5BD'],
+    },
+    xaxis: {
+        labels: {
+            show: false,
+        },
+        axisBorder: {
+            show: false,
+        },
+        axisTicks: {
+            show: false,
+        }
+    },
+    grid: {
+        show: false,
+    },
+    tooltip: {
+        enabled: false,
+    },
+    yaxis: {
+        show: false,
+    },
+}
+var cartChart3 = new ApexCharts(document.querySelector("#card-chart3"), cartOptions3);
+cartChart3.render();
+
+// Карточка 4
+var cartOptions4 = {
+    chart: {
+        type: 'bar',
+        height: 130,
+        toolbar: {
+            show: false,
+        },
+    },
+    plotOptions: {
+        bar: {
+            borderRadius: 9,
+            columnWidth: '60%',
+        }
+    },
+    dataLabels: {
+        enabled: false,
+    },
+    series: [{
+        name: 'Categories',
+        data: [
+            {
+                x: '1',
+                y: [0, 5],
+            },
+            {
+                x: '2',
+                y: [0, 4],
+            },
+            {
+                x: '3',
+                y: [0, 2],
+            },
+            {
+                x: '4',
+                y: [0, 3],
+            },
+            {
+                x: '5',
+                y: [0, 4],
+            },
+        ],
+    }],
+    fill: {
+        colors: ['#83C5BD'],
+    },
+    xaxis: {
+        labels: {
+            show: false,
+        },
+        axisBorder: {
+            show: false,
+        },
+        axisTicks: {
+            show: false,
+        }
+    },
+    grid: {
+        show: false,
+    },
+    tooltip: {
+        enabled: false,
+    },
+    yaxis: {
+        show: false,
+    },
+}
+var cartChart4 = new ApexCharts(document.querySelector("#card-chart4"), cartOptions4);
+cartChart4.render();
+
+
+// Карточка 5
+var cartOptions5 = {
+    chart: {
+        type: 'bar',
+        height: 130,
+        toolbar: {
+            show: false,
+        },
+    },
+    plotOptions: {
+        bar: {
+            borderRadius: 9,
+            columnWidth: '60%',
+        }
+    },
+    dataLabels: {
+        enabled: false,
+    },
+    series: [{
+        name: 'Categories',
+        data: [
+            {
+                x: '1',
+                y: [0, 5],
+            },
+            {
+                x: '2',
+                y: [0, 4],
+            },
+            {
+                x: '3',
+                y: [0, 2],
+            },
+            {
+                x: '4',
+                y: [0, 3],
+            },
+            {
+                x: '5',
+                y: [0, 4],
+            },
+        ],
+    }],
+    fill: {
+        colors: ['#818C88'],
+    },
+    xaxis: {
+        labels: {
+            show: false,
+        },
+        axisBorder: {
+            show: false,
+        },
+        axisTicks: {
+            show: false,
+        }
+    },
+    grid: {
+        show: false,
+    },
+    tooltip: {
+        enabled: false,
+    },
+    yaxis: {
+        show: false,
+    },
+}
+var cartChart5 = new ApexCharts(document.querySelector("#card-chart5"), cartOptions5);
+cartChart5.render();
+
+
+// Карточка 6
+var cartOptions6 = {
+    chart: {
+        type: 'bar',
+        height: 130,
+        toolbar: {
+            show: false,
+        },
+    },
+    plotOptions: {
+        bar: {
+            borderRadius: 9,
+            columnWidth: '60%',
+        }
+    },
+    dataLabels: {
+        enabled: false,
+    },
+    series: [{
+        name: 'Categories',
+        data: [
+            {
+                x: '1',
+                y: [0, 5],
+            },
+            {
+                x: '2',
+                y: [0, 4],
+            },
+            {
+                x: '3',
+                y: [0, 2],
+            },
+            {
+                x: '4',
+                y: [0, 3],
+            },
+            {
+                x: '5',
+                y: [0, 4],
+            },
+        ],
+    }],
+    fill: {
+        colors: ['#818C88'],
+    },
+    xaxis: {
+        labels: {
+            show: false,
+        },
+        axisBorder: {
+            show: false,
+        },
+        axisTicks: {
+            show: false,
+        }
+    },
+    grid: {
+        show: false,
+    },
+    tooltip: {
+        enabled: false,
+    },
+    yaxis: {
+        show: false,
+    },
+}
+var cartChart6 = new ApexCharts(document.querySelector("#card-chart6"), cartOptions6);
+cartChart6.render();
+
+
+// Карточка 7
+var cartOptions7 = {
+    chart: {
+        type: 'bar',
+        height: 130,
+        toolbar: {
+            show: false,
+        },
+    },
+    plotOptions: {
+        bar: {
+            borderRadius: 9,
+            columnWidth: '60%',
+        }
+    },
+    dataLabels: {
+        enabled: false,
+    },
+    series: [{
+        name: 'Categories',
+        data: [
+            {
+                x: '1',
+                y: [0, 5],
+            },
+            {
+                x: '2',
+                y: [0, 4],
+            },
+            {
+                x: '3',
+                y: [0, 2],
+            },
+            {
+                x: '4',
+                y: [0, 3],
+            },
+            {
+                x: '5',
+                y: [0, 4],
+            },
+        ],
+    }],
+    fill: {
+        colors: ['#818C88'],
+    },
+    xaxis: {
+        labels: {
+            show: false,
+        },
+        axisBorder: {
+            show: false,
+        },
+        axisTicks: {
+            show: false,
+        }
+    },
+    grid: {
+        show: false,
+    },
+    tooltip: {
+        enabled: false,
+    },
+    yaxis: {
+        show: false,
+    },
+}
+var cartChart7 = new ApexCharts(document.querySelector("#card-chart7"), cartOptions7);
+cartChart7.render();
+
+
+// Карточка 8
+var cartOptions8 = {
+    chart: {
+        type: 'bar',
+        height: 130,
+        toolbar: {
+            show: false,
+        },
+    },
+    plotOptions: {
+        bar: {
+            borderRadius: 9,
+            columnWidth: '60%',
+        }
+    },
+    dataLabels: {
+        enabled: false,
+    },
+    series: [{
+        name: 'Categories',
+        data: [
+            {
+                x: '1',
+                y: [0, 5],
+            },
+            {
+                x: '2',
+                y: [0, 4],
+            },
+            {
+                x: '3',
+                y: [0, 2],
+            },
+            {
+                x: '4',
+                y: [0, 3],
+            },
+            {
+                x: '5',
+                y: [0, 4],
+            },
+        ],
+    }],
+    fill: {
+        colors: ['#818C88'],
+    },
+    xaxis: {
+        labels: {
+            show: false,
+        },
+        axisBorder: {
+            show: false,
+        },
+        axisTicks: {
+            show: false,
+        }
+    },
+    grid: {
+        show: false,
+    },
+    tooltip: {
+        enabled: false,
+    },
+    yaxis: {
+        show: false,
+    },
+}
+var cartChart8 = new ApexCharts(document.querySelector("#card-chart8"), cartOptions8);
+cartChart8.render();
+
+
 // Диаграмма категорий
 var catOptions = {
     chart: {
