@@ -791,6 +791,409 @@ var lineChartOptions2 = {
 var lineChart2 = new ApexCharts(document.querySelector("#line-chart2"), lineChartOptions2);
 lineChart2.render();
 
+// Круговая диаграмма 1
+var pieOptions1 = {
+    series: [2484, 548, 2774, 104, 85],
+    labels: [
+        'Наложенный',
+        'На карту',
+        'Онлайн',
+        'На счет',
+        'Наличными',
+    ],
+    chart: {
+        width: '100%',
+        height: '80%',
+        type: 'donut',
+    },
+    plotOptions: {
+        pie: {
+            startAngle: 0,
+            endAngle: 360,
+            donut: {
+                size: '55%'
+            },
+            customScale: 1,
+            offsetX: 0,
+            offsetY: 10,
+        }
+    },
+    dataLabels: {
+        enabled: false,
+    },
+    fill: {
+        type: 'gradient',
+        colors: [
+            '#64B6AC',
+            '#FDC300',
+            '#9870CC',
+            '#EB6767',
+            '#92DD47',
+        ],
+    },
+    legend: {
+        position: 'left',
+        width: '360',
+        height: '250',
+        horizontalAlign: 'left',
+        itemMargin: {
+            horizontal: 0,
+            vertical: 7,
+        },
+        markers: {
+            fillColors: [
+                '#64B6AC',
+                '#FDC300',
+                '#9870CC',
+                '#EB6767',
+                '#92DD47',
+            ]
+        },
+        formatter: function (val, opts) {
+            let seriesCount = opts.w.globals.series;
+            let sum = 0;
+            let value = opts.w.globals.series[opts.seriesIndex];
+            for (let index = 0; index < seriesCount.length; index++) {
+                const el = seriesCount[index];
+                sum += el;
+            }
+            let percentage = Math.round((value * 100 / sum) * 10) / 10;
+            let output = '<div class="chart-legend">';
+            output += '<span class="chart-legend__name">' + val + ' </span>';
+            output += '<span class="chart-legend__value">' + value + ' шт.</span>';
+            output += '<span class="chart-legend__percentage">' + percentage + ' %</span>';
+            output += '</div>';
+            return output;
+        }
+    },
+    tooltip: {
+        followCursor: true,
+        fillSeriesColor: false,
+        marker: {
+            show: false,
+        },
+        style: {
+            fontSize: '16px',
+            fontFamily: 'FuturaNew, sans-serif',
+        },
+    },
+    responsive: [
+        {
+            breakpoint: 1680,
+            options: {
+                legend: {
+                    position: 'top',
+                    width: '100%',
+                    offsetY: 20,
+                },
+                chart: {
+                    height: '95%',
+                },
+            }
+        },
+        {
+            breakpoint: 993,
+            options: {
+                legend: {
+                    position: 'left',
+                    width: '360',
+                },
+                chart: {
+                    height: '80%',
+                },
+            }
+        },
+        {
+            breakpoint: 768,
+            options: {
+                legend: {
+                    position: 'top',
+                    width: '100%',
+                    offsetY: 20,
+                },
+                chart: {
+                    height: '95%',
+                },
+            }
+        },
+    ]
+};
+
+var pieChart1 = new ApexCharts(document.querySelector("#pie-chart1"), pieOptions1);
+pieChart1.render();
+
+// Круговая диаграмма 2
+var pieOptions2 = {
+    series: [2484, 8954, 744, 84, 965],
+    labels: [
+        'Новая почта',
+        'Justin',
+        'УкрПочта',
+        'Самовывоз',
+        'Курьер',
+    ],
+    chart: {
+        width: '100%',
+        height: '80%',
+        type: 'donut',
+    },
+    plotOptions: {
+        pie: {
+            startAngle: 0,
+            endAngle: 360,
+            donut: {
+                size: '55%'
+            },
+            customScale: 1,
+            offsetX: 0,
+            offsetY: 10,
+        }
+    },
+    dataLabels: {
+        enabled: false,
+    },
+    fill: {
+        type: 'gradient',
+        colors: [
+            '#EB6767',
+            '#0093FD',
+            '#FDC300',
+            '#626F6A',
+            '#64B6AC',
+        ],
+    },
+    legend: {
+        position: 'left',
+        width: '360',
+        height: '250',
+        horizontalAlign: 'left',
+        itemMargin: {
+            horizontal: 0,
+            vertical: 7,
+        },
+        markers: {
+            fillColors: [
+                '#EB6767',
+                '#0093FD',
+                '#FDC300',
+                '#626F6A',
+                '#64B6AC',
+            ]
+        },
+        formatter: function (val, opts) {
+            let seriesCount = opts.w.globals.series;
+            let sum = 0;
+            let value = opts.w.globals.series[opts.seriesIndex];
+            for (let index = 0; index < seriesCount.length; index++) {
+                const el = seriesCount[index];
+                sum += el;
+            }
+            let percentage = Math.round((value * 100 / sum) * 10) / 10;
+            let output = '<div class="chart-legend">';
+            output += '<span class="chart-legend__name">' + val + ' </span>';
+            output += '<span class="chart-legend__value">' + value + ' шт.</span>';
+            output += '<span class="chart-legend__percentage">' + percentage + ' %</span>';
+            output += '</div>';
+            return output;
+        }
+    },
+    tooltip: {
+        followCursor: true,
+        fillSeriesColor: false,
+        marker: {
+            show: false,
+        },
+        style: {
+            fontSize: '16px',
+            fontFamily: 'FuturaNew, sans-serif',
+        },
+    },
+    responsive: [
+        {
+            breakpoint: 1680,
+            options: {
+                legend: {
+                    position: 'top',
+                    width: '100%',
+                    offsetY: 20,
+                },
+                chart: {
+                    height: '95%',
+                },
+            }
+        },
+        {
+            breakpoint: 993,
+            options: {
+                legend: {
+                    position: 'left',
+                    width: '360',
+                },
+                chart: {
+                    height: '80%',
+                },
+            }
+        },
+        {
+            breakpoint: 768,
+            options: {
+                legend: {
+                    position: 'top',
+                    width: '100%',
+                    offsetY: 20,
+                },
+                chart: {
+                    height: '95%',
+                },
+            }
+        },
+    ]
+};
+
+var pieChart2 = new ApexCharts(document.querySelector("#pie-chart2"), pieOptions2);
+pieChart2.render();
+
+// Круговая диаграмма 3
+var pieOptions3 = {
+    series: [1458, 258, 17, 88, 17, 331, 0, 548, 10],
+    labels: [
+        'Сайт',
+        'Телефон',
+        'JS',
+        'Rozetka',
+        'Epicentr',
+        'OLX',
+        'Prom',
+        'IZI',
+        'Instagram',
+    ],
+    chart: {
+        width: '100%',
+        height: '80%',
+        type: 'donut',
+    },
+    plotOptions: {
+        pie: {
+            startAngle: 0,
+            endAngle: 360,
+            donut: {
+                size: '55%'
+            },
+            customScale: 1,
+            offsetX: 0,
+            offsetY: 0,
+        }
+    },
+    dataLabels: {
+        enabled: false,
+    },
+    fill: {
+        type: 'gradient',
+        colors: [
+            '#64B6AC',
+            '#626F6A',
+            '#EB6767',
+            '#92DD47',
+            '#0093FD',
+            '#67EBC3',
+            '#9870CC',
+            '#EBAE67',
+            '#E04E7A',
+        ],
+    },
+    legend: {
+        position: 'left',
+        width: '360',
+        horizontalAlign: 'left',
+        itemMargin: {
+            horizontal: 0,
+            vertical: 7,
+        },
+        markers: {
+            fillColors: [
+                '#64B6AC',
+                '#626F6A',
+                '#EB6767',
+                '#92DD47',
+                '#0093FD',
+                '#67EBC3',
+                '#9870CC',
+                '#EBAE67',
+                '#E04E7A',
+            ]
+        },
+        formatter: function (val, opts) {
+            let seriesCount = opts.w.globals.series;
+            let sum = 0;
+            let value = opts.w.globals.series[opts.seriesIndex];
+            for (let index = 0; index < seriesCount.length; index++) {
+                const el = seriesCount[index];
+                sum += el;
+            }
+            let percentage = Math.round((value * 100 / sum) * 10) / 10;
+            let output = '<div class="chart-legend">';
+            output += '<span class="chart-legend__name">' + val + ' </span>';
+            output += '<span class="chart-legend__value">' + value + ' шт.</span>';
+            output += '<span class="chart-legend__percentage">' + percentage + ' %</span>';
+            output += '</div>';
+            return output;
+        }
+    },
+    tooltip: {
+        followCursor: true,
+        fillSeriesColor: false,
+        marker: {
+            show: false,
+        },
+        style: {
+            fontSize: '16px',
+            fontFamily: 'FuturaNew, sans-serif',
+        },
+    },
+    responsive: [
+        {
+            breakpoint: 1440,
+            options: {
+                legend: {
+                    position: 'top',
+                    width: '100%',
+                },
+                chart: {
+                    height: '95%',
+                },
+            }
+        },
+        {
+            breakpoint: 993,
+            options: {
+                legend: {
+                    position: 'left',
+                    width: '360',
+                },
+                chart: {
+                    height: '80%',
+                },
+            }
+        },
+        {
+            breakpoint: 768,
+            options: {
+                legend: {
+                    position: 'top',
+                    width: '100%',
+                    height: '370',
+                },
+                chart: {
+                    height: '95%',
+                },
+            }
+        },
+    ]
+};
+
+var pieChart3 = new ApexCharts(document.querySelector("#pie-chart3"), pieOptions3);
+pieChart3.render();
+
 
 // Диаграмма категорий
 var catOptions = {
@@ -920,18 +1323,18 @@ var catOptions = {
         min: 0,
         max: 240000,
         tickAmount: 12,
+        axisBorder: {
+            show: false,
+        },
         labels: {
             style: {
                 colors: ['#626F6A'],
-                fontSize: '18px',
+                fontSize: '16px',
                 fontFamily: 'FuturaNew, sans-serif',
                 fontWeight: 400,
             },
             offsetY: 7,
-        },
-        axisBorder: {
-            show: false,
-        },
+        }
     },
     grid: {
         show: true,
@@ -960,7 +1363,7 @@ var catOptions = {
         labels: {
             maxWidth: 250,
             style: {
-                colors: ['#143127'],
+                colors: ['#626F6A'],
                 fontSize: '18px',
                 fontFamily: 'FuturaNew, sans-serif',
                 fontWeight: 400,
@@ -1102,7 +1505,7 @@ var prodOptions = {
         labels: {
             style: {
                 colors: ['#626F6A'],
-                fontSize: '18px',
+                fontSize: '16px',
                 fontFamily: 'FuturaNew, sans-serif',
                 fontWeight: 400,
             },
@@ -1139,7 +1542,7 @@ var prodOptions = {
         labels: {
             maxWidth: 250,
             style: {
-                colors: ['#143127'],
+                colors: ['#626F6A'],
                 fontSize: '18px',
                 fontFamily: 'FuturaNew, sans-serif',
                 fontWeight: 400,
