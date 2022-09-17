@@ -326,6 +326,104 @@
                                         <use href='img/sprite/sprite.svg#arrow'></use>
                                     </svg>
                                 </button>
+
+                                <div class="date-analytics__picker">
+                                    <div class="date-analytics__options">
+                                        <button type="button"
+                                            class="date-analytics__option date-analytics__option-month active">
+                                            За месяц
+                                        </button>
+                                        <button type="button"
+                                            class="date-analytics__option date-analytics__option-year">
+                                            За год
+                                        </button>
+                                    </div>
+                                    <span class="date-picker__header">Начальная дата</span>
+                                    <div class="date-analytics__start date-picker">
+                                        <div class="date-picker__select date-picker__date select">
+                                            <div class="date-picker__select-header">
+                                                <input type="hidden" value="1">
+                                                <span class="date-picker__select-current select__current">
+                                                    01
+                                                </span>
+                                            </div>
+                                            <ul class="date-picker__select-body select__body">
+                                            </ul>
+                                        </div>
+                                        <div class="date-picker__select date-picker__month select">
+                                            <div class="date-picker__select-header">
+                                                <input type="hidden" value="1">
+                                                <span class="date-picker__select-current select__current">
+                                                    Март
+                                                </span>
+                                            </div>
+                                            <ul class="date-picker__select-body select__body">
+                                            </ul>
+                                        </div>
+                                        <div class="date-picker__select date-picker__year select">
+                                            <div class="date-picker__select-header">
+                                                <input type="hidden" value="1">
+                                                <span class="date-picker__select-current select__current">
+                                                    2022
+                                                </span>
+                                            </div>
+                                            <ul class="date-picker__select-body select__body">
+                                                <li class="date-picker__select-item select__item" data-id="1"
+                                                    data-choice='choosen'>2023
+                                                </li>
+                                                <li class="date-picker__select-item select__item" data-id="2"
+                                                    data-choice='choosen'>2024
+                                                </li>
+                                                <li class="date-picker__select-item select__item" data-id="3"
+                                                    data-choice='choosen'>2025
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <span class="date-picker__header">Начальная дата</span>
+                                    <div class="date-analytics__end date-picker">
+                                        <div class="date-picker__select date-picker__date select">
+                                            <div class="date-picker__select-header">
+                                                <input type="hidden" value="1">
+                                                <span class="date-picker__select-current select__current">
+                                                    01
+                                                </span>
+                                            </div>
+                                            <ul class="date-picker__select-body select__body">
+                                            </ul>
+                                        </div>
+                                        <div class="date-picker__select date-picker__month select">
+                                            <div class="date-picker__select-header">
+                                                <input type="hidden" value="1">
+                                                <span class="date-picker__select-current select__current">
+                                                    Март
+                                                </span>
+                                            </div>
+                                            <ul class="date-picker__select-body select__body">
+                                            </ul>
+                                        </div>
+                                        <div class="date-picker__select date-picker__year select">
+                                            <div class="date-picker__select-header">
+                                                <input type="hidden" value="1">
+                                                <span class="date-picker__select-current select__current">
+                                                    2022
+                                                </span>
+                                            </div>
+                                            <ul class="date-picker__select-body select__body">
+                                                <li class="date-picker__select-item select__item" data-id="1"
+                                                    data-choice='choosen'>2023
+                                                </li>
+                                                <li class="date-picker__select-item select__item" data-id="2"
+                                                    data-choice='choosen'>2024
+                                                </li>
+                                                <li class="date-picker__select-item select__item" data-id="3"
+                                                    data-choice='choosen'>2025
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -615,7 +713,14 @@
                     <div class="graph-block__right">
                         <div class="graph-block__big">
                             <div class="graph-block__header">
-                                <h3 class="graph-block__title">Источники заказов</h3>
+                                <div class="graph-block__sources">
+                                    <button type="button"
+                                        class="graph-block__sources-option graph-block__sources-order active">Источники
+                                        заказов</button>
+                                    <button type="button"
+                                        class="graph-block__sources-option graph-block__sources-sales">Источники
+                                        продаж</button>
+                                </div>
                                 <div class="graph-block__sort charts__sort left">
                                     <span class="charts__sort-sum">по сумме</span>
                                     <button type="button" class="charts__sort-switcher"></button>
