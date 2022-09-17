@@ -1,3 +1,5 @@
+var graphType = ["грн.", "грн.", "грн."];
+
 // Диаграммы карточек
 // Карточка 1
 var cartOptions1 = {
@@ -677,7 +679,6 @@ var lineChartOptions1 = {
         }
     }
 };
-
 var lineChart1 = new ApexCharts(document.querySelector("#line-chart1"), lineChartOptions1);
 lineChart1.render();
 
@@ -787,7 +788,6 @@ var lineChartOptions2 = {
         }
     }
 };
-
 var lineChart2 = new ApexCharts(document.querySelector("#line-chart2"), lineChartOptions2);
 lineChart2.render();
 
@@ -822,7 +822,7 @@ var pieOptions1 = {
         enabled: false,
     },
     fill: {
-        type: 'gradient',
+        type: 'solid',
         colors: [
             '#64B6AC',
             '#FDC300',
@@ -860,7 +860,7 @@ var pieOptions1 = {
             let percentage = Math.round((value * 100 / sum) * 10) / 10;
             let output = '<div class="chart-legend">';
             output += '<span class="chart-legend__name">' + val + ' </span>';
-            output += '<span class="chart-legend__value">' + value + ' шт.</span>';
+            output += '<span class="chart-legend__value">' + value + ' ' + graphType[0] + '</span>';
             output += '<span class="chart-legend__percentage">' + percentage + ' %</span>';
             output += '</div>';
             return output;
@@ -918,7 +918,6 @@ var pieOptions1 = {
         },
     ]
 };
-
 var pieChart1 = new ApexCharts(document.querySelector("#pie-chart1"), pieOptions1);
 pieChart1.render();
 
@@ -953,7 +952,7 @@ var pieOptions2 = {
         enabled: false,
     },
     fill: {
-        type: 'gradient',
+        type: 'solid',
         colors: [
             '#EB6767',
             '#0093FD',
@@ -991,7 +990,7 @@ var pieOptions2 = {
             let percentage = Math.round((value * 100 / sum) * 10) / 10;
             let output = '<div class="chart-legend">';
             output += '<span class="chart-legend__name">' + val + ' </span>';
-            output += '<span class="chart-legend__value">' + value + ' шт.</span>';
+            output += '<span class="chart-legend__value">' + value + ' ' + graphType[1] + '</span>';
             output += '<span class="chart-legend__percentage">' + percentage + ' %</span>';
             output += '</div>';
             return output;
@@ -1049,7 +1048,6 @@ var pieOptions2 = {
         },
     ]
 };
-
 var pieChart2 = new ApexCharts(document.querySelector("#pie-chart2"), pieOptions2);
 pieChart2.render();
 
@@ -1088,7 +1086,7 @@ var pieOptions3 = {
         enabled: false,
     },
     fill: {
-        type: 'gradient',
+        type: 'solid',
         colors: [
             '#64B6AC',
             '#626F6A',
@@ -1133,7 +1131,7 @@ var pieOptions3 = {
             let percentage = Math.round((value * 100 / sum) * 10) / 10;
             let output = '<div class="chart-legend">';
             output += '<span class="chart-legend__name">' + val + ' </span>';
-            output += '<span class="chart-legend__value">' + value + ' шт.</span>';
+            output += '<span class="chart-legend__value">' + value + ' ' + graphType[2] + '</span>';
             output += '<span class="chart-legend__percentage">' + percentage + ' %</span>';
             output += '</div>';
             return output;
@@ -1190,7 +1188,6 @@ var pieOptions3 = {
         },
     ]
 };
-
 var pieChart3 = new ApexCharts(document.querySelector("#pie-chart3"), pieOptions3);
 pieChart3.render();
 
@@ -1230,12 +1227,12 @@ var catOptions = {
             {
                 x: 'Штаны',
                 y: [0, 155000],
-                fillColor: "#64B6AC",
+                fillColor: "#BDDEDA",
             },
             {
                 x: 'Посуда',
                 y: [0, 115000],
-                fillColor: "#64B6AC",
+                fillColor: "#BDDEDA",
             },
             {
                 x: 'Круассаны',
@@ -1270,12 +1267,12 @@ var catOptions = {
             {
                 x: 'Постеры “Сумерки',
                 y: [0, 75000],
-                fillColor: "#64B6AC",
+                fillColor: "#BDDEDA",
             },
             {
                 x: 'Шины и диски',
                 y: [0, 70000],
-                fillColor: "#64B6AC",
+                fillColor: "#BDDEDA",
             },
             {
                 x: 'Матрасы',
@@ -1305,7 +1302,7 @@ var catOptions = {
             {
                 x: 'Стаканы',
                 y: [0, 45000],
-                fillColor: "#64B6AC",
+                fillColor: "#BDDEDA",
             },
             {
                 x: 'Картины',
@@ -1363,7 +1360,28 @@ var catOptions = {
         labels: {
             maxWidth: 250,
             style: {
-                colors: ['#626F6A'],
+                colors: [
+                    '#143127',
+                    '#626F6A',
+                    '#626F6A',
+                    '#626F6A',
+                    '#626F6A',
+                    '#626F6A',
+                    '#626F6A',
+                    '#626F6A',
+                    '#143127',
+                    '#626F6A',
+                    '#626F6A',
+                    '#626F6A',
+                    '#626F6A',
+                    '#626F6A',
+                    '#626F6A',
+                    '#143127',
+                    '#626F6A',
+                    '#626F6A',
+                    '#626F6A',
+                    '#626F6A',
+                ],
                 fontSize: '18px',
                 fontFamily: 'FuturaNew, sans-serif',
                 fontWeight: 400,
@@ -1399,105 +1417,88 @@ var prodOptions = {
             {
                 x: 'Электронные компоненты',
                 y: [0, 190000],
-                fillColor: "#143127",
             },
             {
                 x: 'Гирлянды',
                 y: [0, 165000],
-                fillColor: "#64B6AC",
             },
             {
                 x: 'Штаны',
                 y: [0, 155000],
-                fillColor: "#64B6AC",
             },
             {
                 x: 'Посуда',
                 y: [0, 115000],
-                fillColor: "#64B6AC",
             },
             {
                 x: 'Круассаны',
                 y: [0, 110000],
-                fillColor: "#BDDEDA",
             },
             {
                 x: 'Столы',
                 y: [0, 100000],
-                fillColor: "#BDDEDA",
             },
             {
                 x: 'Стиральный порошок',
                 y: [0, 95000],
-                fillColor: "#BDDEDA",
             },
             {
                 x: 'Линзы',
                 y: [0, 95000],
-                fillColor: "#BDDEDA",
             },
             {
                 x: 'Кофемашины',
                 y: [0, 90000],
-                fillColor: "#143127",
             },
             {
                 x: 'Освежители воздуха',
                 y: [0, 85000],
-                fillColor: "#64B6AC",
             },
             {
                 x: 'Постеры “Сумерки',
                 y: [0, 75000],
-                fillColor: "#64B6AC",
             },
             {
                 x: 'Шины и диски',
                 y: [0, 70000],
-                fillColor: "#64B6AC",
             },
             {
                 x: 'Матрасы',
                 y: [0, 65000],
-                fillColor: "#BDDEDA",
             },
             {
                 x: 'Болгарки',
                 y: [0, 63000],
-                fillColor: "#BDDEDA",
             },
             {
                 x: 'Средства связи',
                 y: [0, 60000],
-                fillColor: "#BDDEDA",
             },
             {
                 x: 'Чайный сервиз',
                 y: [0, 55000],
-                fillColor: "#143127",
             },
             {
                 x: 'Ноутбуки',
                 y: [0, 52000],
-                fillColor: "#64B6AC",
             },
             {
                 x: 'Стаканы',
                 y: [0, 45000],
-                fillColor: "#64B6AC",
             },
             {
                 x: 'Картины',
                 y: [0, 38000],
-                fillColor: "#BDDEDA",
             },
             {
                 x: 'Пуховики',
                 y: [0, 18000],
-                fillColor: "#BDDEDA",
             },
         ],
     }],
+    fill: {
+        colors: ['#64B6AC'],
+    },
     xaxis: {
         min: 0,
         max: 240000,
@@ -1563,6 +1564,7 @@ function initUI() {
     pagination();
     analyticsMenu();
     chartSelect();
+    datePicker()
 }
 
 initUI();
@@ -1770,6 +1772,99 @@ function modal() {
     });
 }
 
+function datePicker() {
+    const date = new Date();
+    const currentYear = date.getFullYear();
+    const currentMonth = date.getMonth();
+    const currentDate = date.getDate();
+    var days = new Date(2022, currentMonth + 1, 0).getDate();
+    const monthes = [
+        'Январь',
+        'Февраль',
+        'Март',
+        'Апрель',
+        'Май',
+        'Июнь',
+        'Июль',
+        'Август',
+        'Сентябрь',
+        'Октябрь',
+        'Ноябрь',
+        'Декабрь',
+
+    ];
+
+    const datePickers = document.querySelectorAll('.date-analytics');
+    if (datePickers.length > 0) {
+        for (let index = 0; index < datePickers.length; index++) {
+            const datePicker = datePickers[index];
+            const startBlock = datePicker.querySelector('.date-analytics__start');
+            const startDay = startBlock.querySelector('.date-picker__date');
+            const startMonth = startBlock.querySelector('.date-picker__month');
+            const startYear = startBlock.querySelector('.date-picker__year');
+            const endBlock = datePicker.querySelector('.date-analytics__end');
+            const endDay = endBlock.querySelector('.date-picker__date');
+            const endMonth = endBlock.querySelector('.date-picker__month');
+            const endYear = endBlock.querySelector('.date-picker__year');
+
+            startDay.querySelector('.date-picker__select-current').innerHTML = currentDate;
+            startMonth.querySelector('.date-picker__select-current').innerHTML = monthes[currentMonth];
+            startYear.querySelector('.date-picker__select-current').innerHTML = currentYear;
+            endDay.querySelector('.date-picker__select-current').innerHTML = currentDate;
+            endMonth.querySelector('.date-picker__select-current').innerHTML = monthes[currentMonth];
+            endYear.querySelector('.date-picker__select-current').innerHTML = currentYear;
+
+            // Заполняем Даты
+            for (let index = 1; index <= days; index++) {
+                const newFromDay = document.createElement('li');
+                newFromDay.classList.add('date-picker__select-item');
+                newFromDay.classList.add('select-item');
+                newFromDay.setAttribute('data-choice', 'choosen');
+                newFromDay.setAttribute('data-id', index);
+                if (index < 10) {
+                    newFromDay.innerHTML = '0' + index;
+                } else {
+                    newFromDay.innerHTML = index;
+                }
+                const newToDay = newFromDay.cloneNode(true);
+
+                startDay.querySelector('.date-picker__select-body').append(newFromDay);
+                endDay.querySelector('.date-picker__select-body').append(newToDay);
+            }
+
+            // Заполняем Месяцы
+            for (let index = 0; index < monthes.length; index++) {
+                const newFromMonth = document.createElement('li');
+                newFromMonth.classList.add('date-picker__select-item');
+                newFromMonth.classList.add('select-item');
+                newFromMonth.setAttribute('data-choice', 'choosen');
+                newFromMonth.setAttribute('data-id', index);
+
+                newFromMonth.innerHTML = monthes[index];
+                const newToMonth = newFromMonth.cloneNode(true);
+
+                startMonth.querySelector('.date-picker__select-body').append(newFromMonth);
+                endMonth.querySelector('.date-picker__select-body').append(newToMonth);
+            }
+
+            // Заполняем Года
+            for (let index = 10; index >= 0; index--) {
+                const newFromYear = document.createElement('li');
+                newFromYear.classList.add('date-picker__select-item');
+                newFromYear.classList.add('select-item');
+                newFromYear.setAttribute('data-choice', 'choosen');
+                newFromYear.setAttribute('data-id', index);
+
+                newFromYear.innerHTML = currentYear - index;
+                const newToYear = newFromYear.cloneNode(true);
+
+                startYear.querySelector('.date-picker__select-body').append(newFromYear);
+                endYear.querySelector('.date-picker__select-body').append(newToYear);
+            }
+        }
+    }
+}
+
 function analyticsMenu() {
     const analyticsBtn = document.querySelector('.navigation-analytics__btn');
     if (analyticsBtn) {
@@ -1875,11 +1970,40 @@ function switchers() {
     }
 
     const chartsSortSwitchers = document.querySelectorAll('.charts__sort-switcher');
+    var graphName;
     if (chartsSortSwitchers.length > 0) {
-        chartsSortSwitchers.forEach((chartsSortSwitcher) => {
+        chartsSortSwitchers.forEach((chartsSortSwitcher, index) => {
             chartsSortSwitcher.addEventListener('click', () => {
                 chartsSortSwitcher.closest('.charts__sort').classList.toggle('left');
                 chartsSortSwitcher.closest('.charts__sort').classList.toggle('right');
+
+                if (chartsSortSwitcher.closest('.charts__sort').classList.contains('right')) {
+                    graphType[index] = "шт.";
+                    graphName = "pieChart" + (index + 1);
+                    eval(graphName).updateOptions({});
+
+                } else {
+                    graphType[index] = "грн.";
+                    graphName = "pieChart" + (index + 1);
+                    eval(graphName).updateOptions({});
+                }
+            });
+        });
+    }
+
+    const graphSources = document.querySelectorAll('.graph-block__sources');
+    if (graphSources.length > 0) {
+        graphSources.forEach((graphSource) => {
+            const graphSourceBtns = graphSource.querySelectorAll('.graph-block__sources-option');
+            graphSourceBtns.forEach((graphSourceBtn) => {
+                graphSourceBtn.addEventListener('click', (e) => {
+                    if (!graphSourceBtn.classList.contains('active')) {
+                        graphSourceBtns.forEach((el) => {
+                            el.classList.remove('active');
+                        });
+                        e.target.classList.add('active');
+                    }
+                });
             });
         });
     }
@@ -2145,6 +2269,7 @@ function pagination() {
         });
     }
 }
+
 
 /**
  * Applies the :focus-visible polyfill at the given scope.
