@@ -5503,6 +5503,9 @@ footer {
 .date-analytics {
   position: relative;
 }
+.date-analytics.active .date-analytics__picker {
+  display: block;
+}
 @media (max-width: 480px) {
   .date-analytics {
     width: 100%;
@@ -5555,17 +5558,50 @@ footer {
   position: absolute;
   right: 16px;
 }
+.date-analytics__btn span {
+  margin: 0 5px;
+}
+.date-analytics__btn span:first-child {
+  margin-left: 0;
+}
+.date-analytics__apply {
+  height: 44px;
+  width: 100%;
+  padding: 0 45px;
+  margin: 30px auto 0;
+  background: #64B6AC;
+  border: 2px solid #BDDEDA;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  color: #fff;
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+.date-analytics__apply:hover {
+  background-color: var(--yellow);
+}
 .date-analytics__picker {
   position: absolute;
   top: 110%;
-  right: 0;
+  left: 0;
   width: 100%;
+  max-width: 300px;
   z-index: 5;
   padding: 15px;
   border-radius: 20px;
   background: #fff;
   -webkit-box-shadow: 0px 4px 15px -5px rgba(213, 213, 213, 0.64);
           box-shadow: 0px 4px 15px -5px rgba(213, 213, 213, 0.64);
+  display: none;
 }
 .date-analytics__options {
   display: -webkit-box;
@@ -5700,6 +5736,11 @@ footer {
           box-shadow: 0px 4px 15px -5px rgba(213, 213, 213, 0.64);
   border-radius: 20px;
   padding: 40px;
+}
+@media (max-width: 768px) {
+  .charts__block {
+    padding: 20px;
+  }
 }
 .charts__header {
   display: -webkit-box;
@@ -5926,7 +5967,7 @@ footer {
   position: absolute;
   top: 100%;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
 }
 .select-charts__checkbox-label {
   height: 100%;
@@ -6556,6 +6597,11 @@ footer {
     min-height: 800px;
   }
 }
+@media (max-width: 480px) {
+  .graph-block__big {
+    padding: 30px 15px 30px 15px;
+  }
+}
 .graph-block__header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6566,6 +6612,9 @@ footer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  row-gap: 20px;
 }
 @media (max-width: 768px) {
   .graph-block__header {
@@ -6584,11 +6633,6 @@ footer {
   font-size: 18px;
   line-height: 23px;
   color: #143127;
-}
-@media (max-width: 768px) {
-  .graph-block__title {
-    margin: 0 0 10px;
-  }
 }
 .graph-block__sort {
   margin: 0;
