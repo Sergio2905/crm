@@ -1777,7 +1777,7 @@ function datePicker() {
     const currentYear = date.getFullYear();
     const currentMonth = date.getMonth();
     const currentDate = date.getDate();
-    var days = new Date(2022, currentMonth + 1, 0).getDate();
+    let days = new Date(2022, currentMonth + 1, 0).getDate();
     const monthes = [
         'Январь',
         'Февраль',
@@ -1791,8 +1791,8 @@ function datePicker() {
         'Октябрь',
         'Ноябрь',
         'Декабрь',
-
     ];
+
 
     const datePickers = document.querySelectorAll('.date-analytics');
     if (datePickers.length > 0) {
@@ -1814,23 +1814,48 @@ function datePicker() {
             endMonth.querySelector('.date-picker__select-current').innerHTML = monthes[currentMonth];
             endYear.querySelector('.date-picker__select-current').innerHTML = currentYear;
 
-            // Заполняем Даты
-            for (let index = 1; index <= days; index++) {
-                const newFromDay = document.createElement('li');
-                newFromDay.classList.add('date-picker__select-item');
-                newFromDay.classList.add('select-item');
-                newFromDay.setAttribute('data-choice', 'choosen');
-                newFromDay.setAttribute('data-id', index);
-                if (index < 10) {
-                    newFromDay.innerHTML = '0' + index;
-                } else {
-                    newFromDay.innerHTML = index;
-                }
-                const newToDay = newFromDay.cloneNode(true);
+            // Показать форму выбора
+            const dateBtn = datePicker.querySelector('.date-analytics__btn');
+            dateBtn.addEventListener('click', () => {
+                dateBtn.closest('.date-analytics').classList.toggle('active');
+            });
 
-                startDay.querySelector('.date-picker__select-body').append(newFromDay);
-                endDay.querySelector('.date-picker__select-body').append(newToDay);
+            // Переключение периодов
+            const datePeriodOptions = datePicker.querySelectorAll('.date-analytics__option');
+            if (datePeriodOptions) {
+                datePeriodOptions.forEach((el) => {
+                    el.addEventListener('click', () => {
+                        if (!el.classList.contains('active')) {
+                            datePeriodOptions.forEach((el) => {
+                                el.classList.remove('active');
+                            });
+                            el.classList.add('active');
+                        }
+                    });
+                });
             }
+
+            // Заполняем Даты
+            function fillDate(days, point) {
+                for (let index = 1; index <= days; index++) {
+                    const newFromDay = document.createElement('li');
+                    newFromDay.classList.add('date-picker__select-item');
+                    newFromDay.classList.add('select-item');
+                    newFromDay.setAttribute('data-choice', 'choosen');
+                    newFromDay.setAttribute('data-id', index);
+                    if (index < 10) {
+                        newFromDay.innerHTML = '0' + index;
+                    } else {
+                        newFromDay.innerHTML = index;
+                    }
+                    const newToDay = newFromDay.cloneNode(true);
+
+                    point.querySelector('.date-picker__select-body').append(newFromDay);
+                }
+            }
+            fillDate(days, startDay);
+            fillDate(days, endDay);
+
 
             // Заполняем Месяцы
             for (let index = 0; index < monthes.length; index++) {
@@ -1860,6 +1885,73 @@ function datePicker() {
 
                 startYear.querySelector('.date-picker__select-body').append(newFromYear);
                 endYear.querySelector('.date-picker__select-body').append(newToYear);
+            }
+
+            // Проверка правильности даты
+            const monthOptions = startMonth.querySelectorAll('.date-picker__select-item');
+            if (monthOptions) {
+                for (let index = 0; index < monthOptions.length; index++) {
+                    const monthOption = monthOptions[index];
+                    monthOption.addEventListener('click', () => {
+                        let days = new Date(2022, index + 1, 0).getDate();
+                        let date = startDay.querySelector('.date-picker__select-current');
+                        if (Number(date.innerHTML) > days) {
+                            date.innerHTML = days;
+                            startDay.querySelector('.date-picker__select-body').innerHTML = null;
+                            fillDate(days, startDay);
+                        } else {
+                            startDay.querySelector('.date-picker__select-body').innerHTML = null;
+                            fillDate(days, startDay);
+                        }
+                    });
+                }
+            }
+            const monthEndOptions = endMonth.querySelectorAll('.date-picker__select-item');
+            if (monthEndOptions) {
+                for (let index = 0; index < monthEndOptions.length; index++) {
+                    const monthEndOption = monthEndOptions[index];
+                    monthEndOption.addEventListener('click', () => {
+                        let days = new Date(2022, index + 1, 0).getDate();
+                        let date = endDay.querySelector('.date-picker__select-current');
+                        if (Number(date.innerHTML) > days) {
+                            date.innerHTML = days;
+                            endDay.querySelector('.date-picker__select-body').innerHTML = null;
+                            fillDate(days, endDay);
+                        } else {
+                            endDay.querySelector('.date-picker__select-body').innerHTML = null;
+                            fillDate(days, endDay);
+                        }
+                    });
+                }
+            }
+
+            // Применить изменения
+            const apply = datePicker.querySelector('.date-analytics__apply');
+            const out = datePicker.querySelectorAll('.date-analytics__btn span');
+            if (apply) {
+                apply.addEventListener('click', () => {
+                    let from = '';
+                    let to = '';
+                    let monthIndex = monthes.indexOf(startMonth.querySelector('.date-picker__select-current').innerHTML) + 1;
+                    let toMonthIndex = monthes.indexOf(endMonth.querySelector('.date-picker__select-current').innerHTML) + 1;
+                    from += startDay.querySelector('.date-picker__select-current').innerHTML + '.';
+                    to += endDay.querySelector('.date-picker__select-current').innerHTML + '.';
+                    if (monthIndex < 10) {
+                        from += '0' + monthIndex + '.';
+                    } else {
+                        from += monthIndex + '.';
+                    }
+                    if (toMonthIndex < 10) {
+                        to += '0' + toMonthIndex + '.';
+                    } else {
+                        to += toMonthIndex + '.';
+                    }
+                    from += startYear.querySelector('.date-picker__select-current').innerHTML;
+                    to += endYear.querySelector('.date-picker__select-current').innerHTML;
+                    out[0].innerHTML = from;
+                    out[1].innerHTML = to;
+                    apply.closest('.date-analytics').classList.remove('active');
+                });
             }
         }
     }
