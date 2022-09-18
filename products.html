@@ -319,13 +319,91 @@
                             </div>
                             <div class="content-analytics__date date-analytics">
                                 <button type="button" class="date-analytics__btn">
-                                    <span>01.01.2021</span>
-                                    —
-                                    <span>01.05.2022</span>
+                                    <span>01.01.2021</span>-<span>01.05.2022</span>
                                     <svg>
                                         <use href='img/sprite/sprite.svg#arrow'></use>
                                     </svg>
                                 </button>
+
+                                <div class="date-analytics__picker">
+                                    <div class="date-analytics__options">
+                                        <button type="button"
+                                            class="date-analytics__option date-analytics__option-month active">
+                                            За месяц
+                                        </button>
+                                        <button type="button"
+                                            class="date-analytics__option date-analytics__option-year">
+                                            За год
+                                        </button>
+                                    </div>
+                                    <span class="date-picker__header">Начальная дата</span>
+                                    <div class="date-analytics__start date-picker">
+                                        <div class="date-picker__select date-picker__date select">
+                                            <div class="date-picker__select-header">
+                                                <input type="hidden" value="1">
+                                                <span class="date-picker__select-current select__current">
+                                                    01
+                                                </span>
+                                            </div>
+                                            <ul class="date-picker__select-body select__body">
+                                            </ul>
+                                        </div>
+                                        <div class="date-picker__select date-picker__month select">
+                                            <div class="date-picker__select-header">
+                                                <input type="hidden" value="1">
+                                                <span class="date-picker__select-current select__current">
+                                                    Март
+                                                </span>
+                                            </div>
+                                            <ul class="date-picker__select-body select__body">
+                                            </ul>
+                                        </div>
+                                        <div class="date-picker__select date-picker__year select">
+                                            <div class="date-picker__select-header">
+                                                <input type="hidden" value="1">
+                                                <span class="date-picker__select-current select__current">
+                                                    2022
+                                                </span>
+                                            </div>
+                                            <ul class="date-picker__select-body select__body">
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <span class="date-picker__header">Начальная дата</span>
+                                    <div class="date-analytics__end date-picker">
+                                        <div class="date-picker__select date-picker__date select">
+                                            <div class="date-picker__select-header">
+                                                <input type="hidden" value="1">
+                                                <span class="date-picker__select-current select__current">
+                                                    01
+                                                </span>
+                                            </div>
+                                            <ul class="date-picker__select-body select__body">
+                                            </ul>
+                                        </div>
+                                        <div class="date-picker__select date-picker__month select">
+                                            <div class="date-picker__select-header">
+                                                <input type="hidden" value="1">
+                                                <span class="date-picker__select-current select__current">
+                                                    Март
+                                                </span>
+                                            </div>
+                                            <ul class="date-picker__select-body select__body">
+                                            </ul>
+                                        </div>
+                                        <div class="date-picker__select date-picker__year select">
+                                            <div class="date-picker__select-header">
+                                                <input type="hidden" value="1">
+                                                <span class="date-picker__select-current select__current">
+                                                    2022
+                                                </span>
+                                            </div>
+                                            <ul class="date-picker__select-body select__body">
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="date-analytics__apply">Применить</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -564,52 +642,52 @@
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="modal">
-                <div class="modal__container" data-target="export">
-                    <div class="modal__wrapper download">
-                        <div class="modal__title">Выберите формат экспорта</div>
+                <div class="modal">
+                    <div class="modal__container" data-target="export">
+                        <div class="modal__wrapper download">
+                            <div class="modal__title">Выберите формат экспорта</div>
 
-                        <div class="download__modal-content">
-                            <div class="download__select select">
-                                <div class="download__select-header select__header">
-                                    <span class="download__select-current select__current">
-                                        Таблица XLSX
-                                    </span>
-                                    <svg width='12' height='12'>
-                                        <use href='img/sprite/sprite.svg#arrow'></use>
-                                    </svg>
+                            <div class="download__modal-content">
+                                <div class="download__select select">
+                                    <div class="download__select-header select__header">
+                                        <span class="download__select-current select__current">
+                                            Таблица XLSX
+                                        </span>
+                                        <svg width='12' height='12'>
+                                            <use href='img/sprite/sprite.svg#arrow'></use>
+                                        </svg>
+                                    </div>
+
+                                    <ul class="download__select-body select__body">
+                                        <li class="download__select-item select__item" data-choice='choosen'>Таблица
+                                            XLSX
+                                        </li>
+                                        <li class="download__select-item select__item" data-choice='choosen'>Таблица XLS
+                                        </li>
+                                    </ul>
                                 </div>
-
-                                <ul class="download__select-body select__body">
-                                    <li class="download__select-item select__item" data-choice='choosen'>Таблица XLSX
-                                    </li>
-                                    <li class="download__select-item select__item" data-choice='choosen'>Таблица XLS
-                                    </li>
-                                </ul>
                             </div>
-                        </div>
 
-                        <div class="modal__bottom">
-                            <button type="button" class="modal__btn modal__btn--download">Загрузить</button>
-                            <button type="button" class="modal__btn modal-close">Отменить</button>
+                            <div class="modal__bottom">
+                                <button type="button" class="modal__btn modal__btn--download">Загрузить</button>
+                                <button type="button" class="modal__btn modal-close">Отменить</button>
+                            </div>
                         </div>
                     </div>
                 </div>
+
             </div>
 
-        </div>
-
-        <footer>
+            <footer>
   <div class="footer">
     <p class="copyright">© 2022. iBattery CRM. Все права защищены.</p>
   </div>
 </footer>
 
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-    <script type="text/javascript" src="js/main.js"></script>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+        <script type="text/javascript" src="js/main.js"></script>
 </body>
 
 </html>
