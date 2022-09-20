@@ -1,4 +1,19 @@
 var graphType = ["грн.", "грн.", "грн."];
+var graphSeries = [
+    [2484, 548, 2774, 104, 85],
+    [2484, 8954, 744, 84, 965],
+    [1458, 258, 17, 88, 17, 331, 0, 548, 10],
+];
+var newGraphSeries = [
+    [484, 48, 774, 54, 25],
+    [484, 954, 444, 84, 265],
+    [558, 358, 170, 100, 13, 231, 50, 248, 100],
+];
+
+var bigGraph = [
+    [1758, 658, 170, 880, 170, 431, 300, 148, 180],
+    [458, 758, 470, 300, 132, 331, 500, 748, 400],
+];
 
 // Диаграммы карточек
 // Карточка 1
@@ -677,7 +692,37 @@ var lineChartOptions1 = {
         hover: {
             size: 7,
         }
-    }
+    },
+    responsive: [
+        {
+            breakpoint: 1366,
+            options: {
+                xaxis: {
+                    tickAmount: 4,
+                },
+            },
+        },
+        {
+            breakpoint: 768,
+            options: {
+                xaxis: {
+                    tickAmount: 2,
+                    labels: {
+                        style: {
+                            fontSize: '14px',
+                        },
+                    }
+                },
+                yaxis: {
+                    labels: {
+                        style: {
+                            fontSize: '14px',
+                        },
+                    }
+                },
+            },
+        },
+    ],
 };
 var lineChart1 = new ApexCharts(document.querySelector("#line-chart1"), lineChartOptions1);
 lineChart1.render();
@@ -786,14 +831,44 @@ var lineChartOptions2 = {
         hover: {
             size: 7,
         }
-    }
+    },
+    responsive: [
+        {
+            breakpoint: 1366,
+            options: {
+                xaxis: {
+                    tickAmount: 4,
+                },
+            },
+        },
+        {
+            breakpoint: 768,
+            options: {
+                xaxis: {
+                    tickAmount: 2,
+                    labels: {
+                        style: {
+                            fontSize: '14px',
+                        },
+                    }
+                },
+                yaxis: {
+                    labels: {
+                        style: {
+                            fontSize: '14px',
+                        },
+                    }
+                },
+            },
+        },
+    ],
 };
 var lineChart2 = new ApexCharts(document.querySelector("#line-chart2"), lineChartOptions2);
 lineChart2.render();
 
 // Круговая диаграмма 1
 var pieOptions1 = {
-    series: [2484, 548, 2774, 104, 85],
+    series: graphSeries[0],
     labels: [
         'Наложенный',
         'На карту',
@@ -923,7 +998,7 @@ pieChart1.render();
 
 // Круговая диаграмма 2
 var pieOptions2 = {
-    series: [2484, 8954, 744, 84, 965],
+    series: graphSeries[1],
     labels: [
         'Новая почта',
         'Justin',
@@ -1053,7 +1128,7 @@ pieChart2.render();
 
 // Круговая диаграмма 3
 var pieOptions3 = {
-    series: [1458, 258, 17, 88, 17, 331, 0, 548, 10],
+    series: graphSeries[2],
     labels: [
         'Сайт',
         'Телефон',
@@ -2072,12 +2147,16 @@ function switchers() {
                 if (chartsSortSwitcher.closest('.charts__sort').classList.contains('right')) {
                     graphType[index] = "шт.";
                     graphName = "pieChart" + (index + 1);
-                    eval(graphName).updateOptions({});
+                    eval(graphName).updateOptions({
+                        series: newGraphSeries[index],
+                    });
 
                 } else {
                     graphType[index] = "грн.";
                     graphName = "pieChart" + (index + 1);
-                    eval(graphName).updateOptions({});
+                    eval(graphName).updateOptions({
+                        series: graphSeries[index],
+                    });
                 }
             });
         });
@@ -2087,13 +2166,20 @@ function switchers() {
     if (graphSources.length > 0) {
         graphSources.forEach((graphSource) => {
             const graphSourceBtns = graphSource.querySelectorAll('.graph-block__sources-option');
-            graphSourceBtns.forEach((graphSourceBtn) => {
+            graphSourceBtns.forEach((graphSourceBtn, index) => {
                 graphSourceBtn.addEventListener('click', (e) => {
                     if (!graphSourceBtn.classList.contains('active')) {
                         graphSourceBtns.forEach((el) => {
                             el.classList.remove('active');
                         });
                         e.target.classList.add('active');
+                        pieChart3.updateOptions({
+                            series: bigGraph[index],
+                        });
+                    } else {
+                        pieChart3.updateOptions({
+                            series: bigGraph[index],
+                        });
                     }
                 });
             });
@@ -2314,9 +2400,17 @@ function chartSelect() {
         for (let index = 0; index < chartSelects.length; index++) {
             const chartSelect = chartSelects[index];
             const chartSelectBtn = chartSelect.querySelector('.select-charts__btn');
-
-            let count = chartSelect.querySelectorAll('.select-charts__item').length;
-            chartSelect.querySelector('.select-charts__from').innerHTML = count;
+            let count;
+            let options
+            if (chartSelectBtn.classList.contains('select-charts__btn--categories')) {
+                count = document.querySelectorAll('.choose__modal-content .choose__categories-item').length;
+                chartSelect.querySelector('.select-charts__from').innerHTML = count;
+                options = document.querySelectorAll('.choose__modal-content .choose__input');
+            } else {
+                count = chartSelect.querySelectorAll('.select-charts__item').length;
+                chartSelect.querySelector('.select-charts__from').innerHTML = count;
+                options = chartSelect.querySelectorAll('.select-charts__checkbox-input');
+            }
 
             chartSelectBtn.addEventListener('click', () => {
                 if (!chartSelectBtn.closest('.select-charts').classList.contains('active')) {
@@ -2328,8 +2422,6 @@ function chartSelect() {
                     chartSelectBtn.closest('.select-charts').classList.remove('active');
                 }
             });
-
-            const options = chartSelect.querySelectorAll('.select-charts__checkbox-input');
 
             let selected = 0;
             options.forEach((option) => {
