@@ -1,13 +1,86 @@
 <!DOCTYPE html>
 <html lang="Ru">
-@include('partials/head.html',{})
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="Description" content="default">
+  <title>BatteryCRM</title>
+  <link href="img/logo.png" rel="icon"/>
+  <link rel="preload" href="fonts/FuturaNewRegular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/FuturaNewMedium.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/FuturaNewDemi.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/FuturaNewBold.woff2" as="font" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+</head>
 
 <body class="settings-page">
     <div class="wrapper">
-        @include('partials/header.html',{
-        'title': 'Настройки',
-        'link': './'
-        })
+        <header>
+  <div class="header">
+    <div class="header__title">Настройки</div>
+    <a class="header__logo" href="$">
+      <svg width='8' height='16'>
+        <use href='img/sprite/sprite.svg#logo-battery'></use>
+      </svg>
+      <svg width='122' height='13'>
+        <use href='img/sprite/sprite.svg#logo-title'></use>
+      </svg>
+    </a>
+    <div class="header__btns">
+      <a href="./" class="header__btn">
+        <svg width='13.7' height='13.7'>
+          <use href='img/sprite/sprite.svg#setting'></use>
+        </svg>
+      </a>
+      <div class="header__user-btn">
+        <button class="header__btn">
+          <svg width='13.7' height='13.7'>
+            <use href='img/sprite/sprite.svg#user'></use>
+          </svg>
+        </button>
+        <div class="header__user-settings">
+          <div class="user">
+            <div class="user__personal">
+              <div class="user__avatar">
+                <picture>
+                  <source type='image/webp' srcset='img/agnes.webp'>
+                  <img width='40' height='40' src='img/agnes.png' alt='Агнес Толстопятко'>
+                </picture>
+              </div>
+              <div class="user__name">Агнес Толстопятко</div>
+            </div>
+            <ul class="user__btns">
+              <li class="user__btns-item">
+                <button class="user__btn">
+                  <svg width='14' height='14'>
+                    <use href='img/sprite/sprite.svg#account'></use>
+                  </svg>
+                  <span>Личный кабинет</span>
+                </button>
+              </li>
+              <li class="user__btns-item">
+                <button class="user__btn">
+                  <svg width='14' height='14'>
+                    <use href='img/sprite/sprite.svg#theme'></use>
+                  </svg>
+                  <span>Темная тема</span>
+                </button>
+              </li>
+              <li class="user__btns-item">
+                <button class="user__btn">
+                  <svg width='14' height='14'>
+                    <use href='img/sprite/sprite.svg#exit'></use>
+                  </svg>
+                  <span>Выйти</span>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
 
         <main class="main">
 
@@ -496,8 +569,8 @@
 
                                 <div class="modal__message">
                                     Подтвердите загрузку данных для текущего склада. При подтверждении, загрузка
-                                    начнется в фоне и Вы получите
-                                    уведомление об окончании.
+                                    начнется в фоне и Вы получите
+                                    уведомление об окончании.
                                 </div>
 
                                 <div class="modal__bottom">
@@ -513,8 +586,8 @@
 
                                 <div class="modal__message">
                                     Подтвердите загрузку данных информации всех доступных складов. При подтверждении,
-                                    загрузка начнется в фоне и Вы
-                                    получите уведомление об окончании.
+                                    загрузка начнется в фоне и Вы
+                                    получите уведомление об окончании.
                                 </div>
 
                                 <div class="modal__bottom">
@@ -529,7 +602,7 @@
                                 <div class="modal__title">Раскрыть категории</div>
 
                                 <div class="modal__message">
-                                    Подтвердите раскрытие всех подкатегорий 1-го и 2-го уровней.
+                                    Подтвердите раскрытие всех подкатегорий 1-го и 2-го уровней.
                                 </div>
 
                                 <div class="modal__bottom">
@@ -546,7 +619,7 @@
 
                                 <div class="modal__message">
                                     Подтвердите удаление всех данных для текущего склада. При подтверждении, вся
-                                    информация о данном складе будет
+                                    информация о данном складе будет
                                     безвозвратно удалена.
                                 </div>
 
@@ -650,7 +723,7 @@
                                     </div>
 
                                     <div class="form-modal__link">
-                                        <h3 class="form-modal__subtitle">Ссылка на файл</h3>
+                                        <h3 class="form-modal__subtitle">Ссылка на файл</h3>
                                         <div class="form-modal__info-block">
                                             <div class="form-modal__input-block">
                                                 <div class="form-modal__input-wrapper">
@@ -813,7 +886,7 @@
                                     </svg>
                                 </div>
 
-                                <div class="modal__title">Работа со складом</div>
+                                <div class="modal__title">Работа со складом</div>
 
                                 <form class="modal__form form-modal">
 
@@ -898,7 +971,7 @@
                                     </div>
 
                                     <div class="form-modal__link">
-                                        <h3 class="form-modal__subtitle">Ссылка на файл</h3>
+                                        <h3 class="form-modal__subtitle">Ссылка на файл</h3>
                                         <div class="form-modal__info-block">
                                             <div class="form-modal__input-block">
                                                 <div class="form-modal__input-wrapper">
@@ -1089,10 +1162,10 @@
                                                 </li>
                                                 <li class="table__product-item">
                                                     <div class="table__product-title">
-                                                        <span>Мобильный телефон Samsung Galaxy S8 Plus Black на 188гб
+                                                        <span>Мобильный телефон Samsung Galaxy S8 Plus Black на 188гб
                                                         </span>
                                                         <div class="table__product-titlefull">Мобильный телефон Samsung
-                                                            Galaxy S8 Plus Black на 188гб
+                                                            Galaxy S8 Plus Black на 188гб
 
                                                         </div>
                                                     </div>
@@ -1107,10 +1180,10 @@
                                                 </li>
                                                 <li class="table__product-item">
                                                     <div class="table__product-title">
-                                                        <span>Мобильный телефон Samsung Galaxy S8 Plus Black на 188гб
+                                                        <span>Мобильный телефон Samsung Galaxy S8 Plus Black на 188гб
                                                         </span>
                                                         <div class="table__product-titlefull">Мобильный телефон Samsung
-                                                            Galaxy S8 Plus Black на 188гб
+                                                            Galaxy S8 Plus Black на 188гб
 
                                                         </div>
                                                     </div>
@@ -1125,10 +1198,10 @@
                                                 </li>
                                                 <li class="table__product-item">
                                                     <div class="table__product-title">
-                                                        <span>Мобильный телефон Samsung Galaxy S8 Plus Black на 188гб
+                                                        <span>Мобильный телефон Samsung Galaxy S8 Plus Black на 188гб
                                                         </span>
                                                         <div class="table__product-titlefull">Мобильный телефон Samsung
-                                                            Galaxy S8 Plus Black на 188гб
+                                                            Galaxy S8 Plus Black на 188гб
 
                                                         </div>
                                                     </div>
@@ -1143,10 +1216,10 @@
                                                 </li>
                                                 <li class="table__product-item">
                                                     <div class="table__product-title">
-                                                        <span>Мобильный телефон Samsung Galaxy S8 Plus Black на 188гб
+                                                        <span>Мобильный телефон Samsung Galaxy S8 Plus Black на 188гб
                                                         </span>
                                                         <div class="table__product-titlefull">Мобильный телефон Samsung
-                                                            Galaxy S8 Plus Black на 188гб
+                                                            Galaxy S8 Plus Black на 188гб
 
                                                         </div>
                                                     </div>
@@ -1161,10 +1234,10 @@
                                                 </li>
                                                 <li class="table__product-item">
                                                     <div class="table__product-title">
-                                                        <span>Мобильный телефон Samsung Galaxy S8 Plus Black на 188гб
+                                                        <span>Мобильный телефон Samsung Galaxy S8 Plus Black на 188гб
                                                         </span>
                                                         <div class="table__product-titlefull">Мобильный телефон Samsung
-                                                            Galaxy S8 Plus Black на 188гб
+                                                            Galaxy S8 Plus Black на 188гб
 
                                                         </div>
                                                     </div>
@@ -1179,10 +1252,10 @@
                                                 </li>
                                                 <li class="table__product-item">
                                                     <div class="table__product-title">
-                                                        <span>Мобильный телефон Samsung Galaxy S8 Plus Black на 188гб
+                                                        <span>Мобильный телефон Samsung Galaxy S8 Plus Black на 188гб
                                                         </span>
                                                         <div class="table__product-titlefull">Мобильный телефон Samsung
-                                                            Galaxy S8 Plus Black на 188гб
+                                                            Galaxy S8 Plus Black на 188гб
 
                                                         </div>
                                                     </div>
@@ -1197,10 +1270,10 @@
                                                 </li>
                                                 <li class="table__product-item">
                                                     <div class="table__product-title">
-                                                        <span>Мобильный телефон Samsung Galaxy S8 Plus Black на 188гб
+                                                        <span>Мобильный телефон Samsung Galaxy S8 Plus Black на 188гб
                                                         </span>
                                                         <div class="table__product-titlefull">Мобильный телефон Samsung
-                                                            Galaxy S8 Plus Black на 188гб
+                                                            Galaxy S8 Plus Black на 188гб
 
                                                         </div>
                                                     </div>
@@ -1215,10 +1288,10 @@
                                                 </li>
                                                 <li class="table__product-item">
                                                     <div class="table__product-title">
-                                                        <span>Мобильный телефон Samsung Galaxy S8 Plus Black на 188гб
+                                                        <span>Мобильный телефон Samsung Galaxy S8 Plus Black на 188гб
                                                         </span>
                                                         <div class="table__product-titlefull">Мобильный телефон Samsung
-                                                            Galaxy S8 Plus Black на 188гб
+                                                            Galaxy S8 Plus Black на 188гб
 
                                                         </div>
                                                     </div>
@@ -1233,10 +1306,10 @@
                                                 </li>
                                                 <li class="table__product-item">
                                                     <div class="table__product-title">
-                                                        <span>Мобильный телефон Samsung Galaxy S8 Plus Black на 188гб
+                                                        <span>Мобильный телефон Samsung Galaxy S8 Plus Black на 188гб
                                                         </span>
                                                         <div class="table__product-titlefull">Мобильный телефон Samsung
-                                                            Galaxy S8 Plus Black на 188гб
+                                                            Galaxy S8 Plus Black на 188гб
 
                                                         </div>
                                                     </div>
@@ -1251,10 +1324,10 @@
                                                 </li>
                                                 <li class="table__product-item">
                                                     <div class="table__product-title">
-                                                        <span>Мобильный телефон Samsung Galaxy S8 Plus Black на 188гб
+                                                        <span>Мобильный телефон Samsung Galaxy S8 Plus Black на 188гб
                                                         </span>
                                                         <div class="table__product-titlefull">Мобильный телефон Samsung
-                                                            Galaxy S8 Plus Black на 188гб
+                                                            Galaxy S8 Plus Black на 188гб
 
                                                         </div>
                                                     </div>
@@ -1290,7 +1363,7 @@
                                             <a class="pagination__list-link" href="#">3</a>
                                         </li>
                                         <li class="pagination__list-item">
-                                            <span>...</span>
+                                            <span>…</span>
                                         </li>
                                         <li class="pagination__list-item">
                                             <a class="pagination__list-link" href="#">18</a>
@@ -1318,8 +1391,12 @@
 
         </main>
 
-        @include('partials/footer.html',{})
-        <!--@include('partials/modals.html',{})-->
+        <footer>
+  <div class="footer">
+    <p class="copyright">© 2022. iBattery CRM. Все права защищены.</p>
+  </div>
+</footer>
+
     </div>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script type="text/javascript" src="js/main.js"></script>
