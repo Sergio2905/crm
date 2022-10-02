@@ -1639,7 +1639,9 @@ function initUI() {
     pagination();
     analyticsMenu();
     chartSelect();
-    datePicker()
+    datePicker();
+    showImage();
+    sidebarMinimize();
 }
 
 initUI();
@@ -2451,6 +2453,50 @@ function pagination() {
                 e.preventDefault();
             });
         });
+    }
+}
+
+function showImage() {
+    const photoThumbs = document.querySelectorAll('.table__product-photo');
+
+    if (photoThumbs.length > 0) {
+        for (let index = 0; index < photoThumbs.length; index++) {
+            const photoThumb = photoThumbs[index];
+
+            photoThumb.addEventListener('mouseover', () => {
+                const photoSrc = photoThumb.querySelector('picture').outerHTML;
+                const newPhoto = document.createElement('div');
+                newPhoto.classList.add('image-viewer');
+                newPhoto.innerHTML = photoSrc;
+                photoThumb.append(newPhoto);
+            });
+
+            photoThumb.addEventListener('mouseout', () => {
+                document.querySelector('.image-viewer').remove();
+            });
+        }
+    }
+}
+
+function sidebarMinimize() {
+    const miniBtn = document.querySelector('.minimize-btn');
+    const sidebar = document.querySelector('.sidebar');
+    if (miniBtn) {
+        miniBtn.addEventListener('click', () => {
+            sidebar.classList.toggle('mini');
+        });
+    }
+
+    window.addEventListener('resize', () => {
+        ifMini();
+    });
+
+    ifMini();
+
+    function ifMini() {
+        if (window.innerWidth < 768 && sidebar.classList.contains('mini')) {
+            sidebar.classList.remove('mini');
+        }
     }
 }
 
