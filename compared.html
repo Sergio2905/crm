@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html',{})
+
+<body class="settings-page">
+    <div class="wrapper">
+        @include('partials/header.html',{
+        'title': 'Настройки',
+        'link': './'
+        })
+
+        <main class="main">
+
+            <section class="navigation">
+                <div class="navigation__wrapper">
+                    <ul class="navigation__controls">
+                        <li class="navigation__controls-item">
+                            <div class="navigation__controls-btn">
+                                <svg width='19' height='19'>
+                                    <use href='img/sprite/sprite.svg#bag'></use>
+                                </svg>
+                                <span>Заказы</span>
+                            </div>
+                        </li>
+                        <li class="navigation__controls-item">
+                            <div class="navigation__controls-btn">
+                                <svg width='19' height='19'>
+                                    <use href='img/sprite/sprite.svg#clients'></use>
+                                </svg>
+                                <span>Клиенты</span>
+                            </div>
+                        </li>
+                        <li class="navigation__controls-item">
+                            <div class="navigation__controls-btn">
+                                <svg width='19' height='19'>
+                                    <use href='img/sprite/sprite.svg#shop'></use>
+                                </svg>
+                                <span>Товары</span>
+                            </div>
+                        </li>
+                        <li class="navigation__controls-item">
+                            <div class="navigation__controls-btn">
+                                <svg width='19' height='19'>
+                                    <use href='img/sprite/sprite.svg#wallet'></use>
+                                </svg>
+                                <span>Финансы</span>
+                            </div>
+                        </li>
+                        <li class="navigation__controls-item">
+                            <div class="navigation__controls-btn active">
+                                <svg width='19' height='19'>
+                                    <use href='img/sprite/sprite.svg#tag'></use>
+                                </svg>
+                                <span>Соответствия товаров</span>
+                            </div>
+                        </li>
+                        <li class="navigation__controls-item">
+                            <div class="navigation__controls-btn navigation-analytics">
+                                <button type="button" class="navigation-analytics__btn">
+                                    <svg width='19' height='19'>
+                                        <use href='img/sprite/sprite.svg#activity'></use>
+                                    </svg>
+                                    <span>Аналитика</span>
+                                </button>
+                                <div class="navigation-analytics__menu">
+                                    <ul class="navigation-analytics__list">
+                                        <li class="navigation-analytics__item">
+                                            <a href="general.html" class="navigation-analytics__link">Общая</a>
+                                        </li>
+                                        <li class="navigation-analytics__item">
+                                            <a href="products.html" class="navigation-analytics__link">Товары</a>
+                                        </li>
+                                        <li class="navigation-analytics__item">
+                                            <a href="finance.html" class="navigation-analytics__link">Финансы</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="content">
+                <h1 class="content__title-mobile">Сопоставление артикулов – iBattery</h1>
+
+                <div class="content__sidebar sidebar">
+                    <ul class="sidebar__list">
+                        <li class="sidebar__item">
+                            <a href="settings.html" class="sidebar__link">
+                                <svg>
+                                    <use href='img/sprite/sprite.svg#shopping-cart'></use>
+                                </svg>
+                                <span>Товары</span>
+                            </a>
+                        </li>
+                        <li class="sidebar__item">
+                            <a href="resources.html" class="sidebar__link">
+                                <svg>
+                                    <use href='img/sprite/sprite.svg#store'></use>
+                                </svg>
+                                <span>Ресурсы продаж</span>
+                            </a>
+                        </li>
+                        <li class="sidebar__item active">
+                            <a href="warehouses.html" class="sidebar__link">
+                                <svg>
+                                    <use href='img/sprite/sprite.svg#box'></use>
+                                </svg>
+                                <span>Склады</span>
+                            </a>
+                        </li>
+                        <li class="sidebar__item">
+                            <a href="matrix.html" class="sidebar__link">
+                                <svg>
+                                    <use href='img/sprite/sprite.svg#calculator'></use>
+                                </svg>
+                                <span>Матрица прибыли</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <button type="button" class="minimize-btn">
+                        <svg>
+                            <use xlink: href="img/sprite/sprite.svg#arrow"></use>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="content__body">
+                    <div class="content__header header-content">
+                        <h2 class="header-content__title">Сопоставление артикулов – iBattery</h2>
+
+                        <div class="header-content__btns">
+                            <button class="header-content__btn btn-white">
+                                <span>Требуют сопоставления</span>
+                            </button>
+                            <button class="header-content__btn btn-blue">
+                                Сопоставленные
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="content__subheader subheader-content">
+                        <h3 class="subheader-content__subtitle content__subtitle">Список товаров</h3>
+                        <div class="subheader-content__btns">
+                            <div class="special-table__search-block">
+                                <button type="button"
+                                    class="special-table__search-btn special-table__search-show active">
+                                    <svg>
+                                        <use xlink: href="img/sprite/sprite.svg#search2"></use>
+                                    </svg>
+                                </button>
+                                <form class="special-table__search">
+                                    <button class="special-table__search-btn">
+                                        <svg>
+                                            <use xlink: href="img/sprite/sprite.svg#search2"></use>
+                                        </svg>
+                                    </button>
+                                    <input type="text">
+                                    <button type="button" class="special-table__search-close">
+                                        <svg>
+                                            <use href='img/sprite/sprite.svg#close'></use>
+                                        </svg>
+                                    </button>
+                                </form>
+                            </div>
+                            <button type="button" class="subheader-content__btn table__actions-btn"
+                                data-path="compared-refresh">
+                                <svg>
+                                    <use xlink: href="img/sprite/sprite.svg#refresh"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="compared-table content__table table">
+                        <div class="compared-table__wrapp table__wrapp">
+                            <div class="compared-table__product table__product">
+                                <ul class="compared-table__list table__product-list">
+                                    <li class="compared-table__item table__product-item" data-sticky="sticky">
+                                        <div class="compared-table__left">
+                                            <button class="table__product-amount table__btn">
+                                                <span>#</span>
+                                                <svg width='14' height='14'>
+                                                    <use href='img/sprite/sprite.svg#sorting'></use>
+                                                </svg>
+                                            </button>
+                                            <button class="table__product-partner-art table__btn">
+                                                <span>Артикул партнера</span>
+                                                <svg width='14' height='14'>
+                                                    <use href='img/sprite/sprite.svg#sorting'></use>
+                                                </svg>
+                                            </button>
+                                            <button class="table__product-photo table__btn">
+                                                <span>Фото</span>
+                                            </button>
+                                            <button class="table__product-title table__btn">
+                                                <span>Название</span>
+                                                <svg width='14' height='14'>
+                                                    <use href='img/sprite/sprite.svg#sorting'></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <div class="compared-table__right">
+                                            <button class="table__product-art table__btn">
+                                                <span>Артикул</span>
+                                                <svg width='14' height='14'>
+                                                    <use href='img/sprite/sprite.svg#sorting'></use>
+                                                </svg>
+                                            </button>
+                                            <button class="table__product-photo table__btn">
+                                                <span>Фото</span>
+                                            </button>
+                                            <button class="table__product-title table__btn">
+                                                <span>Название</span>
+                                                <svg width='14' height='14'>
+                                                    <use href='img/sprite/sprite.svg#sorting'></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <div class="compared-table__action">
+                                            <button class="table__product-actions table__btn">
+                                                <span>Действия</span>
+                                            </button>
+                                        </div>
+                                    </li>
+
+                                    <li class="compared-table__item table__product-item">
+                                        <div class="compared-table__left compared-table__block">
+                                            <div class="table__product-amount">
+                                                <span>1</span>
+                                            </div>
+                                            <div class="table__product-partner-art">
+                                                <span>3456432134534</span>
+                                            </div>
+                                            <div class="table__product-photo">
+                                                <picture>
+                                                    <source type="image/webp" srcset="img/avatars/yoho-1564.webp">
+                                                    <img src="img/avatars/yoho-1564.png" alt="yoho 1564">
+                                                </picture>
+                                            </div>
+                                            <div class="table__product-title">
+                                                <span>Автомобильный интертер для общего назначения и приминения</span>
+                                                <div class="table__product-titlefull">Автомобильный интертер для общего
+                                                    назначения и приминения
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="compared-table__right compared-table__block">
+                                            <div class="table__product-art">
+                                                <span>kcs-38819</span>
+                                            </div>
+                                            <div class="table__product-photo">
+                                                <picture>
+                                                    <source type="image/webp" srcset="img/avatars/yoho-1564.webp">
+                                                    <img src="img/avatars/yoho-1564.png" alt="yoho 1564">
+                                                </picture>
+                                            </div>
+                                            <div class="table__product-title">
+                                                <span>Автомобильный интертер для общего назначения и приминения</span>
+                                                <div class="table__product-titlefull">Автомобильный интертер для общего
+                                                    назначения и приминения
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="compared-table__action compared-table__block">
+                                            <button class="table__actions-btn" data-path="compared-delete">
+                                                <svg>
+                                                    <use xlink: href="img/sprite/sprite.svg#delete"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </li>
+
+                                    <li class="compared-table__item table__product-item">
+                                        <div
+                                            class="compared-table__left compared-table__block compared-table__block_red">
+                                            <div class="table__product-amount">
+                                                <span>2</span>
+                                            </div>
+                                            <div class="table__product-partner-art">
+                                                <span>3456432134534</span>
+                                            </div>
+                                            <div class="table__product-photo">
+                                            </div>
+                                            <div class="table__product-title">
+                                            </div>
+                                        </div>
+                                        <div class="compared-table__right compared-table__block">
+                                            <div class="table__product-art">
+                                                <span>bls-19938</span>
+                                            </div>
+                                            <div class="table__product-photo">
+                                                <picture>
+                                                    <source type="image/webp" srcset="img/avatars/grey-15.webp">
+                                                    <img src="img/avatars/grey-15.png" alt="gray 15">
+                                                </picture>
+                                            </div>
+                                            <div class="table__product-title">
+                                                <span>Принтер для скоросной печати текста черный</span>
+                                                <div class="table__product-titlefull">Принтер для скоросной печати
+                                                    текста черный
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="compared-table__action compared-table__block">
+                                            <button class="table__actions-btn" data-path="compared-delete">
+                                                <svg>
+                                                    <use xlink: href="img/sprite/sprite.svg#delete"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </li>
+
+                                    <li class="compared-table__item table__product-item">
+                                        <div class="compared-table__left compared-table__block">
+                                            <div class="table__product-amount">
+                                                <span>3</span>
+                                            </div>
+                                            <div class="table__product-partner-art">
+                                                <span>432345333212</span>
+                                            </div>
+                                            <div class="table__product-photo">
+                                                <picture>
+                                                    <source type="image/webp" srcset="img/avatars/grey-15-1564.webp">
+                                                    <img src="img/avatars/grey-15-1564.png" alt="grey 15 1564">
+                                                </picture>
+                                            </div>
+                                            <div class="table__product-title">
+                                                <span>Шариковая авторучка с тонким пером для всех видов бумаг</span>
+                                                <div class="table__product-titlefull">Шариковая авторучка с тонким пером
+                                                    для всех видов бумаг
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="compared-table__right compared-table__block">
+                                            <div class="table__product-art">
+                                                <span>fjj-19832</span>
+                                            </div>
+                                            <div class="table__product-photo">
+                                                <picture>
+                                                    <source type="image/webp" srcset="img/avatars/grey-15-1564.webp">
+                                                    <img src="img/avatars/grey-15-1564.png" alt="grey 15 1564">
+                                                </picture>
+                                            </div>
+                                            <div class="table__product-title">
+                                                <span>Шариковая авторучка с тонким пером для всех видов бумаг</span>
+                                                <div class="table__product-titlefull">Шариковая авторучка с тонким пером
+                                                    для всех видов бумаг
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="compared-table__action compared-table__block">
+                                            <button class="table__actions-btn" data-path="compared-delete">
+                                                <svg>
+                                                    <use xlink: href="img/sprite/sprite.svg#delete"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </li>
+
+                                    <li class="compared-table__item table__product-item">
+                                        <div class="compared-table__left compared-table__block">
+                                            <div class="table__product-amount">
+                                                <span>4</span>
+                                            </div>
+                                            <div class="table__product-partner-art">
+                                                <span>3456432134534</span>
+                                            </div>
+                                            <div class="table__product-photo">
+                                                <picture>
+                                                    <source type="image/webp" srcset="img/cabel.webp">
+                                                    <img src="img/cabel.jpg" alt="headphones 1564">
+                                                </picture>
+                                            </div>
+                                            <div class="table__product-title">
+                                                <span>Автомобильный интертер для общего назначения и приминения</span>
+                                                <div class="table__product-titlefull">Автомобильный интертер для общего
+                                                    назначения и приминения
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="compared-table__right compared-table__block">
+                                            <div class="table__product-art">
+                                                <span>kcs-38819</span>
+                                            </div>
+                                            <div class="table__product-photo">
+                                                <picture>
+                                                    <source type="image/webp" srcset="img/cabel.webp">
+                                                    <img src="img/cabel.jpg" alt="headphones 1564">
+                                                </picture>
+                                            </div>
+                                            <div class="table__product-title">
+                                                <span>Автомобильный интертер для общего назначения и приминени</span>
+                                                <div class="table__product-titlefull">Автомобильный интертер для общего
+                                                    назначения и приминени
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="compared-table__action compared-table__block">
+                                            <button class="table__actions-btn" data-path="compared-delete">
+                                                <svg>
+                                                    <use xlink: href="img/sprite/sprite.svg#delete"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </li>
+
+                                    <li class="compared-table__item table__product-item">
+                                        <div class="compared-table__left compared-table__block">
+                                            <div class="table__product-amount">
+                                                <span>5</span>
+                                            </div>
+                                            <div class="table__product-partner-art">
+                                                <span>432345333212</span>
+                                            </div>
+                                            <div class="table__product-photo">
+                                                <picture>
+                                                    <source type="image/webp" srcset="img/avatars/cable-yoho.webp">
+                                                    <img src="img/avatars/cable-yoho.png" alt="cable-yoho">
+                                                </picture>
+                                            </div>
+                                            <div class="table__product-title">
+                                                <span>Шариковая авторучка с тонким пером для всех видов бумаг</span>
+                                                <div class="table__product-titlefull">Шариковая авторучка с тонким пером
+                                                    для всех видов бумаг
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="compared-table__right compared-table__block compared-table__block_red">
+                                            <div class="table__product-art">
+                                                <span>hjd-91883</span>
+                                            </div>
+                                            <div class="table__product-photo">
+
+                                            </div>
+                                            <div class="table__product-title">
+
+                                            </div>
+                                        </div>
+                                        <div class="compared-table__action compared-table__block">
+                                            <button class="table__actions-btn" data-path="compared-delete">
+                                                <svg>
+                                                    <use xlink: href="img/sprite/sprite.svg#delete"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </li>
+
+                                    <li class="compared-table__item table__product-item">
+                                        <div class="compared-table__left compared-table__block">
+                                            <div class="table__product-amount">
+                                                <span>6</span>
+                                            </div>
+                                            <div class="table__product-partner-art">
+                                                <span>3456432134534</span>
+                                            </div>
+                                            <div class="table__product-photo">
+                                                <picture>
+                                                    <source type="image/webp" srcset="img/avatars/headphones-1564.webp">
+                                                    <img src="img/avatars/headphones-1564.png" alt="headphones 1564">
+                                                </picture>
+                                            </div>
+                                            <div class="table__product-title">
+                                                <span>Автомобильный интертер для общего назначения</span>
+                                                <div class="table__product-titlefull">Автомобильный интертер для общего
+                                                    назначения
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="compared-table__right compared-table__block">
+                                            <div class="table__product-art">
+                                                <span>kcs-38819</span>
+                                            </div>
+                                            <div class="table__product-photo">
+                                                <picture>
+                                                    <source type="image/webp" srcset="img/avatars/headphones-1564.webp">
+                                                    <img src="img/avatars/headphones-1564.png" alt="headphones 1564">
+                                                </picture>
+                                            </div>
+                                            <div class="table__product-title">
+                                                <span>Автомобильный интертер для общего назначения и приминени</span>
+                                                <div class="table__product-titlefull">Автомобильный интертер для общего
+                                                    назначения и приминени
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="compared-table__action compared-table__block">
+                                            <button class="table__actions-btn" data-path="compared-delete">
+                                                <svg>
+                                                    <use xlink: href="img/sprite/sprite.svg#delete"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="compared-controls controls">
+                        <div class="controls__wrapper">
+                            <div class="pagination">
+                                <a class="pagination__nav pagination__nav--prev" href="#">
+                                    <svg width="11" height="15">
+                                        <use href="img/sprite/sprite.svg#arrow"></use>
+                                    </svg>
+                                </a>
+                                <ul class="pagination__list">
+                                    <li class="pagination__list-item">
+                                        <a class="pagination__list-link pagination__list-link--active" href="#">1</a>
+                                    </li>
+                                    <li class="pagination__list-item">
+                                        <a class="pagination__list-link" href="#">2</a>
+                                    </li>
+                                    <li class="pagination__list-item">
+                                        <a class="pagination__list-link" href="#">3</a>
+                                    </li>
+                                    <li class="pagination__list-item">
+                                        <span>…</span>
+                                    </li>
+                                    <li class="pagination__list-item">
+                                        <a class="pagination__list-link" href="#">18</a>
+                                    </li>
+                                    <li class="pagination__list-item">
+                                        <a class="pagination__list-link" href="#">19</a>
+                                    </li>
+                                </ul>
+                                <a class="pagination__nav pagination__nav--next" href="#">
+                                    <svg width="11" height="15">
+                                        <use href="img/sprite/sprite.svg#arrow"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="show">
+                                <div class="show__title">Показывать по:</div>
+                                <div class="show__select select">
+                                    <div class="show__select-header select__header">
+                                        <input type="hidden" value="1">
+                                        <span class="show__select-current select__current">
+                                            20
+                                        </span>
+                                        <svg width="6" height="12">
+                                            <use href="img/sprite/sprite.svg#arrow"></use>
+                                        </svg>
+                                    </div>
+
+                                    <ul class="show__select-body select__body">
+                                        <li class="show__select-item select__item" data-id="1" data-choice="choosen">10
+                                        </li>
+                                        <li class="show__select-item select__item" data-id="2" data-choice="choosen">20
+                                        </li>
+                                        <li class="show__select-item select__item" data-id="3" data-choice="choosen">50
+                                        </li>
+                                        <li class="show__select-item select__item" data-id="4" data-choice="choosen">100
+                                        </li>
+                                        <li class="show__select-item select__item" data-id="5" data-choice="choosen">200
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal">
+                        <div class="modal__container" data-target="compared-delete">
+                            <div class="modal__wrapper download">
+                                <div class="modal__title">Удалить сопоставление</div>
+
+                                <div class="modal__message">
+                                    Подтвердите удаление всех данных для текущего сопоставления товаров. При
+                                    подтверждении,
+                                    вся информация о данном
+                                    сопоставлении будет безвозвратно удалена.
+                                </div>
+
+                                <div class="modal__bottom">
+                                    <button type="button" class="modal__btn modal__btn--download">Подтвердить</button>
+                                    <button type="button" class="modal__btn modal-close">Отменить</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal__container" data-target="compared-refresh">
+                            <div class="modal__wrapper download">
+                                <div class="modal__title">Обновить сопоставления</div>
+
+                                <div class="modal__message">
+                                    Подтвердите обновление сопоставления для текущего каталога. При подтверждении,
+                                    загрузка
+                                    начнется в фоне и Вы получите
+                                    уведомление об окончании.
+                                </div>
+
+                                <div class="modal__bottom">
+                                    <button type="button" class="modal__btn modal__btn--download">Подтвердить</button>
+                                    <button type="button" class="modal__btn modal-close">Отменить</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        @include('partials/footer.html',{})
+        <!--@include('partials/modals.html',{})-->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>

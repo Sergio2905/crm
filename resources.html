@@ -1,86 +1,13 @@
 <!DOCTYPE html>
 <html lang="Ru">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="Description" content="default">
-  <title>BatteryCRM</title>
-  <link href="img/logo.png" rel="icon"/>
-  <link rel="preload" href="fonts/FuturaNewRegular.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/FuturaNewMedium.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/FuturaNewDemi.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/FuturaNewBold.woff2" as="font" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/style.css">
-</head>
+@include('partials/head.html',{})
 
 <body class="settings-page">
     <div class="wrapper">
-        <header>
-  <div class="header">
-    <div class="header__title">Настройки</div>
-    <a class="header__logo" href="$">
-      <svg width='8' height='16'>
-        <use href='img/sprite/sprite.svg#logo-battery'></use>
-      </svg>
-      <svg width='122' height='13'>
-        <use href='img/sprite/sprite.svg#logo-title'></use>
-      </svg>
-    </a>
-    <div class="header__btns">
-      <a href="./" class="header__btn">
-        <svg width='13.7' height='13.7'>
-          <use href='img/sprite/sprite.svg#setting'></use>
-        </svg>
-      </a>
-      <div class="header__user-btn">
-        <button class="header__btn">
-          <svg width='13.7' height='13.7'>
-            <use href='img/sprite/sprite.svg#user'></use>
-          </svg>
-        </button>
-        <div class="header__user-settings">
-          <div class="user">
-            <div class="user__personal">
-              <div class="user__avatar">
-                <picture>
-                  <source type='image/webp' srcset='img/agnes.webp'>
-                  <img width='40' height='40' src='img/agnes.png' alt='Агнес Толстопятко'>
-                </picture>
-              </div>
-              <div class="user__name">Агнес Толстопятко</div>
-            </div>
-            <ul class="user__btns">
-              <li class="user__btns-item">
-                <button class="user__btn">
-                  <svg width='14' height='14'>
-                    <use href='img/sprite/sprite.svg#account'></use>
-                  </svg>
-                  <span>Личный кабинет</span>
-                </button>
-              </li>
-              <li class="user__btns-item">
-                <button class="user__btn">
-                  <svg width='14' height='14'>
-                    <use href='img/sprite/sprite.svg#theme'></use>
-                  </svg>
-                  <span>Темная тема</span>
-                </button>
-              </li>
-              <li class="user__btns-item">
-                <button class="user__btn">
-                  <svg width='14' height='14'>
-                    <use href='img/sprite/sprite.svg#exit'></use>
-                  </svg>
-                  <span>Выйти</span>
-                </button>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</header>
+        @include('partials/header.html',{
+        'title': 'Настройки',
+        'link': './'
+        })
         <main class="main">
 
             <section class="navigation">
@@ -775,10 +702,10 @@
                                                 <span>bci-0001</span>
                                             </div>
                                             <div class="table__product-title">
-                                                <span>Чехол-аккумулятор iBattery для iPhone 6/6s/8 на 3200mAh
+                                                <span>Чехол-аккумулятор iBattery для iPhone 6/6s/8 на 3200mAh
                                                     Black</span>
                                                 <div class="table__product-titlefull">Чехол-аккумулятор iBattery для
-                                                    iPhone 6/6s/8 на 3200mAh Black
+                                                    iPhone 6/6s/8 на 3200mAh Black
                                                 </div>
                                             </div>
                                             <div class="table__product-price">
@@ -803,10 +730,10 @@
                                                 <span>bci-0001</span>
                                             </div>
                                             <div class="table__product-title">
-                                                <span>Чехол-аккумулятор iBattery для iPhone 6/6s/8 на 3200mAh
+                                                <span>Чехол-аккумулятор iBattery для iPhone 6/6s/8 на 3200mAh
                                                     Black</span>
                                                 <div class="table__product-titlefull">Чехол-аккумулятор iBattery для
-                                                    iPhone 6/6s/8 на 3200mAh Black
+                                                    iPhone 6/6s/8 на 3200mAh Black
                                                 </div>
                                             </div>
                                             <div class="table__product-price">
@@ -831,10 +758,10 @@
                                                 <span>bci-0001</span>
                                             </div>
                                             <div class="table__product-title">
-                                                <span>Чехол-аккумулятор iBattery для iPhone 6/6s/8 на 3200mAh
+                                                <span>Чехол-аккумулятор iBattery для iPhone 6/6s/8 на 3200mAh
                                                     Black</span>
                                                 <div class="table__product-titlefull">Чехол-аккумулятор iBattery для
-                                                    iPhone 6/6s/8 на 3200mAh Black
+                                                    iPhone 6/6s/8 на 3200mAh Black
                                                 </div>
                                             </div>
                                             <div class="table__product-price">
@@ -861,10 +788,10 @@
                                                 <span>bci-0001</span>
                                             </div>
                                             <div class="table__product-title">
-                                                <span>Чехол-аккумулятор iBattery для iPhone 6/6s/8 на 3200mAh
+                                                <span>Чехол-аккумулятор iBattery для iPhone 6/6s/8 на 3200mAh
                                                     Black</span>
                                                 <div class="table__product-titlefull">Чехол-аккумулятор iBattery для
-                                                    iPhone 6/6s/8 на 3200mAh Black
+                                                    iPhone 6/6s/8 на 3200mAh Black
                                                 </div>
                                             </div>
                                             <div class="table__product-price">
@@ -889,10 +816,10 @@
                                                 <span>bci-0001</span>
                                             </div>
                                             <div class="table__product-title">
-                                                <span>Чехол-аккумулятор iBattery для iPhone 6/6s/8 на 3200mAh
+                                                <span>Чехол-аккумулятор iBattery для iPhone 6/6s/8 на 3200mAh
                                                     Black</span>
                                                 <div class="table__product-titlefull">Чехол-аккумулятор iBattery для
-                                                    iPhone 6/6s/8 на 3200mAh Black
+                                                    iPhone 6/6s/8 на 3200mAh Black
                                                 </div>
                                             </div>
                                             <div class="table__product-price">
@@ -917,10 +844,10 @@
                                                 <span>bci-0001</span>
                                             </div>
                                             <div class="table__product-title">
-                                                <span>Чехол-аккумулятор iBattery для iPhone 6/6s/8 на 3200mAh
+                                                <span>Чехол-аккумулятор iBattery для iPhone 6/6s/8 на 3200mAh
                                                     Black</span>
                                                 <div class="table__product-titlefull">Чехол-аккумулятор iBattery для
-                                                    iPhone 6/6s/8 на 3200mAh Black
+                                                    iPhone 6/6s/8 на 3200mAh Black
                                                 </div>
                                             </div>
                                             <div class="table__product-price">
@@ -956,7 +883,7 @@
                                                         <a class="pagination__list-link" href="#">2</a>
                                                     </li>
                                                     <li class="pagination__list-item">
-                                                        <span>…</span>
+                                                        <span>...</span>
                                                     </li>
                                                     <li class="pagination__list-item">
                                                         <a class="pagination__list-link" href="#">19</a>
@@ -1073,10 +1000,10 @@
                                                 <span>217</span>
                                             </div>
                                             <div class="table__product-title">
-                                                <span>Чехол-аккумулятор iBattery для iPhone 6/6s/8 на 3200mAh
+                                                <span>Чехол-аккумулятор iBattery для iPhone 6/6s/8 на 3200mAh
                                                     Black</span>
                                                 <div class="table__product-titlefull">Чехол-аккумулятор iBattery для
-                                                    iPhone 6/6s/8 на 3200mAh Black
+                                                    iPhone 6/6s/8 на 3200mAh Black
                                                 </div>
                                             </div>
                                             <div class="table__product-price">
@@ -1101,10 +1028,10 @@
                                                 <span>217</span>
                                             </div>
                                             <div class="table__product-title">
-                                                <span>Чехол-аккумулятор iBattery для iPhone 6/6s/8 на 3200mAh
+                                                <span>Чехол-аккумулятор iBattery для iPhone 6/6s/8 на 3200mAh
                                                     Black</span>
                                                 <div class="table__product-titlefull">Чехол-аккумулятор iBattery для
-                                                    iPhone 6/6s/8 на 3200mAh Black
+                                                    iPhone 6/6s/8 на 3200mAh Black
                                                 </div>
                                             </div>
                                             <div class="table__product-price">
@@ -1129,10 +1056,10 @@
                                                 <span>217</span>
                                             </div>
                                             <div class="table__product-title">
-                                                <span>Чехол-аккумулятор iBattery для iPhone 6/6s/8 на 3200mAh
+                                                <span>Чехол-аккумулятор iBattery для iPhone 6/6s/8 на 3200mAh
                                                     Black</span>
                                                 <div class="table__product-titlefull">Чехол-аккумулятор iBattery для
-                                                    iPhone 6/6s/8 на 3200mAh Black
+                                                    iPhone 6/6s/8 на 3200mAh Black
                                                 </div>
                                             </div>
                                             <div class="table__product-price">
@@ -1157,10 +1084,10 @@
                                                 <span>217</span>
                                             </div>
                                             <div class="table__product-title">
-                                                <span>Чехол-аккумулятор iBattery для iPhone 6/6s/8 на 3200mAh
+                                                <span>Чехол-аккумулятор iBattery для iPhone 6/6s/8 на 3200mAh
                                                     Black</span>
                                                 <div class="table__product-titlefull">Чехол-аккумулятор iBattery для
-                                                    iPhone 6/6s/8 на 3200mAh Black
+                                                    iPhone 6/6s/8 на 3200mAh Black
                                                 </div>
                                             </div>
                                             <div class="table__product-price">
@@ -1195,7 +1122,7 @@
                                                         <a class="pagination__list-link" href="#">2</a>
                                                     </li>
                                                     <li class="pagination__list-item">
-                                                        <span>…</span>
+                                                        <span>...</span>
                                                     </li>
                                                     <li class="pagination__list-item">
                                                         <a class="pagination__list-link" href="#">19</a>
@@ -1255,7 +1182,7 @@
 
                                 <div class="modal__message">
                                     Подтвердите удаление всех данных для текущего ресурса продажи. При подтверждении,
-                                    вся информация о данном складе
+                                    вся информация о данном складе
                                     будет безвозвратно удалена.
                                 </div>
 
@@ -1272,8 +1199,8 @@
 
                                 <div class="modal__message">
                                     Подтвердите загрузку данных для текущего ресурса продажи. При подтверждении,
-                                    загрузка начнется в фоне и Вы
-                                    получите уведомление об окончании.
+                                    загрузка начнется в фоне и Вы
+                                    получите уведомление об окончании.
                                 </div>
 
                                 <div class="modal__bottom">
@@ -1289,8 +1216,8 @@
 
                                 <div class="modal__message">
                                     Подтвердите загрузку данных информации всех доступных ресурсов. При подтверждении,
-                                    загрузка начнется в фоне и Вы
-                                    получите уведомление об окончании.
+                                    загрузка начнется в фоне и Вы
+                                    получите уведомление об окончании.
                                 </div>
 
                                 <div class="modal__bottom">
@@ -1410,7 +1337,7 @@
                                     </div>
 
                                     <div class="form-modal__link">
-                                        <h3 class="form-modal__subtitle">Ссылка на файл</h3>
+                                        <h3 class="form-modal__subtitle">Ссылка на файл</h3>
                                         <div class="form-modal__info-block">
                                             <div class="form-modal__input-block">
                                                 <div class="form-modal__input-wrapper">
@@ -1443,7 +1370,7 @@
                                     </div>
 
                                     <div class="form-modal__extra">
-                                        <h3 class="form-modal__subtitle">Процент от продаж</h3>
+                                        <h3 class="form-modal__subtitle">Процент от продаж</h3>
                                         <div class="form-modal__info-wrapper">
                                             <div class="form-modal__info-block">
                                                 <div class="form__title">
@@ -1537,9 +1464,9 @@
                                                             <span>1737810</span>
                                                         </div>
                                                         <div class="table__product-title">
-                                                            <span>Смартфоны и телефоны
+                                                            <span>Смартфоны и телефоны
                                                             </span>
-                                                            <div class="table__product-titlefull">Смартфоны и телефоны
+                                                            <div class="table__product-titlefull">Смартфоны и телефоны
                                                             </div>
                                                         </div>
                                                         <div class="table__product-value">
@@ -1551,9 +1478,9 @@
                                                             <span>1737810</span>
                                                         </div>
                                                         <div class="table__product-title">
-                                                            <span>Смартфоны и телефоны
+                                                            <span>Смартфоны и телефоны
                                                             </span>
-                                                            <div class="table__product-titlefull">Смартфоны и телефоны
+                                                            <div class="table__product-titlefull">Смартфоны и телефоны
                                                             </div>
                                                         </div>
                                                         <div class="table__product-value">
@@ -1565,9 +1492,9 @@
                                                             <span>1737810</span>
                                                         </div>
                                                         <div class="table__product-title">
-                                                            <span>Смартфоны и телефоны
+                                                            <span>Смартфоны и телефоны
                                                             </span>
-                                                            <div class="table__product-titlefull">Смартфоны и телефоны
+                                                            <div class="table__product-titlefull">Смартфоны и телефоны
                                                             </div>
                                                         </div>
                                                         <div class="table__product-value">
@@ -1681,7 +1608,7 @@
                                     </div>
 
                                     <div class="form-modal__tags">
-                                        <h3 class="form-modal__subtitle">Данные от аккаунта</h3>
+                                        <h3 class="form-modal__subtitle">Данные от аккаунта</h3>
                                         <div class="form-modal__info-block">
                                             <div class="form-modal__input-block">
                                                 <span class="form-modal__input-name">Логин</span>
@@ -1748,12 +1675,8 @@
 
         </main>
 
-        <footer>
-  <div class="footer">
-    <p class="copyright">© 2022. iBattery CRM. Все права защищены.</p>
-  </div>
-</footer>
-
+        @include('partials/footer.html',{})
+        <!--@include('partials/modals.html',{})-->
     </div>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script type="text/javascript" src="js/main.js"></script>

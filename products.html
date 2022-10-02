@@ -1,86 +1,13 @@
 <!DOCTYPE html>
 <html lang="Ru">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="Description" content="default">
-  <title>BatteryCRM</title>
-  <link href="img/logo.png" rel="icon"/>
-  <link rel="preload" href="fonts/FuturaNewRegular.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/FuturaNewMedium.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/FuturaNewDemi.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/FuturaNewBold.woff2" as="font" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/style.css">
-</head>
+@include('partials/head.html',{})
 
 <body>
     <div class="wrapper">
-        <header>
-  <div class="header">
-    <div class="header__title">Система управления</div>
-    <a class="header__logo" href="$">
-      <svg width='8' height='16'>
-        <use href='img/sprite/sprite.svg#logo-battery'></use>
-      </svg>
-      <svg width='122' height='13'>
-        <use href='img/sprite/sprite.svg#logo-title'></use>
-      </svg>
-    </a>
-    <div class="header__btns">
-      <a href="settings.html" class="header__btn">
-        <svg width='13.7' height='13.7'>
-          <use href='img/sprite/sprite.svg#setting'></use>
-        </svg>
-      </a>
-      <div class="header__user-btn">
-        <button class="header__btn">
-          <svg width='13.7' height='13.7'>
-            <use href='img/sprite/sprite.svg#user'></use>
-          </svg>
-        </button>
-        <div class="header__user-settings">
-          <div class="user">
-            <div class="user__personal">
-              <div class="user__avatar">
-                <picture>
-                  <source type='image/webp' srcset='img/agnes.webp'>
-                  <img width='40' height='40' src='img/agnes.png' alt='Агнес Толстопятко'>
-                </picture>
-              </div>
-              <div class="user__name">Агнес Толстопятко</div>
-            </div>
-            <ul class="user__btns">
-              <li class="user__btns-item">
-                <button class="user__btn">
-                  <svg width='14' height='14'>
-                    <use href='img/sprite/sprite.svg#account'></use>
-                  </svg>
-                  <span>Личный кабинет</span>
-                </button>
-              </li>
-              <li class="user__btns-item">
-                <button class="user__btn">
-                  <svg width='14' height='14'>
-                    <use href='img/sprite/sprite.svg#theme'></use>
-                  </svg>
-                  <span>Темная тема</span>
-                </button>
-              </li>
-              <li class="user__btns-item">
-                <button class="user__btn">
-                  <svg width='14' height='14'>
-                    <use href='img/sprite/sprite.svg#exit'></use>
-                  </svg>
-                  <span>Выйти</span>
-                </button>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</header>
+        @include('partials/header.html',{
+        'title': 'Система управления',
+        'link': 'settings.html'
+        })
 
         <div class="analytics">
 
@@ -157,7 +84,7 @@
 
             <div class="analytics__content content-analytics ">
                 <div class="content-analytics__header">
-                    <h1 class="content-analytics__title">Товары и категории
+                    <h1 class="content-analytics__title">Товары и категории
                     </h1>
                     <div class="content-analytics__options-body" data-spollers data-one-spoller>
                         <button tabindex="-1" type="button" data-spoller class="navigation__filter-btn">
@@ -329,11 +256,11 @@
                                     <div class="date-analytics__options">
                                         <button type="button"
                                             class="date-analytics__option date-analytics__option-month active">
-                                            За месяц
+                                            За месяц
                                         </button>
                                         <button type="button"
                                             class="date-analytics__option date-analytics__option-year">
-                                            За год
+                                            За год
                                         </button>
                                     </div>
                                     <span class="date-picker__header">Начальная дата</span>
@@ -414,9 +341,9 @@
                         <div class="charts__header">
                             <h2 class="charts__title">Категории</h2>
                             <div class="charts__sort left">
-                                <span class="charts__sort-sum">по сумме</span>
+                                <span class="charts__sort-sum">по сумме</span>
                                 <button type="button" class="charts__sort-switcher"></button>
-                                <span class="charts__sort-count">по кол-ву</span>
+                                <span class="charts__sort-count">по кол-ву</span>
                             </div>
                             <div class="charts__select-wrapper">
                                 <div class="charts__select select-charts">
@@ -506,9 +433,9 @@
                         <div class="charts__header">
                             <h2 class="charts__title">Товары</h2>
                             <div class="charts__sort left">
-                                <span class="charts__sort-sum">по сумме</span>
+                                <span class="charts__sort-sum">по сумме</span>
                                 <button type="button" class="charts__sort-switcher"></button>
-                                <span class="charts__sort-count">по кол-ву</span>
+                                <span class="charts__sort-count">по кол-ву</span>
                             </div>
                             <div class="charts__select-wrapper">
                                 <div class="charts__select select-charts">
@@ -604,6 +531,7 @@
                         </div>
                     </div>
                 </div>
+
 
                 <div class="modal">
                     <div class="modal__container" data-target="export">
@@ -867,6 +795,7 @@
                                 </div>
                             </div>
 
+
                             <div class="modal__bottom">
                                 <button class="modal__btn modal__btn--choose">Выбрать</button>
                                 <button class="modal__btn">Очистить</button>
@@ -877,12 +806,8 @@
 
             </div>
 
-            <footer>
-  <div class="footer">
-    <p class="copyright">© 2022. iBattery CRM. Все права защищены.</p>
-  </div>
-</footer>
-
+            @include('partials/footer.html',{})
+            <!--@include('partials/modals.html',{})-->
         </div>
         <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
         <script type="text/javascript" src="js/main.js"></script>
