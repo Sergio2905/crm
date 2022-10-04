@@ -1640,8 +1640,10 @@ function initUI() {
     analyticsMenu();
     chartSelect();
     datePicker();
-    showImage();
+    showImage('.table__product-photo');
+    showImage('.comparison-table__photo');
     sidebarMinimize();
+    addToCompare()
 }
 
 initUI();
@@ -2456,8 +2458,8 @@ function pagination() {
     }
 }
 
-function showImage() {
-    const photoThumbs = document.querySelectorAll('.table__product-photo');
+function showImage(photo) {
+    const photoThumbs = document.querySelectorAll(photo);
 
     if (photoThumbs.length > 0) {
         for (let index = 0; index < photoThumbs.length; index++) {
@@ -2496,6 +2498,33 @@ function sidebarMinimize() {
     function ifMini() {
         if (window.innerWidth < 768 && sidebar.classList.contains('mini')) {
             sidebar.classList.remove('mini');
+        }
+    }
+}
+
+function addToCompare() {
+    const lists = document.querySelectorAll('.comparison-table__sublist');
+    const compareItems = document.querySelectorAll('.compare__item');
+
+    if (lists.length > 0) {
+        for (let index = 0; index < lists.length; index++) {
+            const list = lists[index];
+            const listItems = list.querySelectorAll('.comparison-table__subitem');
+            const compareItem = compareItems[index];
+            listItems.forEach((listItem) => {
+                listItem.addEventListener('click', () => {
+                    compareItem.querySelector('.compare__art').innerHTML = listItem.querySelector('.comparison-table__partner-art span').innerHTML;
+                    compareItem.querySelector('.compare__title').innerHTML = listItem.querySelector('.comparison-table__title span').innerHTML;
+
+                    if (!listItem.classList.contains('active')) {
+                        listItems.forEach((el) => {
+                            el.classList.remove('active');
+                        });
+                        listItem.classList.add('active');
+                    }
+                });
+            });
+
         }
     }
 }
