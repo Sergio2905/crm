@@ -1640,8 +1640,6 @@ function initUI() {
     analyticsMenu();
     chartSelect();
     datePicker();
-    showImage('.table__product-photo');
-    showImage('.comparison-table__photo');
     sidebarMinimize();
     addToCompare()
 }
@@ -2458,27 +2456,27 @@ function pagination() {
     }
 }
 
-function showImage(photo) {
-    const photoThumbs = document.querySelectorAll(photo);
+//function showImage(photo) {
+//    const photoThumbs = document.querySelectorAll(photo);
 
-    if (photoThumbs.length > 0) {
-        for (let index = 0; index < photoThumbs.length; index++) {
-            const photoThumb = photoThumbs[index];
+//    if (photoThumbs.length > 0) {
+//        for (let index = 0; index < photoThumbs.length; index++) {
+//            const photoThumb = photoThumbs[index];
 
-            photoThumb.addEventListener('mouseover', () => {
-                const photoSrc = photoThumb.querySelector('picture').outerHTML;
-                const newPhoto = document.createElement('div');
-                newPhoto.classList.add('image-viewer');
-                newPhoto.innerHTML = photoSrc;
-                photoThumb.append(newPhoto);
-            });
+//            photoThumb.addEventListener('mouseover', () => {
+//                const photoSrc = photoThumb.querySelector('picture').outerHTML;
+//                const newPhoto = document.createElement('div');
+//                newPhoto.classList.add('image-viewer');
+//                newPhoto.innerHTML = photoSrc;
+//                photoThumb.append(newPhoto);
+//            });
 
-            photoThumb.addEventListener('mouseout', () => {
-                document.querySelector('.image-viewer').remove();
-            });
-        }
-    }
-}
+//            photoThumb.addEventListener('mouseout', () => {
+//                document.querySelector('.image-viewer').remove();
+//            });
+//        }
+//    }
+//}
 
 function sidebarMinimize() {
     const miniBtn = document.querySelector('.minimize-btn');
